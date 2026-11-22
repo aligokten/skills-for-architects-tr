@@ -1,0 +1,720 @@
+<title>Arch Studio TR Kılavuzu</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: a drawing sheet — title block (antet) on top, chapter index rail on the left, content as numbered sheets; diagrams drawn like plan/section views */
+:root {
+  --paper: #F5F6F3;
+  --sheet: #FFFFFF;
+  --ink: #18212C;
+  --muted: #5A6573;
+  --line: #D3D8D6;
+  --grid: #E7EBE8;
+  --red: #B8322A;        /* revizyon kalemi */
+  --blue: #2C5A86;       /* çizim mavisi */
+  --blue-soft: #DCE7F1;
+  --red-soft: #F6E1DE;
+  --term-bg: #141A21;
+  --term-fg: #DCE3EA;
+  --term-dim: #7E8B99;
+  --term-ok: #7CC98B;
+  --term-warn: #E7B95A;
+  --f-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --f-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #101419; --sheet: #161B22; --ink: #E6EAEE; --muted: #9AA4AF; --line: #2B333D; --grid: #1E252D;
+    --red: #EE6B5F; --blue: #7DB0DF; --blue-soft: #1D2B3A; --red-soft: #3A2120;
+    --term-bg: #0B0F13; --term-fg: #DCE3EA; --term-dim: #7E8B99; --term-ok: #7CC98B; --term-warn: #E7B95A;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #101419; --sheet: #161B22; --ink: #E6EAEE; --muted: #9AA4AF; --line: #2B333D; --grid: #1E252D;
+  --red: #EE6B5F; --blue: #7DB0DF; --blue-soft: #1D2B3A; --red-soft: #3A2120;
+  --term-bg: #0B0F13; --term-fg: #DCE3EA; --term-dim: #7E8B99; --term-ok: #7CC98B; --term-warn: #E7B95A;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 16px;
+  line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 24px 64px;
+}
+h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; line-height: 1.15; margin: 0; }
+h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; font-stretch: 112%; letter-spacing: -0.01em; }
+h2 { font-size: clamp(1.45rem, 3vw, 1.9rem); font-weight: 700; font-stretch: 108%; }
+h3 { font-size: 1.1rem; font-weight: 700; }
+p { margin: 0; max-width: 68ch; }
+a { color: var(--blue); }
+code, kbd { font-family: var(--f-mono); font-size: 0.88em; }
+:not(pre) > code { background: var(--grid); padding: 1px 5px; border-radius: 3px; }
+.label { font-family: var(--f-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+
+.wrap { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 40px; }
+@media (max-width: 900px) { .wrap { grid-template-columns: minmax(0, 1fr); gap: 24px; } }
+
+/* Antet (title block) */
+.antet { grid-column: 1 / -1; background: var(--sheet); border: 1.5px solid var(--ink); display: grid; grid-template-columns: minmax(0, 2.2fr) minmax(0, 1fr); }
+.antet-main { padding: 28px 28px 24px; display: grid; gap: 14px; border-right: 1.5px solid var(--ink); }
+.antet-main p { color: var(--muted); font-size: 1.05rem; }
+.antet-cells { display: grid; grid-template-columns: 1fr 1fr; }
+.antet-cells div { padding: 10px 14px; border-bottom: 1px solid var(--line); border-left: 1px solid var(--line); display: grid; gap: 2px; }
+.antet-cells div:nth-child(odd) { border-left: 0; }
+.antet-cells b { font-family: var(--f-mono); font-size: 0.9rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+.antet-cells .wide { grid-column: 1 / -1; border-left: 0; border-bottom: 0; }
+@media (max-width: 720px) { .antet { grid-template-columns: minmax(0, 1fr); } .antet-main { border-right: 0; border-bottom: 1.5px solid var(--ink); } }
+
+/* Index rail */
+nav.rail { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 16px); align-self: start; display: grid; gap: 2px; }
+nav.rail a { text-decoration: none; color: var(--muted); font-size: 0.9rem; padding: 6px 10px; border-left: 2px solid var(--line); display: grid; grid-template-columns: 2.4em 1fr; }
+nav.rail a span { font-family: var(--f-mono); font-size: 0.78rem; padding-top: 2px; }
+nav.rail a:hover, nav.rail a:focus-visible { color: var(--ink); border-left-color: var(--red); outline: none; }
+@media (max-width: 900px) { nav.rail { position: static; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); } }
+
+main { display: grid; gap: 56px; min-width: 0; }
+section { display: grid; gap: 18px; min-width: 0; scroll-margin-top: 16px; }
+.sec-head { display: grid; gap: 6px; padding-bottom: 12px; border-bottom: 1.5px solid var(--ink); }
+.sec-head .label b { color: var(--red); font-weight: 600; }
+
+/* Diagrams */
+.fig { background: var(--sheet); border: 1px solid var(--line); padding: 18px; display: grid; gap: 10px; min-width: 0; }
+.fig-scroll { overflow-x: auto; }
+.fig figcaption { font-size: 0.85rem; color: var(--muted); }
+svg text { font-family: var(--f-body); fill: var(--ink); }
+svg .mono { font-family: var(--f-mono); }
+
+/* Steps */
+.steps { display: grid; gap: 14px; counter-reset: s; }
+.step { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 14px; align-items: start; }
+.step-n { width: 44px; height: 44px; border: 1.5px solid var(--ink); display: grid; place-items: center; font-family: var(--f-display); font-weight: 800; font-size: 1.1rem; background: var(--sheet); }
+.step-body { display: grid; gap: 8px; min-width: 0; padding-top: 6px; }
+.step-body .hint { color: var(--muted); font-size: 0.92rem; }
+
+/* Terminal */
+.term { background: var(--term-bg); color: var(--term-fg); border-radius: 8px; font-family: var(--f-mono); font-size: 0.86rem; line-height: 1.55; min-width: 0; overflow: hidden; }
+.term-bar { display: flex; align-items: center; gap: 6px; padding: 8px 12px; border-bottom: 1px solid #ffffff14; }
+.term-bar i { width: 10px; height: 10px; border-radius: 50%; background: #ffffff2a; display: block; }
+.term-bar span { margin-left: 8px; color: var(--term-dim); font-size: 0.75rem; }
+.term pre { margin: 0; padding: 12px 14px; overflow-x: auto; white-space: pre; }
+.term .p { color: var(--term-dim); }
+.term .ok { color: var(--term-ok); }
+.term .warn { color: var(--term-warn); }
+.cmd { display: flex; align-items: stretch; background: var(--term-bg); color: var(--term-fg); border-radius: 6px; min-width: 0; }
+.cmd code { flex: 1; min-width: 0; padding: 10px 12px; overflow-x: auto; white-space: pre; font-size: 0.86rem; }
+.cmd code::before { content: "% "; color: var(--term-dim); }
+.cmd.chat code::before { content: "> "; }
+button.copy { font-family: var(--f-mono); font-size: 0.72rem; letter-spacing: 0.05em; background: transparent; color: var(--term-dim); border: 0; border-left: 1px solid #ffffff1c; padding: 0 12px; cursor: pointer; }
+button.copy:hover, button.copy:focus-visible { color: var(--term-fg); outline: none; }
+
+/* Bars */
+.bars { display: grid; gap: 8px; }
+.bar-row { display: grid; grid-template-columns: minmax(0, 220px) minmax(0, 1fr) 2.5em; gap: 12px; align-items: center; font-size: 0.9rem; }
+.bar-track { height: 18px; background: repeating-linear-gradient(90deg, var(--grid) 0 1px, transparent 1px 25%); border-left: 1px solid var(--muted); position: relative; }
+.bar-fill { height: 100%; background: var(--blue); }
+.bar-fill.tr { background: var(--red); }
+.bar-n { font-family: var(--f-mono); font-variant-numeric: tabular-nums; text-align: right; }
+.bar-axis { display: grid; grid-template-columns: minmax(0, 220px) minmax(0, 1fr) 2.5em; gap: 12px; font-family: var(--f-mono); font-size: 0.72rem; color: var(--muted); }
+.bar-axis .ticks { display: flex; justify-content: space-between; }
+@media (max-width: 560px) { .bar-row, .bar-axis { grid-template-columns: minmax(0, 120px) minmax(0, 1fr) 2em; font-size: 0.8rem; } }
+
+/* Cards for TR skills */
+.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+.skill { background: var(--sheet); border: 1px solid var(--line); border-top: 3px solid var(--red); padding: 16px; display: grid; gap: 10px; align-content: start; min-width: 0; }
+.skill h3 { font-family: var(--f-mono); font-size: 0.98rem; font-weight: 600; }
+.skill p { font-size: 0.92rem; color: var(--muted); }
+
+/* Hierarchy */
+.hier { display: grid; gap: 6px; justify-items: center; }
+.hier div { background: var(--blue-soft); border: 1px solid var(--blue); padding: 10px 14px; text-align: center; font-size: 0.92rem; display: grid; gap: 2px; }
+.hier div small { color: var(--muted); font-size: 0.78rem; }
+.hier div:nth-child(1) { width: min(100%, 52%); background: var(--blue); color: var(--sheet); border-color: var(--blue); }
+.hier div:nth-child(1) small { color: var(--sheet); opacity: .85; }
+.hier div:nth-child(2) { width: min(100%, 64%); }
+.hier div:nth-child(3) { width: min(100%, 76%); }
+.hier div:nth-child(4) { width: min(100%, 88%); }
+.hier div:nth-child(5) { width: 100%; }
+@media (max-width: 560px) { .hier div { width: 100% !important; } }
+
+/* Finder */
+.finder { display: grid; gap: 12px; }
+.finder input { font: inherit; padding: 10px 12px; border: 1.5px solid var(--ink); background: var(--sheet); color: var(--ink); width: 100%; }
+.finder input:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chips button { font: 500 0.8rem var(--f-body); padding: 5px 10px; border: 1px solid var(--line); background: var(--sheet); color: var(--ink); cursor: pointer; border-radius: 999px; }
+.chips button[aria-pressed="true"] { background: var(--ink); color: var(--sheet); border-color: var(--ink); }
+.chips button:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.list { display: grid; border-top: 1px solid var(--line); }
+.list-row { display: grid; grid-template-columns: minmax(0, 230px) minmax(0, 1fr) auto; gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--line); align-items: baseline; font-size: 0.9rem; }
+.list-row code { font-weight: 600; overflow-wrap: anywhere; }
+.list-row .cat { font-family: var(--f-mono); font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; text-align: right; }
+.list-row.tr code { color: var(--red); }
+@media (max-width: 640px) { .list-row { grid-template-columns: minmax(0, 1fr); gap: 2px; } .list-row .cat { text-align: left; } }
+.count { font-family: var(--f-mono); font-size: 0.8rem; color: var(--muted); }
+
+/* Prompts */
+.prompts { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; }
+.pgroup { display: grid; gap: 8px; align-content: start; min-width: 0; }
+
+/* Tree */
+pre.tree { margin: 0; background: var(--sheet); border: 1px solid var(--line); padding: 16px; font-family: var(--f-mono); font-size: 0.85rem; overflow-x: auto; line-height: 1.7; }
+pre.tree .c { color: var(--muted); }
+
+/* FAQ */
+details { background: var(--sheet); border: 1px solid var(--line); padding: 12px 16px; }
+details + details { margin-top: -1px; }
+summary { cursor: pointer; font-weight: 600; }
+summary:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+details > div { display: grid; gap: 10px; padding-top: 10px; }
+
+.note { border-left: 3px solid var(--red); background: var(--red-soft); padding: 12px 16px; display: grid; gap: 6px; font-size: 0.95rem; }
+.note b { font-family: var(--f-display); }
+.twocol { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; }
+.timeline { display: grid; gap: 0; }
+.tl { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 12px; }
+.tl-dot { display: grid; justify-items: center; }
+.tl-dot i { width: 12px; height: 12px; border: 2px solid var(--red); background: var(--sheet); border-radius: 50%; margin-top: 6px; display: block; }
+.tl-dot s { width: 2px; flex: 1; background: var(--line); display: block; min-height: 28px; text-decoration: none; }
+.tl:last-child .tl-dot s { display: none; }
+.tl-body { padding-bottom: 16px; display: grid; gap: 2px; }
+.tl-body span { color: var(--muted); font-size: 0.9rem; }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+html { scroll-behavior: smooth; }
+footer { grid-column: 1 / -1; border-top: 1.5px solid var(--ink); padding-top: 14px; color: var(--muted); font-size: 0.85rem; display: grid; gap: 4px; }
+</style>
+
+<div class="wrap">
+
+  <header class="antet">
+    <div class="antet-main">
+      <span class="label">Arch Studio · Türkiye uyarlaması</span>
+      <h1>Kullanım Kılavuzu</h1>
+      <p>Claude Code içinde çalışan mimarlık becerilerini kurmak, ilk projeyi açmak ve Türkiye'ye özel imar, parsel ve tescil araçlarını kullanmak için adım adım rehber.</p>
+    </div>
+    <div class="antet-cells" aria-label="Pafta bilgileri">
+      <div><span class="label">Proje</span><b>Arch Studio TR</b></div>
+      <div><span class="label">Pafta</span><b>K-01</b></div>
+      <div><span class="label">Tarih</span><b>22.11.2026</b></div>
+      <div><span class="label">Rev.</span><b>01</b></div>
+      <div><span class="label">Beceri</span><b>67</b></div>
+      <div><span class="label">Ajan</span><b>9</b></div>
+      <div class="wide"><span class="label">Depo</span><b>aligokten/skills-for-architects-tr</b></div>
+    </div>
+  </header>
+
+  <nav class="rail" aria-label="Bölümler">
+    <a href="#nasil"><span>01</span>Nasıl çalışır</a>
+    <a href="#kurulum"><span>02</span>Kurulum</a>
+    <a href="#ilk"><span>03</span>İlk oturum</a>
+    <a href="#harita"><span>04</span>Beceri haritası</a>
+    <a href="#turkiye"><span>05</span>Türkiye becerileri</a>
+    <a href="#akis"><span>06</span>Örnek iş akışı</a>
+    <a href="#imar"><span>07</span>İmar hesabı nasıl okunur</a>
+    <a href="#proje"><span>08</span>Proje klasörü</a>
+    <a href="#istekler"><span>09</span>Hazır istekler</a>
+    <a href="#bul"><span>10</span>Tüm beceriler</a>
+    <a href="#sorun"><span>11</span>Sorun giderme</a>
+    <a href="#sinir"><span>12</span>Sınırlamalar</a>
+  </nav>
+
+  <main>
+
+    <!-- 01 -->
+    <section id="nasil">
+      <div class="sec-head"><span class="label"><b>01</b> · Genel bakış</span><h2>Nasıl çalışır</h2></div>
+      <p>Arch Studio, Claude Code'a eklenen bir beceri paketidir. Siz terminalde Türkçe bir istek yazarsınız; Claude isteği anlar, gerekirse koordinatör <strong>Norma</strong> uygun becerileri seçer, beceriler resmî kaynaklara gider ve size kaynak gösteren bir rapor döner. Mevzuat içeren her rapor bir sorumluluk reddiyle biter.</p>
+      <figure class="fig">
+        <div class="fig-scroll">
+          <svg viewBox="0 0 960 230" width="100%" style="min-width:720px" role="img" aria-label="Akış: Siz, Claude Code, Norma, Beceriler, Resmî kaynaklar, Rapor">
+            <defs>
+              <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="var(--muted)"/></marker>
+            </defs>
+            <g fill="none" stroke="var(--muted)" stroke-width="1.5" marker-end="url(#ar)">
+              <line x1="140" y1="95" x2="168" y2="95"/>
+              <line x1="300" y1="95" x2="328" y2="95"/>
+              <line x1="460" y1="95" x2="488" y2="95"/>
+              <line x1="620" y1="95" x2="648" y2="95"/>
+              <line x1="780" y1="95" x2="808" y2="95"/>
+            </g>
+            <g stroke-width="1.5">
+              <rect x="10" y="55" width="130" height="80" fill="var(--sheet)" stroke="var(--ink)"/>
+              <rect x="170" y="55" width="130" height="80" fill="var(--term-bg)" stroke="var(--term-bg)"/>
+              <rect x="330" y="55" width="130" height="80" fill="var(--sheet)" stroke="var(--ink)"/>
+              <rect x="490" y="55" width="130" height="80" fill="var(--blue-soft)" stroke="var(--blue)"/>
+              <rect x="650" y="55" width="130" height="80" fill="var(--sheet)" stroke="var(--ink)" stroke-dasharray="4 3"/>
+              <rect x="810" y="55" width="140" height="80" fill="var(--red-soft)" stroke="var(--red)"/>
+            </g>
+            <g text-anchor="middle" font-size="15" font-weight="700">
+              <text x="75" y="90">Siz</text>
+              <text x="235" y="90" style="fill:var(--term-fg)">Claude Code</text>
+              <text x="395" y="90">Norma</text>
+              <text x="555" y="90">Beceriler</text>
+              <text x="715" y="90">Resmî kaynaklar</text>
+              <text x="880" y="90">Rapor</text>
+            </g>
+            <g text-anchor="middle" font-size="12">
+              <text x="75" y="112" style="fill:var(--muted)">Türkçe istek</text>
+              <text x="235" y="112" style="fill:var(--term-dim)">terminal</text>
+              <text x="395" y="112" style="fill:var(--muted)">doğru beceriyi seçer</text>
+              <text x="555" y="112" style="fill:var(--muted)">67 beceri · 9 ajan</text>
+              <text x="715" y="112" style="fill:var(--muted)">Mevzuat, TKGM, AFAD…</text>
+              <text x="880" y="112" style="fill:var(--muted)">kaynaklı + uyarılı</text>
+            </g>
+            <g font-size="12" class="mono">
+              <text x="10" y="35" style="fill:var(--muted)">"Bu arsaya ne yapabilirim?"</text>
+              <text x="330" y="170" style="fill:var(--muted)">Büyük işlerde önce iş planı gösterir,</text>
+              <text x="330" y="186" style="fill:var(--muted)">onayınızı bekler.</text>
+              <text x="650" y="170" style="fill:var(--muted)">Erişilemeyen kaynak</text>
+              <text x="650" y="186" style="fill:var(--muted)">"erişilemedi" diye raporlanır.</text>
+              <text x="810" y="170" style="fill:var(--red)">Sorumluluk reddi</text>
+              <text x="810" y="186" style="fill:var(--red)">otomatik kontrol edilir.</text>
+            </g>
+          </svg>
+        </div>
+        <figcaption>Şekil 1 — Bir isteğin izlediği yol. Beceriyi adıyla da çağırabilirsiniz (ör. <code>/as:imar-analizi-tr</code>); o zaman Norma aradan çıkar.</figcaption>
+      </figure>
+    </section>
+
+    <!-- 02 -->
+    <section id="kurulum">
+      <div class="sec-head"><span class="label"><b>02</b> · Bir kez yapılır</span><h2>Kurulum (Mac)</h2></div>
+      <p>Tüm komutlar <strong>Terminal</strong> uygulamasına yazılır: <kbd>Cmd</kbd> + <kbd>Boşluk</kbd>, "Terminal", Enter. Komutları tek tek yapıştırıp her birinden sonra Enter'a basın.</p>
+      <div class="steps">
+        <div class="step"><div class="step-n">1</div><div class="step-body">
+          <h3>Claude Code'u kurun</h3>
+          <div class="cmd"><code>curl -fsSL https://claude.ai/install.sh | bash</code><button class="copy" type="button">KOPYALA</button></div>
+          <p class="hint">"Claude Code successfully installed!" yazısını görmelisiniz. Bu adımı tamamladınız.</p>
+        </div></div>
+        <div class="step"><div class="step-n">2</div><div class="step-body">
+          <h3>Terminale Claude'un yerini tanıtın</h3>
+          <div class="cmd"><code>echo 'export PATH="$HOME/.local/bin:$PATH"' &gt;&gt; ~/.zshrc &amp;&amp; source ~/.zshrc</code><button class="copy" type="button">KOPYALA</button></div>
+          <p class="hint">Kurulumdaki sarı "Setup notes" uyarısının çözümü budur. Kontrol için <code>claude --version</code> yazın; bir sürüm numarası çıkmalı.</p>
+        </div></div>
+        <div class="step"><div class="step-n">3</div><div class="step-body">
+          <h3>Türkiye eklenti deposunu ekleyin</h3>
+          <div class="cmd"><code>claude plugin marketplace add aligokten/skills-for-architects-tr</code><button class="copy" type="button">KOPYALA</button></div>
+        </div></div>
+        <div class="step"><div class="step-n">4</div><div class="step-body">
+          <h3>Eklentiyi kurun</h3>
+          <div class="cmd"><code>claude plugin install as@skills-for-architects</code><button class="copy" type="button">KOPYALA</button></div>
+        </div></div>
+        <div class="step"><div class="step-n">5</div><div class="step-body">
+          <h3>Çalışma klasörünüze geçip Claude'u başlatın</h3>
+          <div class="cmd"><code>cd ~/Documents</code><button class="copy" type="button">KOPYALA</button></div>
+          <div class="cmd"><code>claude</code><button class="copy" type="button">KOPYALA</button></div>
+          <p class="hint">İlk açılışta tema seçin, "Claude account with subscription" ile tarayıcıdan giriş yapın ve "Do you trust the files in this folder?" sorusuna evet deyin. Claude yalnızca başlattığınız klasördeki dosyaları görür.</p>
+        </div></div>
+      </div>
+      <figure class="term" aria-label="Başarılı kurulum örneği">
+        <div class="term-bar"><i></i><i></i><i></i><span>Terminal — başarılı kurulumda göreceğiniz</span></div>
+<pre><span class="p">%</span> claude plugin marketplace add aligokten/skills-for-architects-tr
+<span class="ok">✔ Successfully added marketplace: skills-for-architects</span>
+<span class="p">%</span> claude plugin install as@skills-for-architects
+Installing plugin "as@skills-for-architects"...<span class="ok">✔ Successfully installed plugin: as@skills-for-architects</span></pre>
+      </figure>
+    </section>
+
+    <!-- 03 -->
+    <section id="ilk">
+      <div class="sec-head"><span class="label"><b>03</b> · Claude açıkken</span><h2>İlk oturum</h2></div>
+      <p><code>claude</code> komutundan sonra terminal bir sohbet ekranına dönüşür. Buraya normal Türkçe yazarsınız. <code>/</code> ile başlayan satırlar beceri veya komut çağırır. Çıkmak için iki kez <kbd>Ctrl</kbd> + <kbd>C</kbd>.</p>
+      <div class="twocol">
+        <figure class="term">
+          <div class="term-bar"><i></i><i></i><i></i><span>claude</span></div>
+<pre><span class="p">&gt;</span> /as:tool-catalog
+
+  <span class="ok">Arch Studio — 67 beceri</span>
+  Türkiye     imar-analizi-tr · parsel-sorgu-tr
+              tescil-kontrol-tr · yapi-kayit-tr
+              mulk-raporu-tr · mimarlik-bilgisi-tr
+  Proje       project · tasklist · proposal …
+  <span class="p">…</span></pre>
+        </figure>
+        <div style="display:grid;gap:12px;align-content:start">
+          <h3>Önerilen ilk üç adım</h3>
+          <div class="timeline">
+            <div class="tl"><div class="tl-dot"><i></i><s></s></div><div class="tl-body"><b><code>/as:tool-catalog</code></b><span>Neler yapabildiğini görün.</span></div></div>
+            <div class="tl"><div class="tl-dot"><i></i><s></s></div><div class="tl-body"><b><code>/as:studio</code></b><span>Ofisinizi tanımlayın: birimler metrik, yargı bölgesi Türkiye, proje aşamaları. Siz onaylamadan hiçbir dosya yazmaz.</span></div></div>
+            <div class="tl"><div class="tl-dot"><i></i><s></s></div><div class="tl-body"><b><code>/as:project</code></b><span>İlk projenizi kaydedin (ada/parsel, işveren, yapı sınıfı). Sonraki oturumlar buradan devam eder.</span></div></div>
+          </div>
+          <p class="hint" style="color:var(--muted);font-size:.92rem">Kurulum yapmadan da tek bir işle başlayabilirsiniz; beceriler her iki şekilde çalışır.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 -->
+    <section id="harita">
+      <div class="sec-head"><span class="label"><b>04</b> · Envanter</span><h2>Beceri haritası</h2></div>
+      <p>67 becerinin alanlara göre dağılımı. Kırmızı çubuk Türkiye'ye özel becerileri, gri metin ise yalnızca New York'ta geçerli olanları gösterir.</p>
+      <figure class="fig">
+        <div class="bars" id="bars" aria-label="Alanlara göre beceri sayısı"></div>
+        <div class="bar-axis" aria-hidden="true"><span></span><div class="ticks"><span>0</span><span>5</span><span>10</span><span>15</span><span>20</span></div><span></span></div>
+        <figcaption>Şekil 2 — Alanlara göre beceri sayısı. Yalnızca NYC becerileri Türkiye'deki bir arsa için çalışmaz; sizi <code>-tr</code> karşılığına yönlendirir.</figcaption>
+      </figure>
+    </section>
+
+    <!-- 05 -->
+    <section id="turkiye">
+      <div class="sec-head"><span class="label"><b>05</b> · Yeni</span><h2>Türkiye becerileri</h2></div>
+      <div class="grid-2">
+        <article class="skill"><h3>/as:mulk-raporu-tr</h3><p>Parsel, imar, tescil, yapı kayıtları, deprem tehlikesi ve çevreyi tek bir ön inceleme raporunda birleştirir. Arsa alımı veya proje başlangıcı için.</p><div class="cmd chat"><code>/as:mulk-raporu-tr Ankara Çankaya 1234 ada 5 parsel</code><button class="copy" type="button">KOPYALA</button></div></article>
+        <article class="skill"><h3>/as:imar-analizi-tr</h3><p>Plan fonksiyonu, emsal (KAKS), TAKS, Hmax, çekme mesafeleri, otopark ve plan notları. Hesapları açıkça gösterir.</p><div class="cmd chat"><code>/as:imar-analizi-tr Kadıköy 123 ada 45 parsel, konut</code><button class="copy" type="button">KOPYALA</button></div></article>
+        <article class="skill"><h3>/as:parsel-sorgu-tr</h3><p>TKGM Parsel Sorgu'dan yüzölçümü, nitelik, pafta ve geometri. Tapu kaydını yalnızca sizin verdiğiniz belgeden okur.</p><div class="cmd chat"><code>/as:parsel-sorgu-tr İzmir Urla 210 ada 7 parsel</code><button class="copy" type="button">KOPYALA</button></div></article>
+        <article class="skill"><h3>/as:tescil-kontrol-tr</h3><p>Tescilli yapı ve sit alanı kontrolü; Koruma Bölge Kurulu kararları ve tapu beyanları üzerinden.</p><div class="cmd chat"><code>/as:tescil-kontrol-tr Beyoğlu Galata, 98 ada 12 parsel</code><button class="copy" type="button">KOPYALA</button></div></article>
+        <article class="skill"><h3>/as:yapi-kayit-tr</h3><p>Ruhsat, iskân, yapı denetim, yapı kayıt belgesi ve riskli yapı. Belgelerinizi okur, eksikleri listeler.</p><div class="cmd chat"><code>/as:yapi-kayit-tr ekteki ruhsat ve iskânı incele</code><button class="copy" type="button">KOPYALA</button></div></article>
+        <article class="skill"><h3>/as:mimarlik-bilgisi-tr</h3><p>Avan ve uygulama projesi, proje müellifi, yapı denetim, Mimarlar Odası en az bedel, yapı sınıfları.</p><div class="cmd chat"><code>/as:mimarlik-bilgisi-tr III-B yapı sınıfı nedir?</code><button class="copy" type="button">KOPYALA</button></div></article>
+      </div>
+      <p>Diğer beceriler de Türkiye'ye uyarlandı: <code>occupancy-calculator</code> Yangın Yönetmeliği'ni, <code>environmental-analysis</code> AFAD ve MTA'yı, <code>demographics-analysis</code> TÜİK'i, <code>proposal</code> Mimarlar Odası esaslarını, <code>invoice</code> TL ve KDV'yi, <code>spec-writer</code> mahal listesi ve TS/TS EN standartlarını kullanır.</p>
+    </section>
+
+    <!-- 06 -->
+    <section id="akis">
+      <div class="sec-head"><span class="label"><b>06</b> · Senaryo</span><h2>Örnek iş akışı: arsa ön incelemesi</h2></div>
+      <p>Bir işveren size bir parsel gösterdi ve "buraya ne yapabiliriz?" diye soruyor. Tek bir istekle başlarsınız; Claude aşağıdaki sırayı izler.</p>
+      <div class="cmd chat"><code>Moda Mahallesi 123 ada 45 parselde 4 katlı konut düşünüyoruz. Ön inceleme raporu ve imar zarfı hazırla.</code><button class="copy" type="button">KOPYALA</button></div>
+      <figure class="fig">
+        <div class="fig-scroll">
+          <svg viewBox="0 0 960 200" width="100%" style="min-width:760px" role="img" aria-label="Ön inceleme sırası: parsel, imar, tescil, yapı kayıtları, deprem, rapor, 3B zarf">
+            <line x1="40" y1="70" x2="920" y2="70" stroke="var(--line)" stroke-width="2"/>
+            <g id="tlnodes"></g>
+          </svg>
+        </div>
+        <figcaption>Şekil 3 — Her adım ayrı bir beceridir; biri başarısız olursa (ör. site erişilemez) diğerleri devam eder ve rapor o adımı "tamamlanmadı" olarak işaretler.</figcaption>
+      </figure>
+      <div class="note"><b>Size düşen</b><p>Belediyeden aldığınız imar durum belgesini, tapu kaydını veya ruhsatı PDF olarak klasöre koyup "ekteki belgeyi kullan" demek sonucu en çok iyileştiren adımdır. Resmî belge, web'deki her kaynaktan önce gelir.</p></div>
+    </section>
+
+    <!-- 07 -->
+    <section id="imar">
+      <div class="sec-head"><span class="label"><b>07</b> · Okuma rehberi</span><h2>İmar hesabı nasıl okunur</h2></div>
+      <p>İmar analizi raporu her değeri kaynağıyla birlikte verir. Aşağıdaki çizim, raporu okumayı kolaylaştırmak için <strong>tamamen örnek</strong> değerlerle hazırlandı; gerçek değerler her zaman imar durum belgesinden ve plan notlarından gelir.</p>
+      <div class="twocol">
+        <figure class="fig">
+          <svg viewBox="0 0 300 380" width="100%" style="max-width:340px;justify-self:center" role="img" aria-label="Örnek parsel planı: 20 m x 30 m parsel, çekme mesafeleri ve 225 m² taban alanı">
+            <rect x="50" y="20" width="200" height="300" fill="var(--grid)" stroke="var(--ink)" stroke-width="2"/>
+            <rect x="80" y="50" width="140" height="220" fill="none" stroke="var(--blue)" stroke-width="1.5" stroke-dasharray="5 4"/>
+            <rect x="87.5" y="70" width="125" height="180" fill="var(--red-soft)" stroke="var(--red)" stroke-width="2"/>
+            <text x="150" y="155" text-anchor="middle" font-size="13" font-weight="700" style="fill:var(--red)">Taban alanı</text>
+            <text x="150" y="173" text-anchor="middle" font-size="12" class="mono" style="fill:var(--red)">12,5 × 18 = 225 m²</text>
+            <rect x="0" y="330" width="300" height="34" fill="var(--blue-soft)"/>
+            <text x="150" y="352" text-anchor="middle" font-size="12" style="fill:var(--blue)">YOL</text>
+            <g font-size="11" class="mono" style="fill:var(--muted)">
+              <text x="150" y="14" text-anchor="middle">20,00 m</text>
+              <text x="38" y="170" text-anchor="middle" transform="rotate(-90 38 170)">30,00 m</text>
+              <text x="150" y="296" text-anchor="middle" style="fill:var(--blue)">ön bahçe 5 m</text>
+              <text x="150" y="40" text-anchor="middle" style="fill:var(--blue)">arka 3 m</text>
+              <text x="65" y="162" text-anchor="middle" transform="rotate(-90 65 162)" style="fill:var(--blue)">yan 3 m</text>
+              <text x="235" y="162" text-anchor="middle" transform="rotate(90 235 162)" style="fill:var(--blue)">yan 3 m</text>
+            </g>
+          </svg>
+          <figcaption>Şekil 4a — Plan. Kesikli mavi çizgi çekme mesafeleri sonrası yapılaşabilir alandır (14 × 22 = 308 m²). TAKS bu alanı ayrıca sınırlar.</figcaption>
+        </figure>
+        <figure class="fig">
+          <svg viewBox="0 0 300 400" width="100%" style="max-width:340px;justify-self:center" role="img" aria-label="Örnek kesit: 4 kat, her biri 3 metre, Hmax 12,50 metre">
+            <line x1="20" y1="370" x2="290" y2="370" stroke="var(--ink)" stroke-width="2"/>
+            <g fill="var(--red-soft)" stroke="var(--red)" stroke-width="1.5">
+              <rect x="80" y="290" width="125" height="80"/>
+              <rect x="80" y="210" width="125" height="80"/>
+              <rect x="80" y="130" width="125" height="80"/>
+              <rect x="80" y="50" width="125" height="80"/>
+            </g>
+            <line x1="30" y1="36.7" x2="285" y2="36.7" stroke="var(--blue)" stroke-width="1.5" stroke-dasharray="6 4"/>
+            <g text-anchor="middle" font-size="12" class="mono" style="fill:var(--red)">
+              <text x="142.5" y="334">Zemin kat</text>
+              <text x="142.5" y="254">1. kat</text>
+              <text x="142.5" y="174">2. kat</text>
+              <text x="142.5" y="94">3. kat</text>
+            </g>
+            <g font-size="11" class="mono" style="fill:var(--muted)">
+              <text x="215" y="374">± 0,00</text>
+              <text x="215" y="294">+ 3,00</text>
+              <text x="215" y="214">+ 6,00</text>
+              <text x="215" y="134">+ 9,00</text>
+              <text x="215" y="54">+ 12,00</text>
+              <text x="20" y="390" style="fill:var(--ink)">tabii zemin</text>
+              <text x="30" y="28" style="fill:var(--blue)">Hmax + 12,50</text>
+            </g>
+          </svg>
+          <figcaption>Şekil 4b — Kesit. 4 kat × 3,00 m = 12,00 m; kesikli çizgi örnek Hmax (12,50 m). Ölçek: 1 m = 26,7 birim.</figcaption>
+        </figure>
+      </div>
+      <figure class="fig" style="padding:0">
+        <div class="fig-scroll">
+        <table style="width:100%;border-collapse:collapse;font-size:.9rem;min-width:560px">
+          <thead><tr style="text-align:left;border-bottom:1.5px solid var(--ink)"><th style="padding:10px 14px">Koşul</th><th style="padding:10px 14px">Örnek değer</th><th style="padding:10px 14px">Hesap</th><th style="padding:10px 14px">Raporda kaynak olarak</th></tr></thead>
+          <tbody style="font-variant-numeric:tabular-nums">
+            <tr style="border-bottom:1px solid var(--line)"><td style="padding:9px 14px">Net parsel alanı</td><td style="padding:9px 14px"><code>600,00 m²</code></td><td style="padding:9px 14px">20 × 30</td><td style="padding:9px 14px;color:var(--muted)">TKGM / aplikasyon</td></tr>
+            <tr style="border-bottom:1px solid var(--line)"><td style="padding:9px 14px">TAKS</td><td style="padding:9px 14px"><code>0,40</code></td><td style="padding:9px 14px">600 × 0,40 = <b>240 m²</b> azami taban</td><td style="padding:9px 14px;color:var(--muted)">İmar durumu / plan notu</td></tr>
+            <tr style="border-bottom:1px solid var(--line)"><td style="padding:9px 14px">Emsal (KAKS)</td><td style="padding:9px 14px"><code>1,50</code></td><td style="padding:9px 14px">600 × 1,50 = <b>900 m²</b> emsal alanı</td><td style="padding:9px 14px;color:var(--muted)">İmar durumu / plan notu</td></tr>
+            <tr style="border-bottom:1px solid var(--line)"><td style="padding:9px 14px">Kat dağılımı</td><td style="padding:9px 14px"><code>4 kat</code></td><td style="padding:9px 14px">900 ÷ 4 = 225 m² ≤ 240 m²</td><td style="padding:9px 14px;color:var(--muted)">Tasarım kararı</td></tr>
+            <tr><td style="padding:9px 14px">Hmax</td><td style="padding:9px 14px"><code>12,50 m</code></td><td style="padding:9px 14px">4 × 3,00 = 12,00 m ≤ 12,50 m</td><td style="padding:9px 14px;color:var(--muted)">İmar durumu / PAİY</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </figure>
+      <h3>Kaynak önceliği</h3>
+      <p>Beceriler kaynakları bu sırayla dikkate alır. Üstteki belge alttakiyle çelişirse, hangisinin geçerli olduğu asıl metinden doğrulanır.</p>
+      <div class="hier" role="list">
+        <div role="listitem"><b>İmar durum belgesi</b><small>belediyeden alınan resmî belge</small></div>
+        <div role="listitem"><b>Uygulama imar planı ve plan notları</b><small>1/1000 · e-Plan, belediye e-İmar</small></div>
+        <div role="listitem"><b>Yerel imar yönetmeliği</b><small>büyükşehir / ilçe belediyesi</small></div>
+        <div role="listitem"><b>Planlı Alanlar İmar Yönetmeliği</b><small>plan notunda hüküm yoksa</small></div>
+        <div role="listitem"><b>3194 sayılı İmar Kanunu</b><small>ve Otopark, Yangın, Deprem yönetmelikleri</small></div>
+      </div>
+    </section>
+
+    <!-- 08 -->
+    <section id="proje">
+      <div class="sec-head"><span class="label"><b>08</b> · Hafıza</span><h2>Proje klasörü</h2></div>
+      <p>Arch Studio her şeyi sizin bilgisayarınızda, düz dosyalarda tutar. Bir sonraki oturumda Claude buradan devam eder. Dosyaları kendiniz de açıp düzenleyebilirsiniz.</p>
+      <div class="twocol">
+<pre class="tree">Moda-Konut/
+├── PROJECT.md      <span class="c"># olgular: ada/parsel, işveren, kararlar</span>
+├── DOCUMENTS.csv   <span class="c"># gelen/giden belge kaydı (receive)</span>
+├── TASKS.csv       <span class="c"># görevler (tasklist)</span>
+├── TIME.csv        <span class="c"># onayladığınız süreler (timetracker)</span>
+├── INVOICES.csv    <span class="c"># faturalar, TL (invoice)</span>
+├── proposals/      <span class="c"># teklifler (proposal)</span>
+├── agreement/      <span class="c"># sözleşme kapsamı (agreement)</span>
+└── imar-analizi-istanbul-kadikoy-123-45.md</pre>
+        <div style="display:grid;gap:10px;align-content:start">
+          <h3>Claude kendiliğinden yazmaz</h3>
+          <p>Bir araştırmada yeni bir bilgi bulduğunda (ör. imar durumu tarihi) bunu <code>PROJECT.md</code>'ye eklemeyi <em>önerir</em>; siz onaylarsanız yazar. Süreler de yalnızca sizin onayladığınız miktarlarla kaydedilir.</p>
+          <div class="cmd chat"><code>Bunu hatırla: işveren 2 bodrum kat istiyor, karar tarihi bugün.</code><button class="copy" type="button">KOPYALA</button></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09 -->
+    <section id="istekler">
+      <div class="sec-head"><span class="label"><b>09</b> · Kopyala, yapıştır</span><h2>Hazır istekler</h2></div>
+      <div class="prompts">
+        <div class="pgroup"><span class="label">Proje başlangıcı</span>
+          <div class="cmd chat"><code>Yeni proje aç: Moda Konut, Kadıköy 123 ada 45 parsel, işveren Ayşe Yılmaz.</code><button class="copy" type="button">KOPYALA</button></div>
+          <div class="cmd chat"><code>Bu proje için Mimarlar Odası esaslarına göre avan + uygulama projesi teklifi hazırla.</code><button class="copy" type="button">KOPYALA</button></div>
+        </div>
+        <div class="pgroup"><span class="label">Arsa ve mevzuat</span>
+          <div class="cmd chat"><code>450 m² restoran, İzmir. Yangın Yönetmeliği'ne göre kullanıcı yükü ve çıkış sayısı?</code><button class="copy" type="button">KOPYALA</button></div>
+          <div class="cmd chat"><code>Bu parselin deprem tehlike parametrelerini AFAD haritasından çıkar.</code><button class="copy" type="button">KOPYALA</button></div>
+        </div>
+        <div class="pgroup"><span class="label">Şartname ve malzeme</span>
+          <div class="cmd chat"><code>Islak hacimler için mahal listesi ve özel teknik şartname taslağı yaz.</code><button class="copy" type="button">KOPYALA</button></div>
+          <div class="cmd chat"><code>Türkiye'de üretilen, EPD'si olan 3 seramik kaplama bul ve GWP karşılaştır.</code><button class="copy" type="button">KOPYALA</button></div>
+        </div>
+        <div class="pgroup"><span class="label">Ofis işleri</span>
+          <div class="cmd chat"><code>Ekteki toplantı notlarından tutanak çıkar, kararları ve aksiyonları ayır.</code><button class="copy" type="button">KOPYALA</button></div>
+          <div class="cmd chat"><code>Bu haftanın şantiye gözlemlerinden saha ziyaret raporu hazırla.</code><button class="copy" type="button">KOPYALA</button></div>
+        </div>
+        <div class="pgroup"><span class="label">Sunum</span>
+          <div class="cmd chat"><code>İmar analizinden işverene 8 slaytlık Türkçe sunum hazırla.</code><button class="copy" type="button">KOPYALA</button></div>
+          <div class="cmd chat"><code>Ege taşı ve zeytin tonlarında bir renk paleti oluştur.</code><button class="copy" type="button">KOPYALA</button></div>
+        </div>
+        <div class="pgroup"><span class="label">Kendi becerin</span>
+          <div class="cmd chat"><code>/as:skill-maker ofisimizin hakediş kontrol prosedürünü beceriye dönüştür.</code><button class="copy" type="button">KOPYALA</button></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 -->
+    <section id="bul">
+      <div class="sec-head"><span class="label"><b>10</b> · Arama</span><h2>Tüm beceriler</h2></div>
+      <div class="finder">
+        <label for="q" class="label">Beceri ara (ad veya açıklama)</label>
+        <input id="q" type="search" placeholder="ör. imar, EPD, fatura, sunum" autocomplete="off">
+        <div class="chips" id="chips" role="group" aria-label="Alan filtresi"></div>
+        <span class="count" id="count" aria-live="polite"></span>
+        <div class="list" id="list"></div>
+      </div>
+    </section>
+
+    <!-- 11 -->
+    <section id="sorun">
+      <div class="sec-head"><span class="label"><b>11</b> · Sık karşılaşılanlar</span><h2>Sorun giderme</h2></div>
+      <div>
+        <details><summary><code>zsh: command not found: claude</code></summary><div>
+          <p>Claude kurulu ama terminal yerini bilmiyor. 02 · Kurulum'daki 2. adımı çalıştırın, ardından terminali kapatıp açın.</p>
+          <div class="cmd"><code>echo 'export PATH="$HOME/.local/bin:$PATH"' &gt;&gt; ~/.zshrc &amp;&amp; source ~/.zshrc</code><button class="copy" type="button">KOPYALA</button></div>
+        </div></details>
+        <details><summary>"Marketplace already exists" veya eski İngilizce açıklamalar görünüyor</summary><div>
+          <p>Orijinal eklenti kurulu kalmış. Önce kaldırın, sonra 3. ve 4. adımları tekrarlayın.</p>
+          <div class="cmd"><code>claude plugin uninstall as@skills-for-architects</code><button class="copy" type="button">KOPYALA</button></div>
+          <div class="cmd"><code>claude plugin marketplace remove skills-for-architects</code><button class="copy" type="button">KOPYALA</button></div>
+        </div></details>
+        <details><summary>Beceriler sohbette görünmüyor</summary><div>
+          <p>Eklentiler oturum başlarken yüklenir. Claude'dan çıkıp (<kbd>Ctrl</kbd>+<kbd>C</kbd> iki kez) <code>claude</code> ile yeniden başlatın.</p>
+        </div></details>
+        <details><summary>Raporda "erişilemedi" yazıyor</summary><div>
+          <p>Bazı resmî siteler (e-Devlet, Web Tapu, belediye e-İmar) giriş ister veya otomatik erişimi engeller. Belgeyi kendiniz indirip proje klasörüne koyun ve "ekteki imar durum belgesini kullan" deyin.</p>
+        </div></details>
+        <details><summary>Eklentiyi güncellemek</summary><div>
+          <p>Depoya yeni sürüm yüklendiğinde şu komutla alırsınız. Claude'un "yeni sürüm var" uyarısı orijinal (İngilizce) projeye aittir; o sürüm Türkiye uyarlamasını içermez.</p>
+          <div class="cmd"><code>claude plugin marketplace update skills-for-architects</code><button class="copy" type="button">KOPYALA</button></div>
+        </div></details>
+        <details><summary>Bir beceri hatalı çalıştı</summary><div>
+          <p><code>/as:studio-feedback</code> yazın; Claude sizin göreceğiniz bir hata raporu hazırlar, siz onaylamadan hiçbir yere göndermez.</p>
+        </div></details>
+      </div>
+    </section>
+
+    <!-- 12 -->
+    <section id="sinir">
+      <div class="sec-head"><span class="label"><b>12</b> · Önemli</span><h2>Sınırlamalar</h2></div>
+      <div class="note">
+        <b>Mesleki onay yerine geçmez</b>
+        <p>İmar, yangın, deprem ve şartname çıktıları ön planlama amaçlıdır. Her rapor şu blokla biter ve yetkili bir mimar veya mühendis tarafından doğrulanmalıdır:</p>
+        <p style="font-style:italic">"Bu, ön planlama amacıyla yapay zekâ tarafından üretilmiş bir analizdir. Tüm bulgular; tasarım, ruhsat veya resmî başvurularda kullanılmadan önce yetkili bir mimar veya mühendis tarafından doğrulanmalıdır."</p>
+      </div>
+      <div class="twocol">
+        <div style="display:grid;gap:6px"><h3>Rakam ezberlemez</h3><p>Emsal, kullanıcı yükü katsayısı, KDV oranı ve birim maliyetler beceriye gömülü değildir; her seferinde güncel resmî kaynaktan okunur. Kaynak yoksa değer "çözümlenmemiş" kalır.</p></div>
+        <div style="display:grid;gap:6px"><h3>Verileriniz sizde kalır</h3><p>Proje dosyaları bilgisayarınızda durur. Tapu ve kişisel verilerde KVKK ilkelerine uyulur; bu bilgiler yalnızca sizin verdiğiniz belgelerden okunur.</p></div>
+        <div style="display:grid;gap:6px"><h3>Belediyeye göre değişir</h3><p>Her belediyenin imar yönetmeliği ve plan notları farklıdır. İlk raporlarınızı resmî imar durum belgesiyle karşılaştırmanız önerilir.</p></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <span>Arch Studio, ALPA'nın MIT lisanslı açık kaynak projesidir. Bu kılavuz Türkiye uyarlaması (aligokten/skills-for-architects-tr) içindir; ALPA tarafından yayımlanmamıştır.</span>
+    <span>İmar hesabı çizimindeki değerler örnektir ve hiçbir parseli temsil etmez.</span>
+  </footer>
+</div>
+
+<script>
+const SKILLS = [["mulk-raporu-tr", "Türkiye", "Parsel, imar, tescil, yapı kayıtları ve deprem tehlikesini birleştiren ön inceleme raporu"], ["imar-analizi-tr", "Türkiye", "İmar durumu, emsal/KAKS, TAKS, Hmax, çekme mesafeleri, otopark ve plan notları"], ["parsel-sorgu-tr", "Türkiye", "TKGM Parsel Sorgu ile ada/parsel kimliği, yüzölçümü, nitelik ve geometri"], ["tescil-kontrol-tr", "Türkiye", "Tescilli kültür varlığı ve sit alanı kontrolü (2863, Koruma Bölge Kurulları)"], ["yapi-kayit-tr", "Türkiye", "Ruhsat, iskân, yapı denetim, yapı kayıt belgesi ve riskli yapı geçmişi"], ["mimarlik-bilgisi-tr", "Türkiye", "Türkiye mimarlık meslek pratiği: proje aşamaları, roller, Mimarlar Odası, yapı sınıfları"], ["norma", "Ofis işleri", "Mimari niyeti, kapsamı ve devirleri mevcut beceriler üzerinden koordine eder"], ["norma-support", "Ofis işleri", "Arch Studio başlangıç, erişim, hafıza ve kanıta dayalı sorun giderme"], ["studio", "Ofis işleri", "Ofisi kurar ve inceler, projeleri kaydeder, genel istekleri Norma'ya iletir"], ["tool-catalog", "Ofis işleri", "Mevcut becerileri ve ajanları gösterir"], ["learn", "Ofis işleri", "Mimarlar için Codex ve Claude Code'a rehberli, devam ettirilebilir giriş (Codex'te `$learn`)"], ["skill-maker", "Ofis işleri", "Yönetişimli ofis, proje veya katalog becerileri oluşturur ya da günceller"], ["studio-feedback", "Ofis işleri", "Otomatik gönderim olmadan gözden geçirilmiş hata raporu veya özellik isteği hazırlar"], ["project", "Proje kayıtları", "Proje başlatır, kaynaklı olguları tutar ve kalıcı kararları yönetir"], ["receive", "Proje kayıtları", "Gelen ve üretilen belgeleri doğrulanmış kimlik ve geçmişle DOCUMENTS.csv'ye kaydeder"], ["workplan", "Proje kayıtları", "İşe başlamadan önce depo, operasyon veya yapı işlerini planlar"], ["meeting-minutes", "Proje kayıtları", "Kaynak bağlantılı toplantı tutanakları"], ["site-visit-report", "Proje kayıtları", "Saha gözlemleri, beyanlar, sınırlamalar ve takip adayları"], ["tasklist", "Proje kayıtları", "Proje görevleri veya ofis portföy kaydı"], ["timetracker", "Proje kayıtları", "Etkinliği yeniden oluşturur ve yalnızca onaylanan süreyi ekler"], ["proposal", "Proje kayıtları", "Korumalı verilmiş koşullarla proje teklifleri (Mimarlar Odası en az bedel, TL/KDV)"], ["agreement", "Proje kayıtları", "Kaynaklı sözleşme bağlamı ve işin kapsamla karşılaştırılması"], ["invoice", "Proje kayıtları", "Kullanıcı talimatıyla fatura kaydı, tavan uyarıları ve boşluk tespiti (TL, e-Fatura)"], ["architecture-knowledge", "Mesleki pratik bilgisi", "ABD pratiği terimleri (CD set, AIA, CSI); Türkiye için `mimarlik-bilgisi-tr`"], ["nyc-landmarks", "Ön inceleme — New York (yalnızca NYC)", "LPC landmark ve tarihî bölge kontrolü"], ["nyc-dob-permits", "Ön inceleme — New York (yalnızca NYC)", "DOB ruhsat ve başvuru geçmişi"], ["nyc-dob-violations", "Ön inceleme — New York (yalnızca NYC)", "DOB ve ECB ihlalleri"], ["nyc-acris", "Ön inceleme — New York (yalnızca NYC)", "ACRIS mülk işlem kayıtları"], ["nyc-hpd", "Ön inceleme — New York (yalnızca NYC)", "HPD ihlalleri, şikâyetler ve kayıt"], ["nyc-bsa", "Ön inceleme — New York (yalnızca NYC)", "BSA muafiyetleri ve özel izinler"], ["nyc-property-report", "Ön inceleme — New York (yalnızca NYC)", "Birleşik NYC mülk raporu"], ["environmental-analysis", "Arsa ve imar", "İklim, rüzgâr, güneş, sel, deprem (AFAD) ve zemin araştırması"], ["mobility-analysis", "Arsa ve imar", "Toplu taşıma, yürünebilirlik, bisiklet ve yaya altyapısı"], ["demographics-analysis", "Arsa ve imar", "Nüfus, gelir, yaş, konut ve istihdam (TÜİK)"], ["site-history", "Arsa ve imar", "Mahalle bağlamı, tescilli yapılar, hareketlilik ve planlanan gelişmeler"], ["zoning-analysis-nyc", "Arsa ve imar", "NYC FAR, yükseklik, setback ve kullanım analizi (Türkiye için `imar-analizi-tr`)"], ["zoning-envelope", "Arsa ve imar", "Bağımsız etkileşimli 3B imar zarfı (Türkiye ve NYC)"], ["workplace-programmer", "Programlama ve şartnameler", "Personel sayısı ve çalışma biçiminden ofis alan programı"], ["occupancy-calculator", "Programlama ve şartnameler", "Kullanıcı yükü, kaçış ve çıkışlar (Türkiye: Yangın Yönetmeliği; ABD: IBC)"], ["spec-writer", "Programlama ve şartnameler", "Mahal listesi ve teknik şartname bölümleri, inceleme işaretleriyle (TS/TS EN veya CSI)"], ["epd-parser", "Sürdürülebilirlik", "EPD PDF'lerinden çevresel veri çıkarır"], ["epd-research", "Sürdürülebilirlik", "Malzeme veya kategoriye göre EPD kayıtlarını araştırır (EPD Türkiye dahil)"], ["epd-compare", "Sürdürülebilirlik", "Çevresel etkileri ve LEED uygunluğunu karşılaştırır"], ["epd-to-spec", "Sürdürülebilirlik", "Şartname için EPD teslim gereklilikleri ve kaynaklı GWP sınırları"], ["master-schedule", "FF&E ve malzemeler", "Listeleri benimser/revize eder/uzlaştırır; kütüphane bakımı product-library'de kalır"], ["product-library", "FF&E ve malzemeler", "Önizleme, korumalı kayıt ve yeniden deneme kurtarmasıyla CSV ürün kütüphanesi"], ["product-url-clip", "FF&E ve malzemeler", "Verilen URL kanıtını saklar ve kayıt geçmişini inceler; ürün benimsemez"], ["product-research", "FF&E ve malzemeler", "Tasarım brifinden ürün bulur"], ["product-spec-bulk-fetch", "FF&E ve malzemeler", "Ürün URL'lerinden toplu teknik özellik çıkarır"], ["product-spec-pdf-parser", "FF&E ve malzemeler", "Katalog, fiyat listesi ve föylerden teknik özellik çıkarır"], ["drawing-quantity-extract", "FF&E ve malzemeler", "Çizimlerden konum kanıtlı adet sayımı ve kapsam boşlukları"], ["schedule-quantity-reconcile", "FF&E ve malzemeler", "Eşleşen kapsamlarda kaynaklı adetleri kayıt değiştirmeden karşılaştırır"], ["lighting-report-extract", "FF&E ve malzemeler", "Aydınlatma raporu sonuçlarını kesin yüzey ve sayfa kimlikleriyle çıkarır"], ["product-data-cleanup", "FF&E ve malzemeler", "Ürün kategorisi, ölçü, malzeme ve dili normalize eder"], ["product-data-import", "FF&E ve malzemeler", "Ürün listelerini biçimli FF&E listelerine dönüştürür"], ["product-enrich", "FF&E ve malzemeler", "Ürünleri kategori, renk, malzeme ve stil ile etiketler"], ["product-match", "FF&E ve malzemeler", "Görsel, ad veya tanımdan benzer ürün bulur"], ["product-pair", "FF&E ve malzemeler", "Tamamlayıcı ürün önerir"], ["product-image-processor", "FF&E ve malzemeler", "Ürün görsellerini indirir, boyutlandırır ve arka planını kaldırır"], ["product-audit", "FF&E ve malzemeler", "Ürün kanıtını, tutarsızlıkları ve bilinmeyenleri denetler"], ["product-cut-sheet", "FF&E ve malzemeler", "Kaynağa sadık tek ürün föyü veya FF&E girdisi"], ["ffe-spec-book", "FF&E ve malzemeler", "Kalem kalem teslim kaydıyla sıralı FF&E şartname kitabı"], ["csv-to-sif", "FF&E ve malzemeler", "Kanonik ürün CSV'sini SIF'e dönüştürür"], ["sif-to-csv", "FF&E ve malzemeler", "SIF'i kanonik ürün CSV şemasına dönüştürür"], ["slide-deck-generator", "Sunumlar", "Bağımsız HTML sunumlar"], ["color-palette-generator", "Sunumlar", "WCAG kontrast kontrollü renk paletleri"], ["resize-images", "Sunumlar", "Web, sosyal medya, sunum ve baskı için görsel boyutlandırma"]];
+const CAT_SHORT = {
+  "Türkiye": "Türkiye",
+  "Ofis işleri": "Ofis işleri",
+  "Proje kayıtları": "Proje kayıtları",
+  "Mesleki pratik bilgisi": "Mesleki bilgi",
+  "Ön inceleme — New York (yalnızca NYC)": "Yalnızca NYC",
+  "Arsa ve imar": "Arsa ve imar",
+  "Programlama ve şartnameler": "Program / şartname",
+  "Sürdürülebilirlik": "Sürdürülebilirlik",
+  "FF&E ve malzemeler": "FF&E ve malzeme",
+  "Sunumlar": "Sunum"
+};
+
+// Bars (scale 0–20)
+(function () {
+  const counts = {};
+  SKILLS.forEach(s => { counts[s[1]] = (counts[s[1]] || 0) + 1; });
+  const order = Object.keys(CAT_SHORT);
+  const el = document.getElementById("bars");
+  order.forEach(c => {
+    const n = counts[c] || 0;
+    const row = document.createElement("div");
+    row.className = "bar-row";
+    const nyc = c.includes("NYC");
+    row.innerHTML = `<span style="${nyc ? "color:var(--muted)" : ""}">${CAT_SHORT[c]}</span>
+      <div class="bar-track"><div class="bar-fill${c === "Türkiye" ? " tr" : ""}" style="width:${(n / 20) * 100}%;${nyc ? "opacity:.35" : ""}"></div></div>
+      <span class="bar-n">${n}</span>`;
+    el.appendChild(row);
+  });
+})();
+
+// Timeline diagram (workflow)
+(function () {
+  const steps = [
+    ["parsel-sorgu-tr", "Parsel kimliği"],
+    ["imar-analizi-tr", "İmar koşulları"],
+    ["tescil-kontrol-tr", "Tescil / sit"],
+    ["yapi-kayit-tr", "Yapı kayıtları"],
+    ["environmental-analysis", "Deprem, zemin"],
+    ["mulk-raporu-tr", "Birleşik rapor"],
+    ["zoning-envelope", "3B imar zarfı"]
+  ];
+  const g = document.getElementById("tlnodes");
+  const ns = "http://www.w3.org/2000/svg";
+  const x0 = 70, dx = 136;
+  steps.forEach((s, i) => {
+    const x = x0 + i * dx;
+    const last = i === steps.length - 1;
+    const c = document.createElementNS(ns, "circle");
+    c.setAttribute("cx", x); c.setAttribute("cy", 70); c.setAttribute("r", 16);
+    c.setAttribute("fill", last ? "var(--blue)" : (i === 5 ? "var(--red)" : "var(--sheet)"));
+    c.setAttribute("stroke", last ? "var(--blue)" : "var(--red)"); c.setAttribute("stroke-width", "2");
+    g.appendChild(c);
+    const t = document.createElementNS(ns, "text");
+    t.setAttribute("x", x); t.setAttribute("y", 75); t.setAttribute("text-anchor", "middle");
+    t.setAttribute("font-size", "13"); t.setAttribute("font-weight", "700");
+    t.setAttribute("style", `fill:${(last || i === 5) ? "var(--sheet)" : "var(--red)"}`);
+    t.textContent = i + 1; g.appendChild(t);
+    const a = document.createElementNS(ns, "text");
+    a.setAttribute("x", x); a.setAttribute("y", 118); a.setAttribute("text-anchor", "middle");
+    a.setAttribute("font-size", "14"); a.setAttribute("font-weight", "600");
+    a.textContent = s[1]; g.appendChild(a);
+    const b = document.createElementNS(ns, "text");
+    b.setAttribute("x", x); b.setAttribute("y", 140); b.setAttribute("text-anchor", "middle");
+    b.setAttribute("font-size", "11"); b.setAttribute("class", "mono");
+    b.setAttribute("style", "fill:var(--muted)");
+    b.textContent = s[0]; g.appendChild(b);
+  });
+  const note = document.createElementNS(ns, "text");
+  note.setAttribute("x", 40); note.setAttribute("y", 30); note.setAttribute("font-size", "12");
+  note.setAttribute("style", "fill:var(--muted)");
+  note.textContent = "1–5 bilgi toplar · 6 birleştirir · 7 isteğe bağlı görselleştirme";
+  g.appendChild(note);
+})();
+
+// Finder
+(function () {
+  const q = document.getElementById("q"), list = document.getElementById("list"),
+        chips = document.getElementById("chips"), count = document.getElementById("count");
+  let active = "Tümü";
+  const cats = ["Tümü", ...Object.keys(CAT_SHORT)];
+  cats.forEach(c => {
+    const b = document.createElement("button");
+    b.type = "button"; b.textContent = c === "Tümü" ? "Tümü" : CAT_SHORT[c];
+    b.setAttribute("aria-pressed", c === active ? "true" : "false");
+    b.addEventListener("click", () => {
+      active = c;
+      chips.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", "false"));
+      b.setAttribute("aria-pressed", "true");
+      render();
+    });
+    chips.appendChild(b);
+  });
+  const norm = s => s.toLocaleLowerCase("tr");
+  function render() {
+    const term = norm(q.value.trim());
+    const rows = SKILLS.filter(s => (active === "Tümü" || s[1] === active) &&
+      (!term || norm(s[0] + " " + s[2]).includes(term)));
+    list.innerHTML = "";
+    rows.forEach(s => {
+      const r = document.createElement("div");
+      r.className = "list-row" + (s[1] === "Türkiye" ? " tr" : "");
+      const code = document.createElement("code"); code.textContent = "/as:" + s[0];
+      const d = document.createElement("span"); d.textContent = s[2].replace(/`/g, "");
+      const c = document.createElement("span"); c.className = "cat"; c.textContent = CAT_SHORT[s[1]];
+      r.append(code, d, c); list.appendChild(r);
+    });
+    count.textContent = rows.length + " / " + SKILLS.length + " beceri";
+  }
+  q.addEventListener("input", render);
+  render();
+})();
+
+// Copy buttons
+document.addEventListener("click", e => {
+  const b = e.target.closest("button.copy");
+  if (!b) return;
+  const code = b.parentElement.querySelector("code");
+  const text = code.textContent;
+  const done = () => { b.textContent = "KOPYALANDI"; setTimeout(() => b.textContent = "KOPYALA", 1600); };
+  const fallback = () => {
+    const r = document.createRange(); r.selectNodeContents(code);
+    const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+    b.textContent = "SEÇİLDİ"; setTimeout(() => b.textContent = "KOPYALA", 1600);
+  };
+  try { navigator.clipboard.writeText(text).then(done, fallback); } catch (err) { fallback(); }
+});
+</script>
