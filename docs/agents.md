@@ -1,6 +1,6 @@
 # Specialist profiles
 
-Arch Studio retains eight specialist profiles and one optional Norma worker. They help an available host coordinate
+Arch Studio retains seven specialist profiles and one optional Norma worker. They help an available host coordinate
 multi-step work using the same owning skills. A profile is not an independent service, model,
 background agent or permission grant. Native registration and delegation depend on the host
 and must be observed; package presence alone is not proof. The Codex package does not register these
@@ -16,7 +16,6 @@ follows the relevant skills directly. Direct skill calls and existing profile na
 | Agent | Domain | Skills it orchestrates |
 |-------|--------|----------------------|
 | [site-planner](../agents/site-planner.md) | Site Planning | environmental-analysis, mobility-analysis, demographics-analysis, site-history |
-| [nyc-zoning-expert](../agents/nyc-zoning-expert.md) | Due Diligence + Zoning | nyc-landmarks, nyc-dob-permits, nyc-dob-violations, nyc-acris, nyc-hpd, nyc-bsa, nyc-property-report, zoning-analysis-nyc, zoning-envelope |
 | [turkiye-imar-uzmani](../agents/turkiye-imar-uzmani.md) | Türkiye Ön İnceleme + İmar | parsel-sorgu-tr, imar-analizi-tr, tescil-kontrol-tr, yapi-kayit-tr, mulk-raporu-tr, zoning-envelope |
 | [workplace-strategist](../agents/workplace-strategist.md) | Programming | occupancy-calculator, workplace-programmer |
 | [sustainability-specialist](../agents/sustainability-specialist.md) | Sustainability | epd-research, epd-compare, epd-parser, epd-to-spec |

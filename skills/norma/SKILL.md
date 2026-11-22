@@ -46,4 +46,4 @@ Distinguish selection, instruction retrieval, execution, checks and completed ou
 
 ## Türkiye
 
-Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy. Arsa Türkiye'deyse NYC becerilerini kullanma; `imar-analizi-tr`, `parsel-sorgu-tr`, `tescil-kontrol-tr`, `yapi-kayit-tr`, `mulk-raporu-tr` ve `mimarlik-bilgisi-tr` becerilerine yönlendir.
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy. `imar-analizi-tr`, `parsel-sorgu-tr`, `tescil-kontrol-tr`, `yapi-kayit-tr`, `mulk-raporu-tr` ve `mimarlik-bilgisi-tr` becerilerine yönlendir.

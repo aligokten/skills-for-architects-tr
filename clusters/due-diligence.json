@@ -3,15 +3,12 @@
   "id": "cluster:due-diligence",
   "name": "Due Diligence",
   "maintainer": "Arch Studio maintainers",
-  "scope": "Existing NYC property records and sourced site context.",
+  "scope": "Türkiye'deki taşınmazlar için kaynaklı ön inceleme: parsel, tescil/sit, yapı kayıtları ve çevre bağlamı.",
   "members": [
-    "skill:nyc-property-report",
-    "skill:nyc-acris",
-    "skill:nyc-bsa",
-    "skill:nyc-dob-permits",
-    "skill:nyc-dob-violations",
-    "skill:nyc-hpd",
-    "skill:nyc-landmarks",
+    "skill:mulk-raporu-tr",
+    "skill:parsel-sorgu-tr",
+    "skill:tescil-kontrol-tr",
+    "skill:yapi-kayit-tr",
     "skill:site-history",
     "studio:workspace-contract",
     "knowledge:sources",
@@ -20,9 +17,9 @@
   "dependencies": [],
   "coverage": {
     "jurisdictions": [
-      "jurisdiction:us-ny-nyc"
+      "jurisdiction:tr"
     ],
-    "limitations": "Selected NYC agency routes are indexed as original-source metadata. Procedures cover NYC property records; no complete due-diligence coverage, current factual determination or validated cluster workflow is claimed.",
+    "limitations": "Türk resmî kaynakları yalnızca gezinme üst verisi olarak dizinlenmiştir. Prosedürler Türkiye'deki taşınmaz kayıtlarını kapsar; belediye bazında veri erişimi, güncel mevzuat metni veya doğrulanmış küme iş akışı iddia edilmez.",
     "sources_indexed": true,
     "procedures_available": true,
     "execution_implemented": false,

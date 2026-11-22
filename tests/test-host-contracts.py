@@ -49,7 +49,7 @@ class Contracts(unittest.TestCase):
                 host.validate(document, ROOT)
 
     def test_missing_component(self):
-        self.document['components'].pop('skill:architecture-knowledge')
+        self.document['components'].pop('skill:mimarlik-bilgisi-tr')
         with self.assertRaises(ValueError):
             host.validate(self.document, ROOT)
 
@@ -61,7 +61,7 @@ class Contracts(unittest.TestCase):
                 host.validate(document, ROOT)
 
     def test_knowledge_does_not_require_workspace(self):
-        mode = host.select(self.document, 'skill:architecture-knowledge', 'answer')
+        mode = host.select(self.document, 'skill:mimarlik-bilgisi-tr', 'answer')
         self.assertEqual(mode['required'], [])
 
     def test_native_render_requires_actual_readback_without_mandatory_process(self):

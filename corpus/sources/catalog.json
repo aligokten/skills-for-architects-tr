@@ -361,9 +361,7 @@
         ],
         "max_bytes": 262144
       },
-      "existing_skills": [
-        "zoning-analysis-nyc"
-      ],
+      "existing_skills": [],
       "topics": [
         "code",
         "nyc",
@@ -393,15 +391,7 @@
         ],
         "max_bytes": 262144
       },
-      "existing_skills": [
-        "nyc-acris",
-        "nyc-bsa",
-        "nyc-dob-permits",
-        "nyc-dob-violations",
-        "nyc-hpd",
-        "nyc-landmarks",
-        "zoning-analysis-nyc"
-      ],
+      "existing_skills": [],
       "topics": [
         "code",
         "dataset",
@@ -442,9 +432,7 @@
       "access": "unknown",
       "adapter": null,
       "identity": null,
-      "existing_skills": [
-        "architecture-knowledge"
-      ],
+      "existing_skills": [],
       "topics": [
         "professional-practice",
         "architecture-knowledge"
@@ -470,9 +458,7 @@
       "access": "unknown",
       "adapter": null,
       "identity": null,
-      "existing_skills": [
-        "architecture-knowledge"
-      ],
+      "existing_skills": [],
       "topics": [
         "professional-practice",
         "architecture-knowledge"
@@ -498,9 +484,7 @@
       "access": "unknown",
       "adapter": null,
       "identity": null,
-      "existing_skills": [
-        "architecture-knowledge"
-      ],
+      "existing_skills": [],
       "topics": [
         "professional-practice",
         "architecture-knowledge"
@@ -526,9 +510,7 @@
       "access": "unknown",
       "adapter": null,
       "identity": null,
-      "existing_skills": [
-        "architecture-knowledge"
-      ],
+      "existing_skills": [],
       "topics": [
         "professional-practice",
         "architecture-knowledge"
@@ -554,9 +536,7 @@
       "access": "unknown",
       "adapter": null,
       "identity": null,
-      "existing_skills": [
-        "architecture-knowledge"
-      ],
+      "existing_skills": [],
       "topics": [
         "professional-practice",
         "architecture-knowledge"
@@ -582,9 +562,7 @@
       "access": "unknown",
       "adapter": null,
       "identity": null,
-      "existing_skills": [
-        "architecture-knowledge"
-      ],
+      "existing_skills": [],
       "topics": [
         "professional-practice",
         "architecture-knowledge"
@@ -610,9 +588,7 @@
       "access": "unknown",
       "adapter": null,
       "identity": null,
-      "existing_skills": [
-        "architecture-knowledge"
-      ],
+      "existing_skills": [],
       "topics": [
         "professional-practice",
         "architecture-knowledge"
@@ -638,9 +614,7 @@
       "access": "unknown",
       "adapter": null,
       "identity": null,
-      "existing_skills": [
-        "architecture-knowledge"
-      ],
+      "existing_skills": [],
       "topics": [
         "professional-practice",
         "architecture-knowledge"
@@ -666,9 +640,7 @@
       "access": "unknown",
       "adapter": null,
       "identity": null,
-      "existing_skills": [
-        "architecture-knowledge"
-      ],
+      "existing_skills": [],
       "topics": [
         "professional-practice",
         "architecture-knowledge"
@@ -694,9 +666,7 @@
       "access": "unknown",
       "adapter": null,
       "identity": null,
-      "existing_skills": [
-        "zoning-analysis-nyc"
-      ],
+      "existing_skills": [],
       "topics": [
         "nyc",
         "zoning",
@@ -718,9 +688,7 @@
       "access": "unknown",
       "adapter": null,
       "identity": null,
-      "existing_skills": [
-        "zoning-analysis-nyc"
-      ],
+      "existing_skills": [],
       "topics": [
         "nyc",
         "zoning",
@@ -743,8 +711,7 @@
       "adapter": null,
       "identity": null,
       "existing_skills": [
-        "site-history",
-        "zoning-analysis-nyc"
+        "site-history"
       ],
       "topics": [
         "code",
@@ -768,9 +735,7 @@
       "access": "unknown",
       "adapter": null,
       "identity": null,
-      "existing_skills": [
-        "zoning-analysis-nyc"
-      ],
+      "existing_skills": [],
       "topics": [
         "nyc",
         "zoning",
@@ -792,9 +757,7 @@
       "access": "unknown",
       "adapter": null,
       "identity": null,
-      "existing_skills": [
-        "zoning-analysis-nyc"
-      ],
+      "existing_skills": [],
       "topics": [
         "nyc",
         "zoning",
@@ -816,9 +779,7 @@
       "access": "unknown",
       "adapter": null,
       "identity": null,
-      "existing_skills": [
-        "zoning-analysis-nyc"
-      ],
+      "existing_skills": [],
       "topics": [
         "nyc",
         "zoning",
@@ -840,15 +801,7 @@
       "access": "unknown",
       "adapter": null,
       "identity": null,
-      "existing_skills": [
-        "nyc-acris",
-        "nyc-bsa",
-        "nyc-dob-permits",
-        "nyc-dob-violations",
-        "nyc-hpd",
-        "nyc-landmarks",
-        "nyc-property-report"
-      ],
+      "existing_skills": [],
       "topics": [
         "nyc",
         "property",
@@ -879,15 +832,7 @@
       "access": "unknown",
       "adapter": null,
       "identity": null,
-      "existing_skills": [
-        "nyc-acris",
-        "nyc-bsa",
-        "nyc-dob-permits",
-        "nyc-dob-violations",
-        "nyc-hpd",
-        "nyc-landmarks",
-        "nyc-property-report"
-      ],
+      "existing_skills": [],
       "topics": [
         "nyc",
         "property",
@@ -918,15 +863,7 @@
       "access": "unknown",
       "adapter": null,
       "identity": null,
-      "existing_skills": [
-        "nyc-acris",
-        "nyc-bsa",
-        "nyc-dob-permits",
-        "nyc-dob-violations",
-        "nyc-hpd",
-        "nyc-landmarks",
-        "nyc-property-report"
-      ],
+      "existing_skills": [],
       "topics": [
         "nyc",
         "property",
@@ -957,15 +894,7 @@
       "access": "unknown",
       "adapter": null,
       "identity": null,
-      "existing_skills": [
-        "nyc-acris",
-        "nyc-bsa",
-        "nyc-dob-permits",
-        "nyc-dob-violations",
-        "nyc-hpd",
-        "nyc-landmarks",
-        "nyc-property-report"
-      ],
+      "existing_skills": [],
       "topics": [
         "nyc",
         "property",
@@ -996,15 +925,7 @@
       "access": "unknown",
       "adapter": null,
       "identity": null,
-      "existing_skills": [
-        "nyc-acris",
-        "nyc-bsa",
-        "nyc-dob-permits",
-        "nyc-dob-violations",
-        "nyc-hpd",
-        "nyc-landmarks",
-        "nyc-property-report"
-      ],
+      "existing_skills": [],
       "topics": [
         "nyc",
         "property",
@@ -1035,15 +956,7 @@
       "access": "unknown",
       "adapter": null,
       "identity": null,
-      "existing_skills": [
-        "nyc-acris",
-        "nyc-bsa",
-        "nyc-dob-permits",
-        "nyc-dob-violations",
-        "nyc-hpd",
-        "nyc-landmarks",
-        "nyc-property-report"
-      ],
+      "existing_skills": [],
       "topics": [
         "nyc",
         "property",
@@ -1074,15 +987,7 @@
       "access": "unknown",
       "adapter": null,
       "identity": null,
-      "existing_skills": [
-        "nyc-acris",
-        "nyc-bsa",
-        "nyc-dob-permits",
-        "nyc-dob-violations",
-        "nyc-hpd",
-        "nyc-landmarks",
-        "nyc-property-report"
-      ],
+      "existing_skills": [],
       "topics": [
         "nyc",
         "property",
@@ -1113,15 +1018,7 @@
       "access": "unknown",
       "adapter": null,
       "identity": null,
-      "existing_skills": [
-        "nyc-acris",
-        "nyc-bsa",
-        "nyc-dob-permits",
-        "nyc-dob-violations",
-        "nyc-hpd",
-        "nyc-landmarks",
-        "nyc-property-report"
-      ],
+      "existing_skills": [],
       "topics": [
         "nyc",
         "property",
@@ -1152,15 +1049,7 @@
       "access": "unknown",
       "adapter": null,
       "identity": null,
-      "existing_skills": [
-        "nyc-acris",
-        "nyc-bsa",
-        "nyc-dob-permits",
-        "nyc-dob-violations",
-        "nyc-hpd",
-        "nyc-landmarks",
-        "nyc-property-report"
-      ],
+      "existing_skills": [],
       "topics": [
         "nyc",
         "property",
@@ -1191,15 +1080,7 @@
       "access": "unknown",
       "adapter": null,
       "identity": null,
-      "existing_skills": [
-        "nyc-acris",
-        "nyc-bsa",
-        "nyc-dob-permits",
-        "nyc-dob-violations",
-        "nyc-hpd",
-        "nyc-landmarks",
-        "nyc-property-report"
-      ],
+      "existing_skills": [],
       "topics": [
         "nyc",
         "property",
@@ -1230,15 +1111,7 @@
       "access": "unknown",
       "adapter": null,
       "identity": null,
-      "existing_skills": [
-        "nyc-acris",
-        "nyc-bsa",
-        "nyc-dob-permits",
-        "nyc-dob-violations",
-        "nyc-hpd",
-        "nyc-landmarks",
-        "nyc-property-report"
-      ],
+      "existing_skills": [],
       "topics": [
         "nyc",
         "property",
@@ -1269,15 +1142,7 @@
       "access": "unknown",
       "adapter": null,
       "identity": null,
-      "existing_skills": [
-        "nyc-acris",
-        "nyc-bsa",
-        "nyc-dob-permits",
-        "nyc-dob-violations",
-        "nyc-hpd",
-        "nyc-landmarks",
-        "nyc-property-report"
-      ],
+      "existing_skills": [],
       "topics": [
         "nyc",
         "property",
@@ -1308,15 +1173,7 @@
       "access": "unknown",
       "adapter": null,
       "identity": null,
-      "existing_skills": [
-        "nyc-acris",
-        "nyc-bsa",
-        "nyc-dob-permits",
-        "nyc-dob-violations",
-        "nyc-hpd",
-        "nyc-landmarks",
-        "nyc-property-report"
-      ],
+      "existing_skills": [],
       "topics": [
         "nyc",
         "property",
@@ -1347,15 +1204,7 @@
       "access": "unknown",
       "adapter": null,
       "identity": null,
-      "existing_skills": [
-        "nyc-acris",
-        "nyc-bsa",
-        "nyc-dob-permits",
-        "nyc-dob-violations",
-        "nyc-hpd",
-        "nyc-landmarks",
-        "nyc-property-report"
-      ],
+      "existing_skills": [],
       "topics": [
         "nyc",
         "property",
@@ -1386,15 +1235,7 @@
       "access": "unknown",
       "adapter": null,
       "identity": null,
-      "existing_skills": [
-        "nyc-acris",
-        "nyc-bsa",
-        "nyc-dob-permits",
-        "nyc-dob-violations",
-        "nyc-hpd",
-        "nyc-landmarks",
-        "nyc-property-report"
-      ],
+      "existing_skills": [],
       "topics": [
         "nyc",
         "property",
@@ -1425,15 +1266,7 @@
       "access": "unknown",
       "adapter": null,
       "identity": null,
-      "existing_skills": [
-        "nyc-acris",
-        "nyc-bsa",
-        "nyc-dob-permits",
-        "nyc-dob-violations",
-        "nyc-hpd",
-        "nyc-landmarks",
-        "nyc-property-report"
-      ],
+      "existing_skills": [],
       "topics": [
         "nyc",
         "property",
@@ -1464,15 +1297,7 @@
       "access": "unknown",
       "adapter": null,
       "identity": null,
-      "existing_skills": [
-        "nyc-acris",
-        "nyc-bsa",
-        "nyc-dob-permits",
-        "nyc-dob-violations",
-        "nyc-hpd",
-        "nyc-landmarks",
-        "nyc-property-report"
-      ],
+      "existing_skills": [],
       "topics": [
         "nyc",
         "property",
@@ -1503,15 +1328,7 @@
       "access": "unknown",
       "adapter": null,
       "identity": null,
-      "existing_skills": [
-        "nyc-acris",
-        "nyc-bsa",
-        "nyc-dob-permits",
-        "nyc-dob-violations",
-        "nyc-hpd",
-        "nyc-landmarks",
-        "nyc-property-report"
-      ],
+      "existing_skills": [],
       "topics": [
         "nyc",
         "property",
@@ -1542,15 +1359,7 @@
       "access": "unknown",
       "adapter": null,
       "identity": null,
-      "existing_skills": [
-        "nyc-acris",
-        "nyc-bsa",
-        "nyc-dob-permits",
-        "nyc-dob-violations",
-        "nyc-hpd",
-        "nyc-landmarks",
-        "nyc-property-report"
-      ],
+      "existing_skills": [],
       "topics": [
         "nyc",
         "property",
@@ -1581,9 +1390,7 @@
       "access": "unknown",
       "adapter": null,
       "identity": null,
-      "existing_skills": [
-        "nyc-property-report"
-      ],
+      "existing_skills": [],
       "topics": [
         "dataset",
         "api"

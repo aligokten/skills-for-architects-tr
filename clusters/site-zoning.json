@@ -5,7 +5,7 @@
   "maintainer": "Arch Studio maintainers",
   "scope": "Existing NYC zoning and general site investigation procedures.",
   "members": [
-    "skill:zoning-analysis-nyc",
+    "skill:imar-analizi-tr",
     "skill:zoning-envelope",
     "skill:environmental-analysis",
     "skill:mobility-analysis",
@@ -19,9 +19,9 @@
   "dependencies": [],
   "coverage": {
     "jurisdictions": [
-      "jurisdiction:us-ny-nyc"
+      "jurisdiction:tr"
     ],
-    "limitations": "Indexed NYC Zoning Resolution, PLUTO and selected site sources support navigation for existing procedures; original retrieval is required for current applicable provisions. General site research requires location-specific sources. Source reachability checks use available authorized host facilities and do not establish legal applicability. Retained source-health tools are maintainer/historical inventory; no cluster-wide workflow validation is claimed.",
+    "limitations": "Dizinlenen Türk kaynakları (Mevzuat Bilgi Sistemi, Planlı Alanlar İmar Yönetmeliği, e-Plan, TKGM, AFAD) mevcut prosedürler için gezinme sağlar; güncel ve uygulanabilir hükümler için asıl kaynağa erişim gerekir. Genel arsa araştırması konuma özgü kaynaklar gerektirir. Kaynak erişilebilirlik kontrolleri hukuki uygulanabilirlik kurmaz; küme genelinde doğrulanmış iş akışı iddia edilmez.",
     "sources_indexed": true,
     "procedures_available": true,
     "execution_implemented": false,

@@ -11,7 +11,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Claude Code: plugin](https://img.shields.io/badge/Claude_Code-plugin-blue)](https://code.claude.com/docs)
 [![Codex: plugin](https://img.shields.io/badge/Codex-plugin-blue)](https://developers.openai.com/codex/)
-[![beceri: 67](https://img.shields.io/badge/beceri-67-blue)](./skills/README.md)
+[![beceri: 58](https://img.shields.io/badge/beceri-58-blue)](./skills/README.md)
 [![Türkiye](https://img.shields.io/badge/uyarlama-T%C3%BCrkiye-red)](./rules/turkiye.md)
 
 **Sürüm: 1.5.3 tabanlı Türkiye uyarlaması**
@@ -39,7 +39,7 @@ Bu depo, ALPA'nın açık kaynak (MIT) [Arch Studio / skills-for-architects](htt
 - **6 yeni Türkiye becerisi:** imar analizi (emsal/KAKS, TAKS, Hmax, çekme mesafeleri, plan notları), TKGM parsel sorgu, tescil ve sit alanı kontrolü, yapı kayıtları (ruhsat, iskân, yapı denetim, yapı kayıt belgesi, riskli yapı), birleşik mülk ön inceleme raporu ve Türkiye mimarlık meslek bilgisi.
 - **Yeni ajan:** `turkiye-imar-uzmani` — Türkiye'deki taşınmazlar için parsel, imar, tescil ve yapı kaydı araştırmasını koordine eder.
 - **Türkiye yargı bölgesi ve 27 resmî kaynak:** Mevzuat Bilgi Sistemi, Resmî Gazete, 3194 sayılı İmar Kanunu, Planlı Alanlar İmar Yönetmeliği, Binaların Yangından Korunması Hakkında Yönetmelik, Türkiye Bina Deprem Yönetmeliği, Otopark Yönetmeliği, 2863, 4708, 6306 ve 4734 sayılı kanunlar, TKGM, e-Plan, e-Devlet, AFAD Deprem Tehlike Haritası, MTA, Koruma Bölge Kurulları, TÜİK, MGM, Mimarlar Odası, Yapı Yaklaşık Birim Maliyetleri, TSE, GİB, EKAP ve İBB Açık Veri.
-- **Tüm 61 mevcut beceri uyarlandı:** açıklamalar Türkçe; her beceride Türkiye talimatları var. Örnekler: kullanıcı yükü hesabı Yangın Yönetmeliği'ne göre, deprem tehlikesi AFAD'dan, nüfus TÜİK'ten, teklifler Mimarlar Odası en az bedel esasına göre, faturalar TL/KDV/e-Fatura ile, şartnameler mahal listesi ve TS/TS EN atıflarıyla.
+- **Yalnızca New York'a özel 9 beceri ve 1 ajan çıkarıldı;** kalan 52 orijinal beceri uyarlandı: açıklamalar Türkçe; her beceride Türkiye talimatları var. Örnekler: kullanıcı yükü hesabı Yangın Yönetmeliği'ne göre, deprem tehlikesi AFAD'dan, nüfus TÜİK'ten, teklifler Mimarlar Odası en az bedel esasına göre, faturalar TL/KDV/e-Fatura ile, şartnameler mahal listesi ve TS/TS EN atıflarıyla.
 - **[Türkiye kuralı](rules/turkiye.md):** Türkçe çıktı, metrik birimler, Türk sayı ve tarih biçimi, TL ve KDV, KVKK ilkeleri.
 - **Türkçe sorumluluk reddi:** Mevzuat içeren çıktılar Türkçe kanonik blokla biter; kontrol hook'u Türkçe bloğu da tanır.
 
@@ -102,7 +102,7 @@ Claude Code'da `/as:studio`, Codex'te `$studio` yazın. Türkiye becerilerini g�
 
 ## İçerik
 
-67 beceri (6'sı Türkiye'ye özel), 9 ajan, 9 kural ve 4 hook; hepsi birlikte kurulur. English summary: 67 skills, 9 agents, 9 rules, and 4 hooks. Tam katalog: [skills/README.md](./skills/README.md).
+58 beceri (6'sı Türkiye'ye özel), 8 ajan, 9 kural ve 4 hook; hepsi birlikte kurulur. English summary: 58 skills, 8 agents, 9 rules, and 4 hooks. Tam katalog: [skills/README.md](./skills/README.md).
 
 ### Ajanlar (Claude Code)
 
@@ -110,7 +110,6 @@ Claude Code'da `/as:studio`, Codex'te `$studio` yazın. Türkiye becerilerini g�
 |-------|--------------|
 | [turkiye-imar-uzmani](./agents/turkiye-imar-uzmani.md) | Türkiye'de parsel, imar, tescil ve yapı kaydı araştırması ile imar zarfı |
 | [site-planner](./agents/site-planner.md) | Çevre, ulaşım, demografi ve tarihçe araştırmasını birleştirir |
-| [nyc-zoning-expert](./agents/nyc-zoning-expert.md) | Yalnızca New York: mülk araştırması ve imar analizi |
 | [workplace-strategist](./agents/workplace-strategist.md) | Personel sayısı ve çalışma biçiminden alan programı |
 | [product-and-materials-researcher](./agents/product-and-materials-researcher.md) | Ürün bulur, özellik çıkarır, muadil önerir |
 | [ffe-designer](./agents/ffe-designer.md) | FF&E listeleri ve oda paketleri hazırlar, kontrol eder |

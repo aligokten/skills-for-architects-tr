@@ -2,7 +2,7 @@
 
 Arch Studio becerileri tek bir düz katalog olarak birlikte kurulur. Aşağıdaki bağlantılar `/as:<beceri>` adlandırmasını kullanır; host'un keşfettiği gerçek giriş noktasını (gerekiyorsa eklenti ad alanıyla) kullanın. Gruplar becerilerin ne yaptığını anlatır; ayrı eklenti veya kurulum paketi değildir.
 
-**Türkiye uyarlaması:** Türkiye'ye özel beceriler `-tr` ekiyle biter. Tüm diğer beceriler, kullanıcı Türkçe yazdığında veya arsa Türkiye'de olduğunda [Türkiye kuralını](../rules/turkiye.md) uygular (Türkçe çıktı, metrik birim, TL/KDV, Türk mevzuatı). `nyc-` ile başlayan beceriler yalnızca New York içindir.
+**Türkiye uyarlaması:** Türkiye'ye özel beceriler `-tr` ekiyle biter. Tüm diğer beceriler, kullanıcı Türkçe yazdığında veya arsa Türkiye'de olduğunda [Türkiye kuralını](../rules/turkiye.md) uygular (Türkçe çıktı, metrik birim, TL/KDV, Türk mevzuatı). Orijinal eklentideki yalnızca New York'a özel beceriler bu sürümden çıkarıldı.
 
 [Oluşturulan yetenek kataloğu](../docs/capabilities.md), paylaşılan bileşen kaydından göreve göre keşif sağlar.
 
@@ -48,25 +48,7 @@ Proje kayıtları düz dosyalardan oluşan bağlantılı bir yapıdır. `/as:pro
 | [`/as:agreement`](./agreement) | Kaynaklı sözleşme bağlamı ve işin kapsamla karşılaştırılması |
 | [`/as:invoice`](./invoice) | Kullanıcı talimatıyla fatura kaydı, tavan uyarıları ve boşluk tespiti (TL, e-Fatura) |
 
-### Mesleki pratik bilgisi
-
-| Beceri | Açıklama |
-|-------|-------------|
-| [`/as:architecture-knowledge`](./architecture-knowledge) | ABD pratiği terimleri (CD set, AIA, CSI); Türkiye için `mimarlik-bilgisi-tr` |
-
 ## Pratik ve tasarım
-
-### Ön inceleme — New York (yalnızca NYC)
-
-| Beceri | Açıklama |
-|-------|-------------|
-| [`/as:nyc-landmarks`](./nyc-landmarks) | LPC landmark ve tarihî bölge kontrolü |
-| [`/as:nyc-dob-permits`](./nyc-dob-permits) | DOB ruhsat ve başvuru geçmişi |
-| [`/as:nyc-dob-violations`](./nyc-dob-violations) | DOB ve ECB ihlalleri |
-| [`/as:nyc-acris`](./nyc-acris) | ACRIS mülk işlem kayıtları |
-| [`/as:nyc-hpd`](./nyc-hpd) | HPD ihlalleri, şikâyetler ve kayıt |
-| [`/as:nyc-bsa`](./nyc-bsa) | BSA muafiyetleri ve özel izinler |
-| [`/as:nyc-property-report`](./nyc-property-report) | Birleşik NYC mülk raporu |
 
 ### Arsa ve imar
 
@@ -76,8 +58,7 @@ Proje kayıtları düz dosyalardan oluşan bağlantılı bir yapıdır. `/as:pro
 | [`/as:mobility-analysis`](./mobility-analysis) | Toplu taşıma, yürünebilirlik, bisiklet ve yaya altyapısı |
 | [`/as:demographics-analysis`](./demographics-analysis) | Nüfus, gelir, yaş, konut ve istihdam (TÜİK) |
 | [`/as:site-history`](./site-history) | Mahalle bağlamı, tescilli yapılar, hareketlilik ve planlanan gelişmeler |
-| [`/as:zoning-analysis-nyc`](./zoning-analysis-nyc) | NYC FAR, yükseklik, setback ve kullanım analizi (Türkiye için `imar-analizi-tr`) |
-| [`/as:zoning-envelope`](./zoning-envelope) | Bağımsız etkileşimli 3B imar zarfı (Türkiye ve NYC) |
+| [`/as:zoning-envelope`](./zoning-envelope) | İmar analizinden bağımsız etkileşimli 3B imar zarfı |
 
 ### Programlama ve şartnameler
 

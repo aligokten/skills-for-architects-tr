@@ -45,20 +45,11 @@ For questions asking what Arch Studio offers, use this catalog to name skills an
 | proposal | Korumalı verilmiş koşullarla proje teklifleri (Mimarlar Odası en az bedel, TL/KDV) |
 | agreement | Kaynaklı sözleşme bağlamı ve işin kapsamla karşılaştırılması |
 | invoice | Kullanıcı talimatıyla fatura kaydı, tavan uyarıları ve boşluk tespiti (TL, e-Fatura) |
-| architecture-knowledge | ABD pratiği terimleri (CD set, AIA, CSI); Türkiye için `mimarlik-bilgisi-tr` |
-| nyc-landmarks | LPC landmark ve tarihî bölge kontrolü |
-| nyc-dob-permits | DOB ruhsat ve başvuru geçmişi |
-| nyc-dob-violations | DOB ve ECB ihlalleri |
-| nyc-acris | ACRIS mülk işlem kayıtları |
-| nyc-hpd | HPD ihlalleri, şikâyetler ve kayıt |
-| nyc-bsa | BSA muafiyetleri ve özel izinler |
-| nyc-property-report | Birleşik NYC mülk raporu |
 | environmental-analysis | İklim, rüzgâr, güneş, sel, deprem (AFAD) ve zemin araştırması |
 | mobility-analysis | Toplu taşıma, yürünebilirlik, bisiklet ve yaya altyapısı |
 | demographics-analysis | Nüfus, gelir, yaş, konut ve istihdam (TÜİK) |
 | site-history | Mahalle bağlamı, tescilli yapılar, hareketlilik ve planlanan gelişmeler |
-| zoning-analysis-nyc | NYC FAR, yükseklik, setback ve kullanım analizi (Türkiye için `imar-analizi-tr`) |
-| zoning-envelope | Bağımsız etkileşimli 3B imar zarfı (Türkiye ve NYC) |
+| zoning-envelope | İmar analizinden bağımsız etkileşimli 3B imar zarfı |
 | workplace-programmer | Personel sayısı ve çalışma biçiminden ofis alan programı |
 | occupancy-calculator | Kullanıcı yükü, kaçış ve çıkışlar (Türkiye: Yangın Yönetmeliği; ABD: IBC) |
 | spec-writer | Mahal listesi ve teknik şartname bölümleri, inceleme işaretleriyle (TS/TS EN veya CSI) |

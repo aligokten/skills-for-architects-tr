@@ -17,7 +17,7 @@ claude plugin install as@skills-for-architects
 First, run a zoning analysis to generate a report:
 
 ```
-/as:zoning-analysis-nyc 250 Hudson St, New York NY
+/as:imar-analizi-tr İstanbul Kadıköy 123 ada 45 parsel
 ```
 
 Then generate the 3D viewer:
@@ -86,7 +86,7 @@ The skill then:
 
 ## Dependency
 
-This skill requires a zoning analysis report as input. It does not perform zoning calculations — run `/as:zoning-analysis-nyc` first.
+This skill requires a zoning analysis report as input. It does not perform zoning calculations — run `/as:imar-analizi-tr` first.
 
 ## Demo
 
