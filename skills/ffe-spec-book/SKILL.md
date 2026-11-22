@@ -1,6 +1,6 @@
 ---
 name: ffe-spec-book
-description: "Assemble an ordered FF&E specification book from selected product cut sheets, with every product accounted for and verified package receipts. Use for grouped sheets or a combined FF&E book; use spec-writer for Project Manual sections."
+description: "Seçili ürün föylerinden sıralı bir FF&E şartname kitabı derler; her ürün hesaba katılır ve paket teslimleri doğrulanır. Gruplanmış föyler veya birleşik FF&E kitabı için kullan; teknik şartname bölümleri için spec-writer."
 allowed-tools:
   - Read
   - Write
@@ -110,3 +110,7 @@ with explicit project, phase, stage, scope, originator, date and kind. Receive o
 project library and schedule paths keep their owners. One-off files need no registration or project
 setup. Return only intended delivery artifacts and explicitly requested private evidence; never
 include the whole job in a client package. Follow [completion reporting](../../docs/completion-reporting.md).
+
+## Türkiye
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.

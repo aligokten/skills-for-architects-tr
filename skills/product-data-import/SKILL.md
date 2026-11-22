@@ -1,6 +1,6 @@
 ---
 name: product-data-import
-description: "Normalize supplied FF&E information and record accepted document-job inputs with exact product tags and source hashes. Use for intake or corrections; reusable library saves and schedule adoption go to their record owners."
+description: "Verilen FF&E bilgilerini normalize eder ve kabul edilen belge işi girdilerini kesin ürün etiketleri ve kaynak hash'leriyle kaydeder. Veri alımı veya düzeltmeler için kullan; kütüphane kaydı ve liste benimseme kendi kayıt sahiplerine gider."
 allowed-tools:
   - Read
   - Write
@@ -60,3 +60,7 @@ This read-only comparison does not authorize an edit or replace actual intended-
 backup, feature inspection, recalculation or visual verification required by the task. Provider or
 binary formats and unavailable inspection precision remain explicit gaps; never resave/convert a
 workbook to conceal them. No Arch Studio helper or process runtime is mandatory.
+
+## Türkiye
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.

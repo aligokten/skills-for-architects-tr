@@ -1,6 +1,6 @@
 {
   "path": "skills/product-library/SKILL.md",
-  "responsibility": "Initialize, inspect, import, append or update the reusable project product-library.csv through guarded transactions. Use for explicit FF&E library saves or corrections; adopted selections and workbook reconciliation belong to master-schedule.",
+  "responsibility": "Yeniden kullanılabilir FF&E kütüphane ürünlerini gözden geçirilmiş, korumalı işlemlerle inceler veya kaydeder. Açık kütüphane aktarımları, düzeltmeler veya kurtarma için kullan; benimsenen seçimler ve çalışma kitabı uzlaştırma master-schedule'a aittir.",
   "inputs": "Explicit library operation, resolved project, selected evidence/rows, bound preview hash and stable request ID for writes; native method and readback evidence.",
   "owned_records": [
     "product-library.csv",

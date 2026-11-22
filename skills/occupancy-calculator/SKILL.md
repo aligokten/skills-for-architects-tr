@@ -1,6 +1,6 @@
 ---
 name: occupancy-calculator
-description: "Calculate code occupant loads by area with gross/net factors and jurisdiction checks. Use for \"how many people can this space hold,\" IBC Table 1004.5, egress inputs, or occupancy-load reports; not for workplace headcount planning."
+description: "Alan bazında kullanıcı yükü (doluluk) hesaplar; brüt/net katsayıları ve yargı bölgesi kontrolleriyle. Türkiye'de Binaların Yangından Korunması Hakkında Yönetmelik, ABD'de IBC 1004.5. \"Bu mekân kaç kişi alır\", kaçış hesabı girdileri veya kullanıcı yükü raporları için kullan; ofis personel planlaması için değil."
 allowed-tools:
   - Read
   - Write
@@ -39,6 +39,12 @@ Egress, plumbing and other requested checks need their own applicable source req
 ## Refine and deliver
 
 Show each space's inputs, method, factor, result and locator; aggregate only compatible scopes. A changed use, source edition or area invalidates dependent calculations. Carry unresolved rows rather than treating them as zero. Report scenarios separately from sourced code conclusions. A requested occupancy.json uses explicit values and source evidence, never a plugin default dataset.
+
+## Türkiye
+
+Türkiye'deki bir yapı için kontrol eden kaynak **Binaların Yangından Korunması Hakkında Yönetmelik**tir (kaynak kataloğunda `source:tr-yangin-yonetmeligi`). Kullanıcı yükü katsayılarını, kullanım sınıflarını, kaçış yolu sayısı/genişliği ve diğer gereklilikleri yönetmeliğin analiz tarihindeki konsolide metninden (Mevzuat Bilgi Sistemi) al ve ek/tablo numarasını, değişiklik tarihini kaydet; tablo numarasını bellekten varsayma. Yönetmeliğin kullanım sınıflandırmasını IBC occupancy group'larıyla eşleştirme; ikisi farklı sistemlerdir. Belediye veya itfaiyenin ek şartları ve yapının özel durumları (yüksek bina, karma kullanım) ayrıca kontrol edilir. Sığınak, otopark ve engelli erişimi (TS 9111) ayrı kontroller olarak raporlanır.
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.
 
 ## Outputs and records
 

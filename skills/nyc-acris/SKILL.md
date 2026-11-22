@@ -1,6 +1,6 @@
 ---
 name: nyc-acris
-description: "Look up NYC ACRIS deeds, mortgages, liens, sales, and ownership history. Use for property transactions or recorded ownership; not permits or violations."
+description: "Yalnızca New York: ACRIS tapu, ipotek, haciz, satış ve mülkiyet geçmişi sorgusu. Türkiye'deki taşınmazlar için parsel-sorgu-tr kullan."
 allowed-tools:
   - WebFetch
   - Write
@@ -63,6 +63,10 @@ Keep multiple source systems identifiable; deduplicate only on verified identiti
 ## Deliver
 
 Return the property identity, requested scope, sourced results, retrieval date and query/coverage limitations. Summarize counts without hiding omitted rows; mark truncated output. For no matches, say which source/query returned none. For inaccessible datasets, report unavailable, not zero. Link original records/reports and preserve unresolved conclusions.
+
+## Türkiye
+
+Bu beceri yalnızca New York City içindir. Arsa Türkiye'deyse bu prosedürü kullanma ve NYC verilerini Türkiye yerine koyma; `/as:imar-analizi-tr`, `/as:parsel-sorgu-tr`, `/as:tescil-kontrol-tr`, `/as:yapi-kayit-tr` veya `/as:mulk-raporu-tr` becerisine yönlendir. Kullanıcı Türkçe yazıyorsa NYC raporunu Türkçe sun ve Türkçe sorumluluk reddi bloğunu kullan ([Türkiye kuralı](../../rules/turkiye.md)).
 
 ## Outputs and records
 

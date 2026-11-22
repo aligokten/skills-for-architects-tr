@@ -1,6 +1,6 @@
 {
   "path": "agents/norma.md",
-  "responsibility": "Execute an approved, context-resolved architecture or firm assignment through the relevant Arch Studio owners. Optional host worker; use only after the main harness has resolved pending questions and authorization.",
+  "responsibility": "Onaylanmış, bağlamı çözülmüş bir mimarlık veya ofis görevini ilgili Arch Studio sahipleri üzerinden yürütür. İsteğe bağlı host çalışanı; yalnızca ana oturum bekleyen soruları ve yetkiyi çözdükten sonra kullan.",
   "inputs": "Original task, selected sources, exact targets, permissions and result evidence; delegates inherit these constraints.",
   "owned_records": [],
   "non_owned_records": [

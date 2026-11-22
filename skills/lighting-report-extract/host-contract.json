@@ -1,6 +1,6 @@
 {
   "path": "skills/lighting-report-extract/SKILL.md",
-  "responsibility": "Extract reported simulation metrics and normalize explicitly sourced inventory observations without additive surface counts, design or compliance judgments.",
+  "responsibility": "Verilen aydınlatma simülasyonu PDF'lerindeki armatür adetlerini ve sonuçları tekrar eden hesap yüzeyleri eklemeden kontrol eder. Kapsamlı armatür envanteri ve aydınlık düzeyi sonuçları için kullan; simülasyon veya uygunluk için değil.",
   "inputs": "Explicit source files/snapshots and scope; project instructions only for project-bound work.",
   "owned_records": [],
   "non_owned_records": [

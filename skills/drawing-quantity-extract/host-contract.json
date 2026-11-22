@@ -1,6 +1,6 @@
 {
   "path": "skills/drawing-quantity-extract/SKILL.md",
-  "responsibility": "Extract source-positioned drawing instances without adopting quantities.",
+  "responsibility": "Verilen çizimlerden sayılabilir FF&E veya armatür adetlerini konum düzeyinde kanıtla çıkarır (metraj). Plan adetleri veya sembol sayımı için kullan; alan metrajı, ürün özellikleri veya kaynaklar arası uzlaştırma için değil.",
   "inputs": "Explicit source files/snapshots and scope; project instructions only for project-bound work.",
   "owned_records": [],
   "non_owned_records": [

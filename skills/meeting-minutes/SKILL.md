@@ -1,6 +1,6 @@
 ---
 name: meeting-minutes
-description: "Turn supplied meeting notes or transcripts into sourced minutes, keeping discussion, statements, confirmed/proposed decisions and proposed actions distinct."
+description: "Verilen toplantı notları veya dökümlerinden kaynaklı toplantı tutanağı hazırlar; tartışma, beyanlar, onaylanan/önerilen kararlar ve önerilen aksiyonları ayrı tutar."
 allowed-tools:
   - Read
   - Write
@@ -33,3 +33,7 @@ Prepare the minutes, confirm missing phase/stage/scope/originator/date/kind coor
 Read back the saved document before offering promotion. Show selected fact, decision and task candidates separately; general approval of minutes does not promote them. Project owns sourced current facts/decisions, tasklist owns TASKS.csv. Preserve reported/proposed status throughout the handoff. Direct invocation works without a coordinator or another skill-call tool; print the bounded next action if unavailable.
 
 `meeting.prepare` means the authored preparation procedure above; it may produce an inline draft without a workspace write. Persistence uses the shared native document contract, restricted here to kind `meeting` and authorized attachments. A saved record does not authorize its proposed actions or promote facts/decisions automatically.
+
+## Türkiye
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy. Türkçe toplantı tutanağı başlıkları: Katılımcılar, Gündem, Görüşülen Konular, Alınan Kararlar, Aksiyonlar (Sorumlu / Termin).

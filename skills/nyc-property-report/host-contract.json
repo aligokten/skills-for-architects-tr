@@ -1,6 +1,6 @@
 {
   "path": "skills/nyc-property-report/SKILL.md",
-  "responsibility": "Compile NYC landmarks, DOB, ACRIS, HPD, and BSA findings into one property due-diligence report. Use for a full report; use individual NYC skills for one dataset.",
+  "responsibility": "Yalnızca New York: landmark, DOB, ACRIS, HPD ve BSA bulgularını tek bir mülk ön inceleme raporunda birleştirir. Türkiye'deki taşınmazlar için mulk-raporu-tr kullan.",
   "inputs": "Supplied task and selected source scope; exact destination only for requested persistence or application work. Load project context only when the task needs project records.",
   "owned_records": [],
   "non_owned_records": [

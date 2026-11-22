@@ -1,6 +1,6 @@
 {
   "path": "skills/product-url-clip/SKILL.md",
-  "responsibility": "Persist one supplied product URL capture and provide read-only local history; host retrieval and all product/adopted-record writes remain outside this owner.",
+  "responsibility": "Verilen tek bir ürün URL'sini denetlenebilir, benimsenmemiş FF&E kanıtı olarak kaydeder ve geçmişini inceler. Sayfa kırpmak veya önceki kayıtları incelemek için kullan; kütüphaneye ürün kaydetmek veya liste kalemi benimsemek için değil.",
   "inputs": "One explicit URL, optional explicit configuration, stable request ID, exact authorized project or one-off destination, and host-supplied extraction signals.",
   "owned_records": [
     "ffe/clips/"

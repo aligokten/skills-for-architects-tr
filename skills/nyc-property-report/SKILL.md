@@ -1,6 +1,6 @@
 ---
 name: nyc-property-report
-description: "Compile NYC landmarks, DOB, ACRIS, HPD, and BSA findings into one property due-diligence report. Use for a full report; use individual NYC skills for one dataset."
+description: "Yalnızca New York: landmark, DOB, ACRIS, HPD ve BSA bulgularını tek bir mülk ön inceleme raporunda birleştirir. Türkiye'deki taşınmazlar için mulk-raporu-tr kullan."
 allowed-tools:
   - WebFetch
   - Write
@@ -59,6 +59,10 @@ Each owner retrieves current original field metadata and actual selected rows/do
 Account for every requested domain as retrieved, no matching records for the stated query, partial or unavailable. Missing sources never become “clear.” Keep property identification, landmarks, permits/filings, violations, property documents, housing records and BSA decisions identifiable. Summarize important findings with original record links and dates, and expose conflicting identities/statuses instead of resolving them by guesswork.
 
 Return the requested report format, counts and limitations; an alternate user template is valid when required information survives. Distinguish factual retrieval from interpretation and professional review.
+
+## Türkiye
+
+Bu beceri yalnızca New York City içindir. Arsa Türkiye'deyse bu prosedürü kullanma ve NYC verilerini Türkiye yerine koyma; `/as:imar-analizi-tr`, `/as:parsel-sorgu-tr`, `/as:tescil-kontrol-tr`, `/as:yapi-kayit-tr` veya `/as:mulk-raporu-tr` becerisine yönlendir. Kullanıcı Türkçe yazıyorsa NYC raporunu Türkçe sun ve Türkçe sorumluluk reddi bloğunu kullan ([Türkiye kuralı](../../rules/turkiye.md)).
 
 ## Outputs and records
 

@@ -1,0 +1,37 @@
+{
+  "path": "skills/mimarlik-bilgisi-tr/SKILL.md",
+  "responsibility": "Türkiye'de mimarlık meslek pratiğini kaynaklı olarak açıklar: proje aşamaları (avan, uygulama), proje müellifi, şantiye şefi, yapı denetim, ruhsat/iskân süreci, Mimarlar Odası hizmet şartnamesi ve en az bedel, yapı sınıfları ve Yapı Yaklaşık Birim Maliyetleri. \"Uygulama projesi nedir\", \"hizmet bedeli nasıl hesaplanır\" için kullan.",
+  "inputs": "Supplied task and selected source scope; exact destination only for requested persistence or application work. Load project context only when the task needs project records.",
+  "owned_records": [],
+  "non_owned_records": [
+    "PROJECT.md",
+    "STUDIO.md",
+    "TASKS.csv",
+    "TIME.csv",
+    "proposals/",
+    "agreement/",
+    "INVOICES.csv",
+    "ffe/items-and-schedules",
+    "product-library.csv",
+    "epd-library.csv",
+    "ffe/jobs/input-manifests"
+  ],
+  "delegation": "inherit-scope-target-permissions-and-evidence",
+  "modes": [
+    {
+      "mode": "answer"
+    },
+    {
+      "mode": "research",
+      "when": "Esasa ilişkin bulgular uygulanabilir asıl kaynakları gerektirdiğinde; yalnızca kaynak listesi içerik erişimi gerektirmez ve kullanıcının sağladığı yetkili belgeler kullanılabilir."
+    },
+    {
+      "mode": "file-read"
+    }
+  ],
+  "execution": {
+    "model": "harness-native",
+    "contract": "skills/mimarlik-bilgisi-tr/SKILL.md",
+    "operations": []
+  }
+}

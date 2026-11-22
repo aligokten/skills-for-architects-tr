@@ -1,6 +1,6 @@
 ---
 name: zoning-analysis-nyc
-description: "Analyze NYC lot zoning, FAR, height, setbacks, uses, and buildable envelope from PLUTO and the Zoning Resolution. Use for \"what can I build\"; use nyc-bsa for relief and zoning-envelope for 3D visualization."
+description: "Yalnızca New York: PLUTO ve Zoning Resolution'dan parsel imarı, FAR, yükseklik, çekme ve kullanımları analiz eder. Türkiye'deki parseller için imar-analizi-tr kullan."
 allowed-tools:
   - Read
   - Write
@@ -72,6 +72,10 @@ A useful control table is `Control | Value or unresolved status | Original secti
 When `/as:zoning-envelope` is requested, pass the actual polygon, units, verified controls, source identity and unresolved inputs using that skill's accepted structure. Do not fill missing required values with zeros or silently invent a complete envelope. An illustrative scenario must be explicitly requested and labeled as hypothetical; it is not regulatory evidence.
 
 Save a requested report as `zoning-analysis-[address-slug].md` in the authorized task/project location. Retain task-specific evidence in that user workspace; do not add fetched code text, local summaries or source datasets to the plugin repository. A file being written does not establish review or acceptance.
+
+## Türkiye
+
+Bu beceri yalnızca New York City içindir. Arsa Türkiye'deyse bu prosedürü kullanma ve NYC verilerini Türkiye yerine koyma; `/as:imar-analizi-tr`, `/as:parsel-sorgu-tr`, `/as:tescil-kontrol-tr`, `/as:yapi-kayit-tr` veya `/as:mulk-raporu-tr` becerisine yönlendir. Kullanıcı Türkçe yazıyorsa NYC raporunu Türkçe sun ve Türkçe sorumluluk reddi bloğunu kullan ([Türkiye kuralı](../../rules/turkiye.md)).
 
 ## Final Step: Disclaimer + Marker (required)
 

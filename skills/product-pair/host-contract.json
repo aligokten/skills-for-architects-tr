@@ -1,6 +1,6 @@
 {
   "path": "skills/product-pair/SKILL.md",
-  "responsibility": "Suggest complementary products that pair well with a given item \u2014 side tables for sofas, task lights for desks, etc. Use when the user asks \"what goes with\" a product, wants coordinating pieces, or asks to complete a furniture grouping.",
+  "responsibility": "Verilen bir ürünle uyumlu tamamlayıcı ürünler önerir — kanepeye sehpa, masaya çalışma lambası vb. \"Bununla ne gider\", koordineli parçalar veya mobilya grubunu tamamlama için kullan.",
   "inputs": "Supplied task and selected source scope; exact destination only for requested persistence or application work. Load project context only when the task needs project records.",
   "owned_records": [],
   "non_owned_records": [

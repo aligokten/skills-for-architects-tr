@@ -1,6 +1,6 @@
 {
   "path": "skills/mobility-analysis/SKILL.md",
-  "responsibility": "Research transit, walking, cycling, pedestrian infrastructure, and airport access for a site. Use for mobility, accessibility, or walkability questions tied to a location.",
+  "responsibility": "Bir arsa için toplu taşıma, yürünebilirlik, bisiklet, yaya altyapısı ve havalimanı erişimini araştırır (İstanbul'da İBB Açık Veri, Metro İstanbul vb.). Konuma bağlı ulaşım, erişilebilirlik veya yürünebilirlik soruları için kullan.",
   "inputs": "Supplied task and selected source scope; exact destination only for requested persistence or application work. Load project context only when the task needs project records.",
   "owned_records": [],
   "non_owned_records": [

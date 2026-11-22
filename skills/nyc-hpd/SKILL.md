@@ -1,6 +1,6 @@
 ---
 name: nyc-hpd
-description: "Look up HPD violations, complaints, and building registration for NYC residential buildings. Use when the user asks about housing-code violations, tenant complaints, or HPD registration at an address. NYC only; for DOB and ECB violations use /as:nyc-dob-violations."
+description: "Yalnızca New York: konut binaları için HPD ihlalleri, şikâyetler ve kayıt. Türkiye için yapi-kayit-tr kullan."
 allowed-tools:
   - WebFetch
   - Write
@@ -63,6 +63,10 @@ Keep multiple source systems identifiable; deduplicate only on verified identiti
 ## Deliver
 
 Return the property identity, requested scope, sourced results, retrieval date and query/coverage limitations. Summarize counts without hiding omitted rows; mark truncated output. For no matches, say which source/query returned none. For inaccessible datasets, report unavailable, not zero. Link original records/reports and preserve unresolved conclusions.
+
+## Türkiye
+
+Bu beceri yalnızca New York City içindir. Arsa Türkiye'deyse bu prosedürü kullanma ve NYC verilerini Türkiye yerine koyma; `/as:imar-analizi-tr`, `/as:parsel-sorgu-tr`, `/as:tescil-kontrol-tr`, `/as:yapi-kayit-tr` veya `/as:mulk-raporu-tr` becerisine yönlendir. Kullanıcı Türkçe yazıyorsa NYC raporunu Türkçe sun ve Türkçe sorumluluk reddi bloğunu kullan ([Türkiye kuralı](../../rules/turkiye.md)).
 
 ## Outputs and records
 

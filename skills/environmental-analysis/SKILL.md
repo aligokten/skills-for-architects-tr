@@ -1,6 +1,6 @@
 ---
 name: environmental-analysis
-description: "Research climate, sun, flood, seismic, soil, contamination, and topography for a site. Use for environmental site analysis or hazard questions tied to a location."
+description: "Bir arsa için iklim, güneş, rüzgâr, sel, deprem, zemin, kirlilik ve topoğrafyayı araştırır (Türkiye'de AFAD Deprem Tehlike Haritası, MTA diri fay, MGM iklim verileri). Çevresel arsa analizi veya afet tehlikesi soruları için kullan."
 allowed-tools:
   - WebSearch
   - WebFetch
@@ -200,6 +200,12 @@ A request only to list sources uses catalog metadata and states that coverage is
 - **Flag gaps.** The Gaps & Caveats section is mandatory. Always note what a desk study cannot replace (site visit, survey, geotech).
 - **Use local units.** Imperial for US sites, metric for international sites. Include conversions in parentheses when useful.
 - **Ask once, then work.** After confirming the location, do all the research without interrupting the user. Present the finished brief.
+
+## Türkiye
+
+Türkiye'deki arsalar için başlıca kaynaklar: **AFAD Türkiye Deprem Tehlike Haritaları** (`source:tr-afad-deprem-tehlike-haritasi`; koordinata göre spektral ivme değerleri — TBDY 2018 ile birlikte kullanılır), **MTA Yerbilimleri** diri fay ve jeoloji haritaları (`source:tr-mta-yerbilimleri`), **MGM** iklim ve istasyon verileri (`source:tr-mgm-iklim`), belediye mikrobölgeleme/zemin etüt raporları ve DSİ/AFAD taşkın bilgileri. Deprem tehlikesi parametrelerini (Ss, S1, PGA vb.) yalnızca haritadan veya resmî rapordan al; bölge numarası (eski 1996 haritası) kullanma. Zemin sınıfı yalnızca zemin etüdünden gelir; tahmin etme. Diri faya yakınlık, sıvılaşma ve heyelan riskini kaynağıyla belirt ve mutlaka zemin etüdü öner.
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.
 
 ## Final Step: Disclaimer + Marker (required)
 

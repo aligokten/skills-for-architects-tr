@@ -1,6 +1,6 @@
 ---
 name: lighting-report-extract
-description: "Check reported lighting quantities and results in supplied simulation PDFs without adding repeated calculation surfaces. Use for scoped luminaire inventories and illuminance results; not simulation or compliance."
+description: "Verilen aydınlatma simülasyonu PDF'lerindeki armatür adetlerini ve sonuçları tekrar eden hesap yüzeyleri eklemeden kontrol eder. Kapsamlı armatür envanteri ve aydınlık düzeyi sonuçları için kullan; simülasyon veya uygunluk için değil."
 allowed-tools:
   - Read
   - Write
@@ -56,3 +56,7 @@ produced. One-off extraction requires no studio initialization or schedule adopt
 ## Current document placement
 
 Save only authorized derived outputs and verify their actual content, source hashes and complete requested scope. Inline answers and one-off files need no project setup or adoption. For a requested registered project report, resolve confirmed coordinates using the receive-owned native `documents.resolve/register` semantics in the [workspace model](../../docs/workspace-model.md), including its complete document/register mutation sequence. Find existing records with `documents.query`; never guess a folder. This conditional handoff does not authorize schedule or library changes.
+
+## Türkiye
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.

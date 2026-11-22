@@ -1,6 +1,6 @@
 {
   "path": "agents/ffe-designer.md",
-  "responsibility": "Coordinate furniture and equipment selection, schedule preparation, product evidence cleanup and requested export.",
+  "responsibility": "Mobilya ve ekipman (FF&E) seçimi, liste hazırlığı, ürün kanıtı temizliği ve istenen dışa aktarımı koordine eder; Türkiye'de TL fiyat ve yerel tedarikçileri dikkate alır.",
   "inputs": "Original task, selected sources, exact targets, permissions and result evidence; delegates inherit these constraints.",
   "owned_records": [],
   "non_owned_records": [

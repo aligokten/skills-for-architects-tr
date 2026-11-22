@@ -1,6 +1,6 @@
 {
   "path": "skills/occupancy-calculator/SKILL.md",
-  "responsibility": "Calculate code occupant loads by area with gross/net factors and jurisdiction checks. Use for \"how many people can this space hold,\" IBC Table 1004.5, egress inputs, or occupancy-load reports; not for workplace headcount planning.",
+  "responsibility": "Alan bazında kullanıcı yükü (doluluk) hesaplar; brüt/net katsayıları ve yargı bölgesi kontrolleriyle. Türkiye'de Binaların Yangından Korunması Hakkında Yönetmelik, ABD'de IBC 1004.5. \"Bu mekân kaç kişi alır\", kaçış hesabı girdileri veya kullanıcı yükü raporları için kullan; ofis personel planlaması için değil.",
   "inputs": "Supplied task and selected source scope; exact destination only for requested persistence or application work. Load project context only when the task needs project records.",
   "owned_records": [
     "occupancy.json"

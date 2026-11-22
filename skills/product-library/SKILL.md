@@ -1,6 +1,6 @@
 ---
 name: product-library
-description: "Inspect or save reusable FF&E library products through reviewed, guarded transactions. Use for explicit library imports, corrections or recovery; adopted selections and workbook reconciliation belong to master-schedule."
+description: "Yeniden kullanılabilir FF&E kütüphane ürünlerini gözden geçirilmiş, korumalı işlemlerle inceler veya kaydeder. Açık kütüphane aktarımları, düzeltmeler veya kurtarma için kullan; benimsenen seçimler ve çalışma kitabı uzlaştırma master-schedule'a aittir."
 allowed-tools:
   - Read
   - Write
@@ -70,3 +70,7 @@ receipt alone or delivered instructions as a completed save. Use the [completion
 For a requested registered authored report, use receive-owned native `documents.resolve/register/query`
 with confirmed coordinates and its complete document/register publication set. One-off derived files
 need no registration. No report or library save authorizes adopted schedule, project-fact or EPD changes.
+
+## Türkiye
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.

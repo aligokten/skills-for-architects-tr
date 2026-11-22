@@ -1,6 +1,6 @@
 ---
 name: spec-writer
-description: "Draft Project Manual specification sections from accepted project requirements using CSI MasterFormat identities, three-part sections and review flags. Use for design requirements; use product-cut-sheet for source-faithful product entries and epd-to-spec for EPD requirements."
+description: "Kabul edilmiş proje gerekliliklerinden teknik şartname bölümleri yazar: Türkiye'de mahal listesi ve teknik şartname düzeni (TS/TS EN standart atıflarıyla), isteğe bağlı olarak CSI MasterFormat üç bölümlü yapı ve inceleme işaretleri. Ürün föyleri için product-cut-sheet, EPD gereklilikleri için epd-to-spec kullan."
 allowed-tools:
   - Read
   - Write
@@ -59,6 +59,12 @@ Use [Arch Studio specification formatting](../../rules/csi-formatting.md). Cover
 Keep missing product choices, incompatible requirements and unverified claims marked for review. Do not fill gaps with generic manufacturer facts, copied clauses or unsupported code requirements. An outline does not certify code compliance or construction suitability.
 
 Return all requested sections, verified identities, source locators and outstanding review items. Export only in the authorized destination. Follow the [professional disclaimer rule](../../rules/professional-disclaimer.md) for regulatory or life-safety requirements.
+
+## Türkiye
+
+Türkiye'deki projelerde şartnameyi Türkçe ve Türk pratiğine uygun düzenle: **mahal listesi** (mahal bazında döşeme/duvar/tavan kaplamaları), **özel teknik şartname** ve gerekiyorsa Çevre, Şehircilik ve İklim Değişikliği Bakanlığı birim fiyat poz numaralarıyla eşleşen kalemler. Standart atıflarını TS, TS EN, TS EN ISO olarak ve yürürlükteki sürümüyle yap (`source:tr-tse`); bulamadığın sürüm için "doğrulanmadı" işaretle. Isı yalıtımı (TS 825), erişilebilirlik (TS 9111), yangın (Binaların Yangından Korunması Hakkında Yönetmelik) ve enerji performansı (BEP yönetmeliği) atıflarını asıl kaynaktan doğrula. Kullanıcı CSI MasterFormat isterse o düzeni koru ve Türkçe başlıkları ekle.
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.
 
 ## Outputs and records
 

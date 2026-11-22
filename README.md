@@ -9,254 +9,131 @@
 <br>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Release](https://img.shields.io/github/v/release/AlpacaLabsLLC/skills-for-architects)](https://github.com/AlpacaLabsLLC/skills-for-architects/releases)
 [![Claude Code: plugin](https://img.shields.io/badge/Claude_Code-plugin-blue)](https://code.claude.com/docs)
 [![Codex: plugin](https://img.shields.io/badge/Codex-plugin-blue)](https://developers.openai.com/codex/)
-[![skills: 61](https://img.shields.io/badge/skills-61-blue)](./skills/README.md)
-[![website: architecturestudio.ai](https://img.shields.io/badge/website-architecturestudio.ai-blue)](https://architecturestudio.ai)
-[![Last commit](https://img.shields.io/github/last-commit/AlpacaLabsLLC/skills-for-architects)](https://github.com/AlpacaLabsLLC/skills-for-architects/commits/main)
+[![beceri: 67](https://img.shields.io/badge/beceri-67-blue)](./skills/README.md)
+[![Türkiye](https://img.shields.io/badge/uyarlama-T%C3%BCrkiye-red)](./rules/turkiye.md)
 
-**Current release: 1.5.3**
+**Sürüm: 1.5.3 tabanlı Türkiye uyarlaması**
 
 </div>
 
-Arch Studio is a framework that helps an architecture studio build its own AI practice. It helps you decide how AI is governed in your studio, which practice areas it covers, what it remembers, and which tools it uses, then carries those decisions into [Claude Code](https://code.claude.com/docs) or [Codex](https://developers.openai.com/codex/).
+# Arch Studio — Türkiye
 
-## Contents
+Bu depo, ALPA'nın açık kaynak (MIT) [Arch Studio / skills-for-architects](https://github.com/AlpacaLabsLLC/skills-for-architects) eklentisinin **Türkiye'deki mimarlık ofisleri için uyarlanmış** bir çatalıdır (fork). Arch Studio, bir mimarlık ofisinin kendi yapay zekâ pratiğini kurmasına yardım eder: yapay zekânın nasıl yönetileceğine, hangi pratik alanlarını kapsayacağına, neyi hatırlayacağına ve hangi araçları kullanacağına karar verirsiniz; bu kararlar [Claude Code](https://code.claude.com/docs) veya [Codex](https://developers.openai.com/codex/) içinde uygulanır.
 
-- [How it works](#how-it-works)
-- [Two editions](#two-editions)
-- [Commercial services](#commercial-services)
-- [Install](#install)
-- [The basic workflow](#the-basic-workflow)
-- [What's inside](#whats-inside)
-- [Make it yours](#make-it-yours)
-- [Philosophy](#philosophy)
-- [When something goes wrong](#when-something-goes-wrong)
-- [Updating and what's new](#updating-and-whats-new)
-- [Contributing](#contributing)
-- [Data, privacy and telemetry](#data-privacy-and-telemetry)
-- [License](#license)
+> Bu çatal ALPA tarafından yayımlanmamış ve desteklenmemektedir. Orijinal proje ve tüm hakları için [LICENSE](LICENSE) dosyasına bakın.
 
-## How it works
+## İçindekiler
 
-Before a studio can trust AI with real work, it has to make a few decisions. Arch Studio gives each one a place to live and keeps the assistant inside it.
+- [Türkiye uyarlamasında neler var](#türkiye-uyarlamasında-neler-var)
+- [Kurulum](#kurulum)
+- [Temel iş akışı](#temel-iş-akışı)
+- [İçerik](#i̇çerik)
+- [Önemli sınırlamalar](#önemli-sınırlamalar)
+- [Veri, gizlilik ve telemetri](#veri-gizlilik-ve-telemetri)
+- [Lisans](#lisans)
 
-- **Governance: who approves what.** Adopt your own AI-use policy or start from the default one. The assistant works within it. It shows a work plan before larger jobs, offers findings to your records instead of writing them on its own, and marks building-code, zoning and specification output for professional review. The architect still signs off.
-- **Practice areas: where AI helps.** Skills are grouped by [practice area](docs/practice-clusters.md), from due diligence and programming to specifications and FF&E. Use the areas that fit your practice and ignore the rest.
-- **Memory: what the studio remembers.** Studio settings, project facts, decisions, documents, tasks and time live in plain files in folders you own, so the next session can pick up where the last one ended.
-- **Tooling: what the assistant can use.** Start with the 61 bundled skills as working references. Then write your own with `/as:skill-maker`. Your skills live in your studio or project folder, and plugin updates never overwrite them.
+## Türkiye uyarlamasında neler var
 
-Run `/as:studio` to set up the governance and memory side: your AI-use policy, naming and filing rules, units, jurisdiction and project phases. It shows exactly what it will create and writes nothing until you approve. Then register projects. From there, Norma, the coordinator, sends each request to the right skills within the rules you set. You can also skip setup and try a skill on a single task first.
+- **6 yeni Türkiye becerisi:** imar analizi (emsal/KAKS, TAKS, Hmax, çekme mesafeleri, plan notları), TKGM parsel sorgu, tescil ve sit alanı kontrolü, yapı kayıtları (ruhsat, iskân, yapı denetim, yapı kayıt belgesi, riskli yapı), birleşik mülk ön inceleme raporu ve Türkiye mimarlık meslek bilgisi.
+- **Yeni ajan:** `turkiye-imar-uzmani` — Türkiye'deki taşınmazlar için parsel, imar, tescil ve yapı kaydı araştırmasını koordine eder.
+- **Türkiye yargı bölgesi ve 27 resmî kaynak:** Mevzuat Bilgi Sistemi, Resmî Gazete, 3194 sayılı İmar Kanunu, Planlı Alanlar İmar Yönetmeliği, Binaların Yangından Korunması Hakkında Yönetmelik, Türkiye Bina Deprem Yönetmeliği, Otopark Yönetmeliği, 2863, 4708, 6306 ve 4734 sayılı kanunlar, TKGM, e-Plan, e-Devlet, AFAD Deprem Tehlike Haritası, MTA, Koruma Bölge Kurulları, TÜİK, MGM, Mimarlar Odası, Yapı Yaklaşık Birim Maliyetleri, TSE, GİB, EKAP ve İBB Açık Veri.
+- **Tüm 61 mevcut beceri uyarlandı:** açıklamalar Türkçe; her beceride Türkiye talimatları var. Örnekler: kullanıcı yükü hesabı Yangın Yönetmeliği'ne göre, deprem tehlikesi AFAD'dan, nüfus TÜİK'ten, teklifler Mimarlar Odası en az bedel esasına göre, faturalar TL/KDV/e-Fatura ile, şartnameler mahal listesi ve TS/TS EN atıflarıyla.
+- **[Türkiye kuralı](rules/turkiye.md):** Türkçe çıktı, metrik birimler, Türk sayı ve tarih biçimi, TL ve KDV, KVKK ilkeleri.
+- **Türkçe sorumluluk reddi:** Mevzuat içeren çıktılar Türkçe kanonik blokla biter; kontrol hook'u Türkçe bloğu da tanır.
 
-## Two editions
+## Kurulum
 
-- **Arch Studio OSS** (this repository) is the single-user setup. You install the plugin in your own Claude Code or Codex, and your studio and project records stay in local folders. It is free and MIT-licensed.
-- **Arch Studio MCP** is the hosted service, for teams. It delivers the same Arch Studio content to a connected assistant through a signed-in firm account. It also adds hosted modules, such as the Materials Library, whose records only members of that firm can reach. It sends instructions; your assistant still does the work with its own tools, and the service cannot reach your local files. Project records stay local in both editions. Only records you save to a hosted module are held by the service ([data governance](docs/data-governance.md)).
+Bu çatalın marketplace adı, orijinaliyle aynıdır (`skills-for-architects`). **Orijinal eklentiyi kurduysanız önce onu kaldırın:**
 
-Use one or the other, not both. To ask about Arch Studio MCP, email `hello@alpa.llc`.
+```bash
+claude plugin uninstall as@skills-for-architects
+```
 
-## Commercial services
-
-Arch Studio OSS is open source under the MIT license. If your studio wants help working through these decisions, writing its own skills, moving a team to Arch Studio MCP, training, or support, email ALPA at `hello@alpa.llc`.
-
-## Install
-
-One plugin, `as` (Arch Studio), with the same skills on every host. Install it in each assistant you use.
+```bash
+claude plugin marketplace remove skills-for-architects
+```
 
 ### Claude Code
 
+`<github-kullanici>/<depo>` yerine bu deponun GitHub adresini yazın:
+
 ```bash
-claude plugin marketplace add AlpacaLabsLLC/skills-for-architects
+claude plugin marketplace add <github-kullanici>/<depo>
+```
+
+```bash
 claude plugin install as@skills-for-architects
+```
+
+Ardından yeni bir oturum başlatın:
+
+```bash
 claude
 ```
 
 ### Codex
 
 ```bash
-codex plugin marketplace add AlpacaLabsLLC/skills-for-architects
-codex plugin add as@skills-for-architects
-codex
+codex plugin marketplace add <github-kullanici>/<depo>
 ```
 
-### Claude Desktop
+```bash
+codex plugin add as@skills-for-architects
+```
 
-Open **Customize → Plugins → + → Add marketplace**, choose a repository source, enter `AlpacaLabsLLC/skills-for-architects`, and install **Arch Studio**. Workspace, hook, and subagent behavior depends on the Claude surface and permissions your organization enables; the workflow below is tested with Claude Code.
+### Çalıştığını kontrol edin
 
-### Check that it works
+Claude Code'da `/as:studio`, Codex'te `$studio` yazın. Türkiye becerilerini görmek için `/as:tool-catalog` yazın veya doğrudan deneyin:
 
-Type `/as:studio` in Claude Code, or `$studio` in Codex. It offers four paths: set up a studio, use the skills without setup, open an existing studio, or learn on a fictional practice project. Nothing is created (no studio, project, ALPA account, cloud store, or git repository) until you approve an exact local folder. Using the skills without setup creates no workspace files; a skill creates only the output you ask for.
+- `/as:imar-analizi-tr İstanbul Kadıköy Moda Mahallesi 123 ada 45 parsel`
+- `/as:occupancy-calculator 450 m² restoran, İzmir`
+- `/as:mimarlik-bilgisi-tr Uygulama projesi ile avan proje arasındaki fark nedir?`
 
-New to AI assistants? Start the six-module course with `/as:learn` (Codex: `$learn`).
+## Temel iş akışı
 
-For teams, Arch Studio MCP is connected rather than installed; see [Two editions](#two-editions). Install the plugin or connect the MCP, not both: the MCP delivers instructions only, does not run skills, and cannot reach your local files. See [release delivery](docs/release-delivery.md).
+1. **studio** — `/as:studio` ile ofis politikanızı, adlandırma kurallarınızı, birimleri (metrik), yargı bölgesini (Türkiye) ve proje aşamalarını kaydedin ya da kurulum yapmadan doğrudan bir işe başlayın.
+2. **norma** — İhtiyacınızı düz Türkçeyle anlatın. Norma uygun becerileri seçer; büyük işler için önce bir iş planı gösterir.
+3. **Araştırma becerileri** — Arsa, imar, taşınmaz, ürün ve EPD becerileri asıl kaynaklara gider ve kaynak gösterir. Örneğin **mulk-raporu-tr**, parsel, imar, tescil, yapı kayıtları ve deprem tehlikesini tek raporda birleştirir.
+4. **Şartname ve sunum becerileri** — **spec-writer**, **epd-to-spec**, **product-cut-sheet**, **slide-deck-generator** araştırmadan belge hazırlar. Mevzuat içeren her çıktı mesleki inceleme için işaretlenir.
+5. **Kayıt becerileri** — **project**, **receive**, **meeting-minutes**, **tasklist** ve **timetracker** olguları, belgeleri, kararları, görevleri ve zamanı proje klasörünüzde tutar.
+6. **skill-maker** — Ofisinizde tekrarlanan bir prosedürü `/as:skill-maker` ile ofis veya proje becerisine dönüştürün.
 
-## The basic workflow
+## İçerik
 
-1. **studio** — Run `/as:studio` to record your studio's policy, conventions and projects, or skip setup and go straight to a task. Skills work either way.
-2. **norma** — Describe what you need in plain words. Norma picks the skills, handles quick lookups directly, and for larger jobs uses **workplan** to show you a work plan (steps, skills, and outputs) before starting.
-3. **Research skills** — Site, zoning, property, product, and EPD skills fetch original sources and cite them. For example, **nyc-property-report** gathers landmarks, permits, violations, ownership, housing, and BSA records into one report.
-4. **Specification and presentation skills** — **spec-writer**, **epd-to-spec**, **product-cut-sheet**, **slide-deck-generator** and others prepare documents from the research. Anything regulatory is marked for professional review.
-5. **Record skills** — **project**, **receive**, **meeting-minutes**, **tasklist** and **timetracker** keep facts, documents, decisions, tasks, and time in your project folder. They offer what to save rather than writing silently, and time is logged only in amounts you confirm.
-6. **skill-maker** — When your firm repeats a procedure, run `/as:skill-maker` to turn it into a studio or project skill.
+67 beceri (6'sı Türkiye'ye özel), 9 ajan, 9 kural ve 4 hook; hepsi birlikte kurulur. English summary: 67 skills, 9 agents, 9 rules, and 4 hooks. Tam katalog: [skills/README.md](./skills/README.md).
 
-Not sure what is available? `/as:tool-catalog` lists every skill and agent on your host. `/as:studio` stays the place for studio administration; a general task typed there is passed to Norma. Optional [default preferences](skills/norma/references/assistant-preference.md) make your assistant use Arch Studio by default for architecture and project work; they need a supported target, an exact diff, and your approval.
+### Ajanlar (Claude Code)
 
-**Host syntax.** Claude Code uses `/as:<skill>`; Codex uses `$<skill>`. `as` is the plugin namespace. Use the exact name your assistant shows.
-
-## What's inside
-
-61 skills, 8 agents, 8 rules, and 4 hooks. Everything installs together. The full catalog, with inputs and outputs, is in [skills/README.md](./skills/README.md).
-
-### Skills
-
-**Getting started and studio**
-- **norma** — Coordinates a request across the skills that fit it
-- **norma-support** — Help with setup, access, memory, and troubleshooting
-- **studio** — Set up or open a studio and register projects
-- **tool-catalog** — Lists the skills and agents available on your host
-- **learn** — Six-module, resumable course using a sample museum project
-- **skill-maker** — Create or update your own studio or project skills
-- **studio-feedback** — Prepare a bug report or feature request for you to review and send
-
-**Project records**
-- **project** — Set up a project and keep its facts and decisions
-- **receive** — File received and authored documents, keeping original filenames
-- **workplan** — Prepare a work plan before larger work starts
-- **meeting-minutes** — Minutes from notes or transcripts, decisions kept separate from discussion
-- **site-visit-report** — Site-visit records: what was seen, what was reported, and follow-ups
-- **tasklist** — Project or studio task list (`TASKS.csv`)
-- **timetracker** — Logs only time you confirm (`TIME.csv`)
-
-**Proposals, agreements and invoices**
-- **proposal** — Prepare and register proposals; protects terms once issued
-- **agreement** — Keep agreement scope on hand and check work against it
-- **invoice** — Append-only invoice ledger from billing facts you supply
-
-**Professional practice**
-- **architecture-knowledge** — Plain explanations of US practice terms: phases, CD sets, AIA contracts, CSI/NCS
-
-**NYC due diligence**
-- **nyc-landmarks** — Landmark and historic-district check (LPC)
-- **nyc-dob-permits** — DOB permits and job filings
-- **nyc-dob-violations** — DOB and ECB violations
-- **nyc-acris** — Deeds, mortgages, liens, and sales (ACRIS)
-- **nyc-hpd** — HPD violations, complaints, and registration
-- **nyc-bsa** — BSA variances and special permits
-- **nyc-property-report** — All of the above in one report
-
-**Site planning**
-- **environmental-analysis** — Climate, sun, flood, seismic, soil, and topography
-- **mobility-analysis** — Transit, walking, cycling, and airport access
-- **demographics-analysis** — Population, income, age, housing, and jobs
-- **site-history** — Neighborhood context, landmarks, and planned development
-
-**Zoning**
-- **zoning-analysis-nyc** — NYC FAR, height, setbacks, and uses for a lot
-- **zoning-envelope** — Interactive 3D view of the buildable envelope
-
-**Programming**
-- **workplace-programmer** — Office programs from headcount and work style
-- **occupancy-calculator** — Building-code occupant loads, egress, and plumbing fixtures
-
-**Specifications**
-- **spec-writer** — Project Manual sections, with review markers
-- **epd-to-spec** — EPD submittal requirements and GWP limits for a specification section
-
-**Sustainability**
-- **epd-research** — Find EPDs by material or category
-- **epd-parser** — Pull GWP and other impacts from an EPD PDF
-- **epd-compare** — Compare EPDs side by side, including LEED eligibility
-
-**FF&E and materials**
-- **product-research** — Find products from a design brief
-- **product-match** — Find similar products from an image, name, or description
-- **product-pair** — Suggest pieces that go with a product
-- **product-url-clip** — Save a product page as evidence without adopting it
-- **product-spec-bulk-fetch** — Pull specs from a list of product URLs
-- **product-spec-pdf-parser** — Pull specs from product PDFs and price books
-- **product-data-import** — Turn product information into schedule-ready rows
-- **product-data-cleanup** — Normalize casing, dimensions, units, and materials
-- **product-enrich** — Tag products by category, color, material, and style
-- **product-image-processor** — Download, resize, and remove backgrounds from product images
-- **product-library** — Your firm's reusable product library
-- **product-audit** — Check products or a schedule against their sources
-- **product-cut-sheet** — One-product cut sheet from a PDF or URL
-- **ffe-spec-book** — Assemble cut sheets into an FF&E book
-- **master-schedule** — Adopt, revise, and reconcile the project FF&E schedule
-- **drawing-quantity-extract** — Count furniture or fixtures on supplied drawings
-- **lighting-report-extract** — Read luminaire counts and results from lighting reports
-- **schedule-quantity-reconcile** — Compare counts from drawings, reports, and schedules
-- **csv-to-sif** — Export a product CSV to dealer SIF
-- **sif-to-csv** — Read dealer SIF into a product CSV
-
-**Presentations**
-- **slide-deck-generator** — Self-contained HTML slide decks
-- **color-palette-generator** — Color palettes with contrast checks
-- **resize-images** — Resize images for web, social, slides, and print
-
-**Which specification skill?** A Project Manual section → **spec-writer**. Its EPD and GWP requirements → **epd-to-spec**. One product from a PDF or URL → **product-cut-sheet**. A bound FF&E book → **ffe-spec-book**.
-
-### Agents (Claude Code)
-
-Eight agents: seven specialists and an optional Norma worker. Each one combines a group of skills for a kind of work. They run only where the host supports delegation and the request allows it; otherwise the same skills run directly. Codex installs the skills but not these agents. See the [agents index](./docs/agents.md).
-
-| Agent | What it does |
+| Ajan | Ne yapar |
 |-------|--------------|
-| [site-planner](./agents/site-planner.md) | Runs environmental, mobility, demographic, and history research, then combines them |
-| [nyc-zoning-expert](./agents/nyc-zoning-expert.md) | NYC property research, zoning analysis, and envelope visualization |
-| [workplace-strategist](./agents/workplace-strategist.md) | Turns headcount and work style into programs and room schedules |
-| [product-and-materials-researcher](./agents/product-and-materials-researcher.md) | Finds products, extracts specs, and suggests alternatives |
-| [ffe-designer](./agents/ffe-designer.md) | Builds schedules and room packages, checks them, and prepares dealer files |
-| [sustainability-specialist](./agents/sustainability-specialist.md) | Researches and compares EPDs and prepares spec limits |
-| [brand-manager](./agents/brand-manager.md) | Builds decks and palettes and checks deliverables before they go out |
-| [norma](./agents/norma.md) | Optional worker that carries out an already approved assignment; questions go back to you |
+| [turkiye-imar-uzmani](./agents/turkiye-imar-uzmani.md) | Türkiye'de parsel, imar, tescil ve yapı kaydı araştırması ile imar zarfı |
+| [site-planner](./agents/site-planner.md) | Çevre, ulaşım, demografi ve tarihçe araştırmasını birleştirir |
+| [nyc-zoning-expert](./agents/nyc-zoning-expert.md) | Yalnızca New York: mülk araştırması ve imar analizi |
+| [workplace-strategist](./agents/workplace-strategist.md) | Personel sayısı ve çalışma biçiminden alan programı |
+| [product-and-materials-researcher](./agents/product-and-materials-researcher.md) | Ürün bulur, özellik çıkarır, muadil önerir |
+| [ffe-designer](./agents/ffe-designer.md) | FF&E listeleri ve oda paketleri hazırlar, kontrol eder |
+| [sustainability-specialist](./agents/sustainability-specialist.md) | EPD araştırır, karşılaştırır, şartname sınırları hazırlar |
+| [brand-manager](./agents/brand-manager.md) | Sunum ve paletler hazırlar, teslimleri kontrol eder |
+| [norma](./agents/norma.md) | Onaylanmış bir görevi yürüten isteğe bağlı çalışan |
 
-### Rules
+### Kurallar
 
-Shared conventions the skills follow. They guide output; only the hooks below check anything automatically. See the [rules index](./rules/README.md).
+Ayrıntılar için [kurallar dizinine](./rules/README.md) bakın. Türkiye'ye özgü kural: [turkiye](./rules/turkiye.md). Diğerleri: units-and-measurements, code-citations, professional-disclaimer, csi-formatting, terminology, output-formatting, transparency, moments.
 
-| Rule | Covers |
-|------|--------|
-| [units-and-measurements](./rules/units-and-measurements.md) | Imperial and metric defaults, area types, dimensions |
-| [code-citations](./rules/code-citations.md) | Building-code editions, jurisdiction, and references |
-| [professional-disclaimer](./rules/professional-disclaimer.md) | Required disclaimer and limits on regulated output |
-| [csi-formatting](./rules/csi-formatting.md) | CSI formatting from the original standard you supply |
-| [terminology](./rules/terminology.md) | Style and first-use conventions |
-| [output-formatting](./rules/output-formatting.md) | Tables, source attribution, file names, lists |
-| [transparency](./rules/transparency.md) | Showing inputs, assumptions, calculations, and sources |
-| [moments](./rules/moments.md) | The shared session line, when to suggest setup, and how to invoke skills |
+### Hook'lar
 
-### Hooks
-
-Claude Code loads three hook handlers across two events. Codex loads one. See the [hooks index](./hooks/README.md).
-
-| Hook | Host | When | What it does |
+| Hook | Host | Ne zaman | Ne yapar |
 |------|------|------|--------------|
-| [session-start-welcome](./hooks/session-start-welcome.sh) | Claude Code | First session after install | Confirms the skills are ready and points to setup and the course |
-| [version-check](./hooks/version-check.sh) | Claude Code | Session start, at most daily | Checks for a newer release (see [telemetry](#data-privacy-and-telemetry)) |
-| [post-write-disclaimer-check](./hooks/post-write-disclaimer-check.sh) | Claude Code | After Write or Edit | Flags regulatory output missing the professional disclaimer |
-| [session-start-ambient](./hooks/session-start-ambient.sh) | Codex | Session start | Adds short Arch Studio routing context; reads and writes nothing |
+| [session-start-welcome](./hooks/session-start-welcome.sh) | Claude Code | Oturum başlangıcı | Becerilerin hazır olduğunu bildirir |
+| [version-check](./hooks/version-check.sh) | Claude Code | Günde en fazla bir kez | **Orijinal** projenin yeni sürümünü kontrol eder (aşağıya bakın) |
+| [post-write-disclaimer-check](./hooks/post-write-disclaimer-check.sh) | Claude Code | Write/Edit sonrası | Sorumluluk reddi eksik mevzuat çıktısını işaretler (Türkçe veya İngilizce) |
+| [session-start-ambient](./hooks/session-start-ambient.sh) | Codex | Oturum başlangıcı | Kısa yönlendirme bağlamı ekler |
 
-## Make it yours
+### Nasıl düzenlenmiştir
 
-The bundled skills are working examples, not the limits of the system. Firms add their own skills, which live in the firm's folders, outside the plugin, and are never overwritten by updates.
-
-| Where | Location | For |
-|-------|----------|-----|
-| Bundled skills | Installed plugin | AEC skills maintained in this repository |
-| Studio skills | `studio/.agents/skills/` (Codex) or `studio/.claude/skills/` (Claude Code) | Firm standards, internal procedures, templates |
-| Project skills | `<registered-project>/.agents/skills/` or `.claude/skills/` | Client-, jurisdiction-, or project-specific procedures |
-| Upstream | This repository | General skills proposed for everyone |
-
-Run `/as:skill-maker` and choose studio or project. It uses your assistant's own skill maker when there is one and checks the result against Arch Studio's rules.
-
-You can start with the bundled skills today and set up a studio later; nothing needs migrating.
-
-### How it is organized
-
-Arch Studio has four parts:
+Arch Studio dört bölümden oluşur (çerçeve terimleri orijinal adlarıyla):
 
 | Pillar | Responsibility |
 |---|---|
@@ -265,56 +142,31 @@ Arch Studio has four parts:
 | Knowledge | Access to applicable authoritative original sources and their provenance |
 | Memory | Accepted studio/project facts, decisions, preferences, records and evidence |
 
-More detail: [architecture](docs/architecture.md), [workspace model](docs/workspace-model.md) (who owns which file), [host-harness contract](docs/host-harness-contract.md), [host adapters](docs/host-adapters.md), and [PATTERNS](PATTERNS.md). Firms planning a pilot should read the [firm deployment guide](./docs/firm-deployment.md). For organizing skills across a team, see [Distributing Skills to Teams](https://alpa.llc/articles/distributing-skills-to-teams).
+Yönetişim (kim neyi onaylar), araçlar (beceriler ve ajanlar), bilgi (asıl kaynaklara erişim) ve hafıza (ofis/proje olguları ve kararları). Ayrıntılar: [mimari](docs/architecture.md), [çalışma alanı modeli](docs/workspace-model.md) (hangi dosya kime ait), [host sözleşmesi](docs/host-harness-contract.md) ve [PATTERNS](PATTERNS.md).
 
-## Philosophy
+Kendi becerilerinizi `/as:skill-maker` ile ofis (`studio/.claude/skills/`) veya proje klasörünüzde oluşturabilirsiniz; eklenti güncellemeleri bunların üzerine yazmaz. Belediyenize özel bir imar prosedürü, ofis şartname şablonunuz veya teklif formatınız için idealdir.
 
-- **Local first.** Your studio and project records stay in your folders. The plugin does not upload them anywhere.
-- **Original sources.** Skills go to the authoritative source and say where each fact came from. They do not rely on summaries bundled with the plugin.
-- **The architect decides.** Skills research, prepare and check. Building-code, zoning, and specification output is marked for professional review, and findings are offered to your records rather than written silently.
-- **Firms own their skills.** Your procedures live in your workspace, can stay private, and can be shared upstream if you choose.
+## Önemli sınırlamalar
 
-## When something goes wrong
+- **Mesleki onay değildir.** Tüm imar, yangın, deprem ve şartname çıktıları ön planlama amaçlıdır; yetkili mimar/mühendis tarafından doğrulanmalı ve belediyeden resmî imar durum belgesi alınmalıdır.
+- **Rakam gömülü değildir.** Beceriler emsal, kullanıcı yükü katsayısı, KDV oranı veya birim maliyet gibi değerleri içermez; her görevde asıl kaynaktan doğrulanması gerekir. Kaynağa erişilemezse sonuç "çözümlenmemiş" kalır.
+- **Erişim.** Bazı resmî siteler (e-Devlet, Web Tapu, belediye e-İmar) kimlik doğrulama ister veya otomatik erişimi engeller; bu durumda beceriler sizin sağladığınız belgelerle çalışır.
+- **Belediyeye özgü kurallar.** Her belediyenin imar yönetmeliği ve plan notları farklıdır; beceriler bunları ayrıca kontrol etmenizi ister.
+- **İç belgeler.** `docs/`, `schema/` ve test dosyaları gibi iç yönetişim belgeleri İngilizce bırakılmıştır; bunlar Claude'un okuduğu teknik sözleşmelerdir ve kullanımı etkilemez.
 
-Run `/as:studio-feedback` (Codex: `$studio-feedback`). It prepares a bug report or feature request on your machine for you to read. It opens a prefilled GitHub issue only when you choose to, and never submits it for you.
+## Veri, gizlilik ve telemetri
 
-For setup or access questions, ask `/as:norma-support`. You can also [open an issue](https://github.com/AlpacaLabsLLC/skills-for-architects/issues) directly.
+Arch Studio kendi Claude Code veya Codex oturumunuzda çalışır. Ofis ve proje kayıtlarınız yerel klasörlerinizde kalır; eklenti bunları hiçbir yere yüklemez. Araştırma becerileri, çalıştırdığınızda belgelerinde adı geçen kamu kaynaklarına bağlanır. Tapu ve kişisel verilerde KVKK ilkelerine uyulur ([Türkiye kuralı](rules/turkiye.md)).
 
-## Updating and what's new
+**Telemetri (yalnızca Claude Code).** Orijinal projeden gelen version-check hook'u günde en fazla bir kez `version.alpa.llc` adresine istek gönderir: orijinal ALPA sürümünü kontrol eder ve anonim bir kullanım sinyali (rastgele kurulum kimliği ve sürüm) içerir. Bu çatalda "yeni sürüm" bildirimi orijinal projeye aittir; o sürüm Türkiye uyarlamasını içermez. Kapatmak için:
 
-Current version: **1.5.3**. On Claude Code, a daily check tells you when a newer release is out. Release notes, including breaking changes and upgrade steps, are in the [CHANGELOG](./CHANGELOG.md).
+- Kullanım sinyalini kapatın: `AS_TELEMETRY_DISABLED=1`
+- Güncelleme kontrolünü kapatın: `AS_UPDATE_CHECK_DISABLED=1`
 
-## Contributing
+English summary: The open-source plugin does not upload or store studio, project or module records on Arch Studio servers. Hosted record-holding modules use the separate boundaries in the [data-governance documentation](./docs/data-governance.md).
 
-If a skill would help other practices, propose it here. A good upstream skill has no firm or client secrets, clear inputs and outputs, cites its sources, keeps professional review in place, and includes tests or examples.
+Ayrıntılar: [veri yönetişimi belgeleri](./docs/data-governance.md).
 
-Read [CONTRIBUTING.md](./CONTRIBUTING.md) first. Repository conventions are in [PATTERNS.md](./PATTERNS.md); shared data formats are in [`schema/`](./schema).
+## Lisans
 
-## Data, privacy and telemetry
-
-Arch Studio runs inside your own Claude Code or Codex session. Your AI model provider's data controls, retention, and account policies apply: see Anthropic's [Privacy Center](https://privacy.claude.com/) or OpenAI's [privacy policy](https://openai.com/policies/privacy-policy/).
-
-- The open-source plugin does not upload or store studio, project or module records on Arch Studio servers. Hosted record-holding modules use the separate boundaries in the [data-governance documentation](./docs/data-governance.md).
-- Prompts and files you send to the AI model are handled under your provider account.
-- Research skills contact the public sources named in their documentation when you run them.
-- New studios include an empty `.mcp.json`. Arch Studio does not pick providers, set up logins, or ship credentials.
-- `/as:studio-feedback` prepares everything locally. Opening the prefilled GitHub link sends what is shown on screen.
-
-**Telemetry (Claude Code only).** Once a day at most, the version-check hook makes one request to `version.alpa.llc` to look for updates. That request also carries an anonymous usage ping: a random install ID created once and stored on your machine (not derived from you or the machine) and the plugin version. It sends no names, account, firm, file paths, project content, or text you typed, and fails silently. Cloudflare still sees ordinary request data such as IP address, headers, and time. Both are on by default:
-
-- Turn off the usage ping: `AS_TELEMETRY_DISABLED=1`
-- Turn off the update check: `AS_UPDATE_CHECK_DISABLED=1`, or `/as:studio updates disable`
-
-Codex installs no lifecycle hook that makes this request, so it sends neither.
-
-Full details: [data-governance documentation](./docs/data-governance.md).
-
-## License
-
-MIT. See [LICENSE](LICENSE). Copyright © 2026 Alpaca Labs, LLC.
-
----
-
-Created by Federico Negro in 2026 and built by [ALPA](https://alpa.llc), a boutique design & technology studio for the built environment, founded by Federico Negro in Brooklyn, New York. Contact: `hello@alpa.llc`.
-
-**Read more:** [Claude Code Cheat Sheet for Architects](https://alpa.llc/articles/claude-code-cheat-sheet) · [Distributing Skills to Teams](https://alpa.llc/articles/distributing-skills-to-teams)
+MIT. Bkz. [LICENSE](LICENSE). Orijinal eser: Copyright © 2026 Alpaca Labs, LLC. Orijinali Federico Negro oluşturdu ve [ALPA](https://alpa.llc) geliştirdi. Türkiye uyarlaması aynı MIT lisansıyla dağıtılır.

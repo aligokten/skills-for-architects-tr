@@ -1,6 +1,6 @@
 ---
 name: tasklist
-description: "Maintain the canonical TASKS.csv with permanent IDs, provenance and lifecycle history; list, add, update, complete, cancel or import selected actions."
+description: "Kalıcı kimlikler, köken ve yaşam döngüsü geçmişiyle kanonik TASKS.csv'yi tutar; seçili aksiyonları listeler, ekler, günceller, tamamlar, iptal eder veya içe aktarır."
 allowed-tools:
   - Read
   - Write
@@ -68,3 +68,7 @@ row counts and all protected rows/fields. A prepared import or retrieved instruc
 executed mutation. Report changed, no-op, blocked or partial honestly with the observed protection
 and checks. If PROJECT.md contains Agreement scope, surface relevant advisory findings without
 adding an approval gate to already authorized task changes.
+
+## Türkiye
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.

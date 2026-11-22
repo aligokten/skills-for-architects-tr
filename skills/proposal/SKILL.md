@@ -1,6 +1,6 @@
 ---
 name: proposal
-description: "Draft and register project proposals, protect issued terms, and record explicitly evidenced commercial lifecycle changes. Sending messages is separate authorization."
+description: "Proje tekliflerini hazırlar ve kaydeder (Mimarlar Odası en az bedel esasları, yapı sınıfı ve Yapı Yaklaşık Birim Maliyetleri dikkate alınarak), verilmiş koşulları korur ve açıkça belgelenen ticari değişiklikleri kaydeder. Mesaj göndermek ayrı yetki gerektirir."
 allowed-tools:
   - Read
   - Write
@@ -33,3 +33,9 @@ The harness prepares the terms from authorized inputs and current applicable ori
 Once sealed, changed terms require a new registered revision, not replacement of the stored checksum. Lifecycle evidence stays in registry history outside the issued block. Preserve malformed input and checksum failures without guessing repair. HTML letters may use a confirmed firm template or bundled proposal-letter template, but the registered Markdown terms remain canonical; register additional outputs as documents.
 
 Agreement promotion cites the accepted proposal ID and protected checksum without copying it. Tasks/time/invoices and project facts retain their owners. Fresh readback and actual inspection support completion; a recorded send event does not prove that any message was actually sent.
+
+## Türkiye
+
+Türkiye'de teklif hazırlarken hizmet kapsamını Mimarlar Odası **Mimarlık Hizmetleri Şartnamesi** aşamalarına göre tanımla (ön proje, avan proje, uygulama projesi, detay, şantiye denetimi vb.; `source:tr-mimarlar-odasi`). Ücret, kullanıcı isterse en az bedel esasına göre hesaplanabilir: yapı sınıfı/grubu ve ilgili yılın **Yapı Yaklaşık Birim Maliyetleri Tebliği** (`source:tr-yapi-yaklasik-birim-maliyetleri`) kullanılır; hangi yılın tebliğini kullandığını yaz, katsayıları her seferinde güncel kaynaktan doğrula. Tutarları TL ve KDV hariç/dahil belirterek ver. Kamu işlerinde 4734 sayılı Kanun ve EKAP süreçleri ayrıdır.
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.

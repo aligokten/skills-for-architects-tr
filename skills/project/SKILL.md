@@ -1,6 +1,6 @@
 ---
 name: project
-description: "Initialize or inspect a project, maintain sourced current facts and record durable decisions. Use for project context or remember-this requests; other record types retain their owners."
+description: "Bir projeyi başlatır veya inceler, kaynaklı güncel olguları (ada/parsel, işveren, yapı sınıfı vb.) tutar ve kalıcı kararları kaydeder. Proje bağlamı veya \"bunu hatırla\" istekleri için kullan; diğer kayıt türleri kendi sahiplerinde kalır."
 allowed-tools:
   - Read
   - Write
@@ -47,3 +47,7 @@ For supersession, receive a new decision document with `supersedes` referencing 
 `project.vocab` lists/adds/renames project phase, scope or originator values. Confirm unknown values; never invent them. A used value requires coordinated placement/link updates rather than an in-place manifest rename. Stage vocabulary belongs to studio (or the standalone manifest). An explicit request may create an empty phase folder; ordinary vocabulary edits do not precreate content directories.
 
 Tasks, time, invoices, minutes, site reports and plans retain their corresponding owners. Use stable registered document IDs plus item anchors for provenance. Every durable mutation is read back; raw conversation is not archived merely because a fact/decision is saved.
+
+## Türkiye
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy. Türkiye projelerinde proje olguları arasında il/ilçe/mahalle, ada/parsel, yapı sınıfı/grubu, imar durumu tarihi, ruhsat numarası, yapı denetim kuruluşu ve işveren bilgileri kaynaklarıyla tutulur.

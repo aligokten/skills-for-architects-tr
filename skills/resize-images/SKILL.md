@@ -1,6 +1,6 @@
 ---
 name: resize-images
-description: "Batch-resize or convert a folder of images for web, social media, slides, or ARCH-size print output while preserving originals. Use for image resizing, format presets, or photo batches; not for product-image background removal."
+description: "Bir klasördeki görselleri web, sosyal medya, sunum veya A-serisi/ARCH baskı için toplu olarak yeniden boyutlandırır veya dönüştürür; orijinalleri korur. Görsel boyutlandırma veya fotoğraf grupları için kullan; ürün görseli arka plan kaldırma için değil."
 allowed-tools:
   - Read
   - Bash
@@ -29,3 +29,7 @@ Follow the owner's complete-batch preparation and the [native mutation sequence]
 Verify decoded dimensions, format, print 300×300 DPI and actual crop/orientation/color behavior. Inspect the images for material subject clipping; center crop has no subject detection. Web limits width, print fits an unrotated box, and both avoid enlargement. Small inputs still receive every selected labelled output; social/slides enlarge to fill. Non-RGB/L sources convert to RGB with alpha discarded, and animated/multipage sources contribute only their initial frame. Do not promise ICC/EXIF preservation, metadata stripping or automatic orientation correction.
 
 List actual output directories, filenames, dimensions and integer KiB, successful/failed source counts and concrete errors/omissions. Keep the compatible mechanical summary separate from [actual completion evidence](../../docs/completion-reporting.md); partial batch success is not full completion. No record adoption, registration, upload or external delivery is implicit.
+
+## Türkiye
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy. Türkiye'de baskı için A-serisi (A0–A4) ölçüleri varsayılan olarak öner.

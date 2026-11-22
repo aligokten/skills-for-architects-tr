@@ -1,6 +1,6 @@
 {
   "path": "agents/workplace-strategist.md",
-  "responsibility": "Plan workplace area, seats and rooms from headcount, activities and user requirements; coordinate requested occupant-load analysis separately.",
+  "responsibility": "Personel sayısı, faaliyetler ve kullanıcı gereksinimlerinden ofis alanı, masa ve oda planlar; mevzuata göre kullanıcı yükü analizini ayrıca koordine eder.",
   "inputs": "Original task, selected sources, exact targets, permissions and result evidence; delegates inherit these constraints.",
   "owned_records": [],
   "non_owned_records": [

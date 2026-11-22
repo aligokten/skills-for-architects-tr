@@ -1,6 +1,6 @@
 ---
 name: product-cut-sheet
-description: "Create a source-faithful single-product FF&E cut sheet or spec book entry from a supplied PDF or product URL. Preserve selected identity and source limits; use ffe-spec-book for a complete FF&E book and spec-writer for Project Manual requirements."
+description: "Verilen bir PDF veya ürün URL'sinden kaynağa sadık tek ürünlük FF&E föyü veya şartname kitabı girdisi oluşturur. Seçilen kimliği ve kaynak sınırlarını korur; tam FF&E kitabı için ffe-spec-book, teknik şartname için spec-writer kullan."
 allowed-tools:
   - Read
   - Write
@@ -116,3 +116,7 @@ with explicit project, phase, stage, scope, originator, date and kind. Receive o
 project library and schedule paths keep their owners. One-off files need no registration or project
 setup. Return only intended delivery artifacts and explicitly requested private evidence; never
 include the whole job in a client package. Follow [completion reporting](../../docs/completion-reporting.md).
+
+## Türkiye
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.

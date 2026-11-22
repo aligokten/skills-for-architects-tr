@@ -1,6 +1,6 @@
 ---
 name: timetracker
-description: "Reconstruct evidence-based work descriptions and append user-confirmed durations to TIME.csv. Use for time logging and corrections; never infer hours or billing from activity."
+description: "Kanıta dayalı iş tanımlarını yeniden oluşturur ve kullanıcının onayladığı süreleri TIME.csv'ye ekler. Zaman kaydı ve düzeltmeler için kullan; etkinlikten saat veya fatura çıkarmaz."
 allowed-tools:
   - Read
   - Write
@@ -50,3 +50,7 @@ Re-read the actual canonical file after publication. Report owner path, entry ID
 hours and sources, correction target if any, whether a new row was written or a repeat was found,
 and preservation checks. Separate evidence inspected from channels that were unavailable; a
 successful save or instruction retrieval does not prove a complete timesheet.
+
+## Türkiye
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.

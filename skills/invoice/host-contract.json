@@ -1,6 +1,6 @@
 {
   "path": "skills/invoice/SKILL.md",
-  "responsibility": "Maintain an append-only project INVOICES.csv ledger from explicit billing facts and recorded lifecycle evidence; never infer charges or payment from activity or time logs.",
+  "responsibility": "Açık fatura bilgileri ve kayıtlı yaşam döngüsü kanıtlarından yalnızca eklemeli bir INVOICES.csv defteri tutar (TL, KDV hariç/dahil, e-Fatura/e-Arşiv, serbest meslek makbuzu). Etkinlik veya zaman kayıtlarından ücret ya da ödeme çıkarmaz.",
   "inputs": "Supplied task and selected source scope; exact destination only for requested persistence or application work. Load project context only when the task needs project records.",
   "owned_records": [
     "INVOICES.csv"

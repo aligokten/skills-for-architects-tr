@@ -1,6 +1,6 @@
 ---
 name: product-image-processor
-description: "Download, resize, and remove backgrounds from product images at scale. Use when the user asks to \"process product images\", batch-download images from the schedule, strip backgrounds, or standardize product photos."
+description: "Ürün görsellerini toplu olarak indirir, yeniden boyutlandırır ve arka planlarını kaldırır. \"Ürün görsellerini işle\", listeden toplu görsel indirme, arka plan temizleme veya ürün fotoğraflarını standartlaştırma için kullan."
 allowed-tools:
   - Read
   - Write
@@ -136,3 +136,7 @@ No fixed historical image-receipt schema is supplied. Keep a complete explicit r
 For requested durable project outputs, delegate exact coordinates, document kind and verified artifact evidence to [receive](../receive/SKILL.md) for native document placement/registration and to [project](../project/SKILL.md) for its facts/decisions. Preserve existing authorization; do not independently mutate their records or guess deliverable folders. An adopted scoped schedule remains master-schedule-owned; the project-root product-library.csv retains its own owner. One-off files need no project setup or register adoption.
 
 Native operations used conditionally: `context.resolve`, `product_library.validate`, `ffe_records.read`. Image transformations follow this complete procedure with actual host tools; these operation names are semantic selectors, not executable dispatch instructions.
+
+## Türkiye
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.

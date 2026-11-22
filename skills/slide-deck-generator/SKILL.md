@@ -1,6 +1,6 @@
 ---
 name: slide-deck-generator
-description: "Generate a self-contained HTML slide deck from a topic, outline, report, or data. Use for presentations and slide decks; not for editing PowerPoint files."
+description: "Bir konu, taslak, rapor veya veriden bağımsız çalışan HTML sunum hazırlar (Türkçe içerik destekli). Sunum ve slayt için kullan; PowerPoint dosyası düzenlemek için değil."
 allowed-tools:
   - Read
   - Write
@@ -129,6 +129,10 @@ The active first slide and valid component markup are implementation requirement
 5. **Statement slides**: Center the `.statement` div. No eyebrow. Use dark bg sparingly (1-2 per deck).
 6. **Penultimate slide**: The ask / recommendations / next steps
 7. **Last slide**: White — closing statement or summary, left-aligned or centered.
+
+## Türkiye
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy. Türkçe karakterleri (ç, ğ, ı, İ, ö, ş, ü) destekleyen yazı tipleri seç ve `lang="tr"` kullan.
 
 ## Output
 

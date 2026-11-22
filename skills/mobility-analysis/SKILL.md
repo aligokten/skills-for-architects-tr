@@ -1,6 +1,6 @@
 ---
 name: mobility-analysis
-description: "Research transit, walking, cycling, pedestrian infrastructure, and airport access for a site. Use for mobility, accessibility, or walkability questions tied to a location."
+description: "Bir arsa için toplu taşıma, yürünebilirlik, bisiklet, yaya altyapısı ve havalimanı erişimini araştırır (İstanbul'da İBB Açık Veri, Metro İstanbul vb.). Konuma bağlı ulaşım, erişilebilirlik veya yürünebilirlik soruları için kullan."
 allowed-tools:
   - WebSearch
   - WebFetch
@@ -97,6 +97,12 @@ Search for transportation data near the site:
 - **Pedestrian infrastructure**: Sidewalks, bike lanes, protected paths, trails nearby
 - **Bike share**: Nearest docking stations (Citi Bike, etc.)
 - **Parking**: Public parking availability, street parking character
+
+## Türkiye
+
+Türkiye'deki arsalar için toplu taşıma hatları ve durakları belediye veya işletmeci kaynaklarından alınır (İstanbul: İBB Açık Veri `source:tr-ibb-acik-veri`, Metro İstanbul, İETT; Ankara: EGO; İzmir: ESHOT/İzmir Metro). Yürüme mesafelerini metre ve dakika olarak ver. Otopark gerekliliği bir mevzuat konusudur; `/as:imar-analizi-tr`'ye yönlendir.
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.
 
 ## Output Format
 

@@ -1,6 +1,6 @@
 ---
 name: studio
-description: "Open, inspect or configure an Arch Studio workspace and register projects. Use for studio administration; direct domain skills and tools-only use remain available."
+description: "Bir Arch Studio çalışma alanını açar, inceler veya yapılandırır ve projeleri kaydeder (birimler, yargı bölgesi, proje aşamaları). Ofis yönetimi için kullan; doğrudan alan becerileri de kullanılabilir."
 allowed-tools:
   - Read
   - Write
@@ -60,3 +60,7 @@ Use `studio.preference` only for the optional default-assistant choice, applying
 `studio.connectors` owns the studio `.mcp.json` boundary. Fresh setup creates exactly an empty `mcpServers` object. A later explicitly requested configuration must use verified connector/host documentation and a reviewed exact change, preserving other entries. Configure only the known authorized server; authentication, external messages and account provisioning require their actual separate capabilities and authorization. No arbitrary connector endpoint or secret is inferred from workspace setup.
 
 After administration, use the shared [completion reporting](../../docs/completion-reporting.md) contract. Report actual changes and readbacks; a connection or welcome is not workspace creation.
+
+## Türkiye
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy. Türkiye'deki bir ofis için varsayılan yargı bölgesi `jurisdiction:tr`, birimler metrik, para birimi TL ve proje aşamaları Mimarlar Odası şartnamesine göre (ön proje, avan, uygulama, detay, şantiye) önerilebilir; yine de kullanıcı onayı olmadan yazma.

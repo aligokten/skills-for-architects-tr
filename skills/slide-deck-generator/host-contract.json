@@ -1,6 +1,6 @@
 {
   "path": "skills/slide-deck-generator/SKILL.md",
-  "responsibility": "Generate a self-contained HTML slide deck from a topic, outline, report, or data. Use for presentations and slide decks; not for editing PowerPoint files.",
+  "responsibility": "Bir konu, taslak, rapor veya veriden bağımsız çalışan HTML sunum hazırlar (Türkçe içerik destekli). Sunum ve slayt için kullan; PowerPoint dosyası düzenlemek için değil.",
   "inputs": "Supplied task and selected source scope; exact destination only for requested persistence or application work. Load project context only when the task needs project records.",
   "owned_records": [],
   "non_owned_records": [

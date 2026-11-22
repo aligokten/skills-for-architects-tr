@@ -1,6 +1,6 @@
 ---
 name: agreement
-description: "Maintain sourced agreement context and scope in PROJECT.md, cite registered contracts/proposals, and record amendments without imposing a commercial workflow."
+description: "Sözleşme bağlamını ve hizmet kapsamını PROJECT.md içinde kaynaklı olarak tutar, kayıtlı sözleşme/teklifleri referans verir ve ek protokolleri kaydeder; ticari bir iş akışı dayatmaz. Mimarlar Odası hizmet sözleşmesi ve kamu sözleşmeleri dahil."
 allowed-tools:
   - Read
   - Write
@@ -31,3 +31,9 @@ Agreement context edits affect only the bounded PROJECT.md section; retain the c
 The section contains parties/term/fees/caps and exactly the scope headings In scope, Not in scope and Requires SOW when supplied. `check` reads those source-linked bullets and presents advisory in-scope/needs-SOW/out-of-scope findings; the user decides. No status or automatic invoice gate is introduced.
 
 `agreement.record-amendment` cites a registered agreement/contract ID, explicit date and summary. Preview any associated fact/scope changes separately when not already authorized; retain prior evidence. `agreement.verify` checks cited documents. A malformed section, missing document or checksum conflict blocks dependent mutation and remains preserved. Reopen PROJECT.md and cited originals after the action. Legal interpretation or execution status is not established by a successful registration.
+
+## Türkiye
+
+Türkiye'de sözleşme bağlamı genellikle Mimarlar Odası tip hizmet sözleşmesi, özel sözleşme veya kamu ihale sözleşmesidir. Sözleşmedeki hizmet aşamalarını, teslim sürelerini, ödeme planını ve fikrî hak (5846 sayılı FSEK) hükümlerini kaynak madde numarasıyla kaydet. Hukuki yorum yapma; uyuşmazlıkta hukukçuya yönlendir.
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.

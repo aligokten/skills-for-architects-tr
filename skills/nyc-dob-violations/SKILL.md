@@ -1,6 +1,6 @@
 ---
 name: nyc-dob-violations
-description: "Look up open and resolved DOB and ECB violations for any NYC building, with class, status, and penalty detail. Use when the user asks whether a building has violations, stop-work orders, or outstanding ECB penalties. NYC only; for housing-code violations use /as:nyc-hpd."
+description: "Yalnızca New York: DOB ve ECB ihlalleri (sınıf, durum, ceza). Türkiye'deki yapı kayıtları için yapi-kayit-tr kullan."
 allowed-tools:
   - WebFetch
   - Write
@@ -62,6 +62,10 @@ Keep multiple source systems identifiable; deduplicate only on verified identiti
 ## Deliver
 
 Return the property identity, requested scope, sourced results, retrieval date and query/coverage limitations. Summarize counts without hiding omitted rows; mark truncated output. For no matches, say which source/query returned none. For inaccessible datasets, report unavailable, not zero. Link original records/reports and preserve unresolved conclusions.
+
+## Türkiye
+
+Bu beceri yalnızca New York City içindir. Arsa Türkiye'deyse bu prosedürü kullanma ve NYC verilerini Türkiye yerine koyma; `/as:imar-analizi-tr`, `/as:parsel-sorgu-tr`, `/as:tescil-kontrol-tr`, `/as:yapi-kayit-tr` veya `/as:mulk-raporu-tr` becerisine yönlendir. Kullanıcı Türkçe yazıyorsa NYC raporunu Türkçe sun ve Türkçe sorumluluk reddi bloğunu kullan ([Türkiye kuralı](../../rules/turkiye.md)).
 
 ## Outputs and records
 

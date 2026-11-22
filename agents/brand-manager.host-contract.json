@@ -1,6 +1,6 @@
 {
   "path": "agents/brand-manager.md",
-  "responsibility": "Coordinate presentations, color palettes, image sizing and visual consistency for requested architectural communication.",
+  "responsibility": "Mimari iletişim için sunumları, renk paletlerini, görsel boyutlandırmayı ve görsel tutarlılığı koordine eder (Türkçe içerik destekli).",
   "inputs": "Original task, selected sources, exact targets, permissions and result evidence; delegates inherit these constraints.",
   "owned_records": [],
   "non_owned_records": [

@@ -1,6 +1,6 @@
 ---
 name: site-history
-description: "Neighborhood context and history — adjacent uses, architectural character, landmarks, commercial activity, and planned development from an address. Use when the user asks about a site's history or surroundings, \"what's around this site\", neighborhood character, or nearby planned development."
+description: "Bir adresten mahalle bağlamı ve tarihçesi — komşu kullanımlar, mimari karakter, tescilli yapılar, ticari hareketlilik ve planlanan gelişmeler. Arsanın tarihçesi, çevresi, \"bu arsanın etrafında ne var\" veya yakındaki projeler için kullan."
 allowed-tools:
   - WebSearch
   - WebFetch
@@ -99,6 +99,12 @@ Search for information about the immediate surroundings:
 - **Planned development**: Major projects approved or under construction in the area
 - **Community**: Neighborhood associations, community boards, local governance
 - **Safety**: General crime context if publicly available
+
+## Türkiye
+
+Türkiye'deki arsalar için: tescilli yapılar ve sit alanları `/as:tescil-kontrol-tr` ile, plan ve askıdaki plan değişiklikleri e-Plan ve belediye kaynaklarıyla (`source:tr-e-plan`), kentsel dönüşüm/riskli alan ilanları 6306 sayılı Kanun kapsamındaki resmî kararlarla doğrulanır. Tarihî bilgi için belediye arşivleri, SALT Araştırma, eski hava fotoğrafları (Harita Genel Müdürlüğü) gibi kaynakları kaynak göstererek kullan.
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.
 
 ## Output Format
 

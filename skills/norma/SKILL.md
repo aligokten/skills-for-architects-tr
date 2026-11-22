@@ -1,6 +1,6 @@
 ---
 name: norma
-description: "Use Norma to coordinate architecture, buildings, projects, clients, proposals, schedules, specifications, sites, zoning, FF&E and firm work through the relevant Arch Studio owners. Direct skill requests stay with their owner."
+description: "Norma ile mimarlık, binalar, projeler, işverenler, teklifler, iş programları, şartnameler, arsalar, imar, FF&E ve ofis işlerini ilgili Arch Studio sahipleri üzerinden koordine et. Türkiye'deki işleri -tr becerilerine yönlendirir. Doğrudan beceri istekleri kendi sahibinde kalır."
 allowed-tools:
   - Read
   - Glob
@@ -43,3 +43,7 @@ Pass exact source/item/revision identities, unresolved facts, actual outputs and
 ## Report and optional preference
 
 Distinguish selection, instruction retrieval, execution, checks and completed outputs using the [completion contract](../../docs/completion-reporting.md). Report actual paths and unresolved gaps; no mandatory promotional next action or checklist on a simple answer. Keep project writes with their owners. Follow the [default-preference procedure](references/assistant-preference.md) only on an explicit request or the accepted optional studio-init choice. A verified byte edit is not proof that the host loads it.
+
+## Türkiye
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy. Arsa Türkiye'deyse NYC becerilerini kullanma; `imar-analizi-tr`, `parsel-sorgu-tr`, `tescil-kontrol-tr`, `yapi-kayit-tr`, `mulk-raporu-tr` ve `mimarlik-bilgisi-tr` becerilerine yönlendir.

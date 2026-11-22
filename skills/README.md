@@ -1,127 +1,140 @@
-# Tooling catalog
+# Beceri kataloğu
 
-Arch Studio skills install together in one flat catalog. The links below use `/as:<skill>` as a naming convention; use the exact entry point discovered by the current host, including any plugin namespace it requires. These groups describe what the skills do; they are not separate plugins or installation packages.
+Arch Studio becerileri tek bir düz katalog olarak birlikte kurulur. Aşağıdaki bağlantılar `/as:<beceri>` adlandırmasını kullanır; host'un keşfettiği gerçek giriş noktasını (gerekiyorsa eklenti ad alanıyla) kullanın. Gruplar becerilerin ne yaptığını anlatır; ayrı eklenti veya kurulum paketi değildir.
 
-The [generated capability catalog](../docs/capabilities.md) provides task-first discovery for the R2 critical paths from the shared component registry. This full catalog retains every skill.
+**Türkiye uyarlaması:** Türkiye'ye özel beceriler `-tr` ekiyle biter. Tüm diğer beceriler, kullanıcı Türkçe yazdığında veya arsa Türkiye'de olduğunda [Türkiye kuralını](../rules/turkiye.md) uygular (Türkçe çıktı, metrik birim, TL/KDV, Türk mevzuatı). `nyc-` ile başlayan beceriler yalnızca New York içindir.
 
-## Firm operations
+[Oluşturulan yetenek kataloğu](../docs/capabilities.md), paylaşılan bileşen kaydından göreve göre keşif sağlar.
 
-| Skill | Description |
+## Türkiye
+
+| Beceri | Açıklama |
 |-------|-------------|
-| [`/as:norma`](./norma) | Coordinate architectural intent, scope and handoffs through available skills |
-| [`/as:norma-support`](./norma-support) | Arch Studio onboarding, access and memory guidance, and evidence-bound troubleshooting |
-| [`/as:studio`](./studio) | Set up and inspect the studio, register projects, and forward general requests to Norma |
-| [`/as:tool-catalog`](./tool-catalog) | Show the available skills and agents |
-| [`/as:learn`](./learn) | Guided, resumable introduction to Codex and Claude Code for architects (use `$learn` on Codex) |
-| [`/as:skill-maker`](./skill-maker) | Create or update governed studio, project or catalog skills using native host authoring |
-| [`/as:studio-feedback`](./studio-feedback) | Prepare a reviewed bug report or feature request without automatic submission |
+| [`/as:mulk-raporu-tr`](./mulk-raporu-tr) | Parsel, imar, tescil, yapı kayıtları ve deprem tehlikesini birleştiren ön inceleme raporu |
+| [`/as:imar-analizi-tr`](./imar-analizi-tr) | İmar durumu, emsal/KAKS, TAKS, Hmax, çekme mesafeleri, otopark ve plan notları |
+| [`/as:parsel-sorgu-tr`](./parsel-sorgu-tr) | TKGM Parsel Sorgu ile ada/parsel kimliği, yüzölçümü, nitelik ve geometri |
+| [`/as:tescil-kontrol-tr`](./tescil-kontrol-tr) | Tescilli kültür varlığı ve sit alanı kontrolü (2863, Koruma Bölge Kurulları) |
+| [`/as:yapi-kayit-tr`](./yapi-kayit-tr) | Ruhsat, iskân, yapı denetim, yapı kayıt belgesi ve riskli yapı geçmişi |
+| [`/as:mimarlik-bilgisi-tr`](./mimarlik-bilgisi-tr) | Türkiye mimarlık meslek pratiği: proje aşamaları, roller, Mimarlar Odası, yapı sınıfları |
 
-## Project management
+## Ofis işleri
 
-### Project Records
-
-Project records form a linked graph of plain files. `/as:project` is the setup and memory interface: `PROJECT.md` owns sourced facts and registered decision documents own durable reasoning. Meetings and site reports preserve source context, the canonically resolved project or studio `TASKS.csv` owns action history, work plans read those records, and `TIME.csv` records only user-confirmed durations.
-
-| Skill | Description |
+| Beceri | Açıklama |
 |-------|-------------|
-| [`/as:project`](./project) | Initialize a project, maintain sourced facts, and manage durable decisions |
-| [`/as:receive`](./receive) | Register supplied and authored documents in DOCUMENTS.csv with verified identity, coordinates and history |
-| [`/as:workplan`](./workplan) | Plan repository, operational, or AEC delivery work before acting |
-| [`/as:meeting-minutes`](./meeting-minutes) | Create source-linked meeting records with explicit promotion handoffs |
-| [`/as:site-visit-report`](./site-visit-report) | Record field observations, reported information, limitations, and follow-up candidates |
-| [`/as:tasklist`](./tasklist) | Maintain project tasks or an opted-in studio portfolio register |
-| [`/as:timetracker`](./timetracker) | Reconstruct activity and append only user-confirmed time |
-| [`/as:proposal`](./proposal) | Maintain project-local proposals with protected issued terms and flexible lifecycle records |
-| [`/as:agreement`](./agreement) | Maintain sourced agreement context and check work against its scope |
-| [`/as:invoice`](./invoice) | Record user-directed invoices with cap warnings and gap detection |
+| [`/as:norma`](./norma) | Mimari niyeti, kapsamı ve devirleri mevcut beceriler üzerinden koordine eder |
+| [`/as:norma-support`](./norma-support) | Arch Studio başlangıç, erişim, hafıza ve kanıta dayalı sorun giderme |
+| [`/as:studio`](./studio) | Ofisi kurar ve inceler, projeleri kaydeder, genel istekleri Norma'ya iletir |
+| [`/as:tool-catalog`](./tool-catalog) | Mevcut becerileri ve ajanları gösterir |
+| [`/as:learn`](./learn) | Mimarlar için Codex ve Claude Code'a rehberli, devam ettirilebilir giriş (Codex'te `$learn`) |
+| [`/as:skill-maker`](./skill-maker) | Yönetişimli ofis, proje veya katalog becerileri oluşturur ya da günceller |
+| [`/as:studio-feedback`](./studio-feedback) | Otomatik gönderim olmadan gözden geçirilmiş hata raporu veya özellik isteği hazırlar |
 
-### Professional practice knowledge
+## Proje yönetimi
 
-| Skill | Description |
+### Proje kayıtları
+
+Proje kayıtları düz dosyalardan oluşan bağlantılı bir yapıdır. `/as:project` kurulum ve hafıza arayüzüdür: `PROJECT.md` kaynaklı olguları, kayıtlı karar belgeleri kalıcı gerekçeleri tutar. Toplantı ve saha raporları kaynak bağlamını korur, proje veya ofis `TASKS.csv` aksiyon geçmişini tutar, iş planları bu kayıtları okur ve `TIME.csv` yalnızca kullanıcının onayladığı süreleri kaydeder.
+
+| Beceri | Açıklama |
 |-------|-------------|
-| [`/as:architecture-knowledge`](./architecture-knowledge) | Source-backed US practice terminology: “What is a CD set?”, AIA relationships, and CSI/NCS context |
+| [`/as:project`](./project) | Proje başlatır, kaynaklı olguları tutar ve kalıcı kararları yönetir |
+| [`/as:receive`](./receive) | Gelen ve üretilen belgeleri doğrulanmış kimlik ve geçmişle DOCUMENTS.csv'ye kaydeder |
+| [`/as:workplan`](./workplan) | İşe başlamadan önce depo, operasyon veya yapı işlerini planlar |
+| [`/as:meeting-minutes`](./meeting-minutes) | Kaynak bağlantılı toplantı tutanakları |
+| [`/as:site-visit-report`](./site-visit-report) | Saha gözlemleri, beyanlar, sınırlamalar ve takip adayları |
+| [`/as:tasklist`](./tasklist) | Proje görevleri veya ofis portföy kaydı |
+| [`/as:timetracker`](./timetracker) | Etkinliği yeniden oluşturur ve yalnızca onaylanan süreyi ekler |
+| [`/as:proposal`](./proposal) | Korumalı verilmiş koşullarla proje teklifleri (Mimarlar Odası en az bedel, TL/KDV) |
+| [`/as:agreement`](./agreement) | Kaynaklı sözleşme bağlamı ve işin kapsamla karşılaştırılması |
+| [`/as:invoice`](./invoice) | Kullanıcı talimatıyla fatura kaydı, tavan uyarıları ve boşluk tespiti (TL, e-Fatura) |
 
-## Practice and design
+### Mesleki pratik bilgisi
 
-### Due diligence
-
-| Skill | Description |
+| Beceri | Açıklama |
 |-------|-------------|
-| [`/as:nyc-landmarks`](./nyc-landmarks) | LPC landmark and historic district check |
-| [`/as:nyc-dob-permits`](./nyc-dob-permits) | DOB permit and filing history |
-| [`/as:nyc-dob-violations`](./nyc-dob-violations) | DOB and ECB violations |
-| [`/as:nyc-acris`](./nyc-acris) | ACRIS property transaction records |
-| [`/as:nyc-hpd`](./nyc-hpd) | HPD violations, complaints, and registration |
-| [`/as:nyc-bsa`](./nyc-bsa) | BSA variances and special permits |
-| [`/as:nyc-property-report`](./nyc-property-report) | Combined NYC property report |
+| [`/as:architecture-knowledge`](./architecture-knowledge) | ABD pratiği terimleri (CD set, AIA, CSI); Türkiye için `mimarlik-bilgisi-tr` |
 
-### Site and zoning
+## Pratik ve tasarım
 
-| Skill | Description |
+### Ön inceleme — New York (yalnızca NYC)
+
+| Beceri | Açıklama |
 |-------|-------------|
-| [`/as:environmental-analysis`](./environmental-analysis) | Climate, wind, sun, flood, seismic, and soil research |
-| [`/as:mobility-analysis`](./mobility-analysis) | Transit, walkability, cycling, and pedestrian infrastructure |
-| [`/as:demographics-analysis`](./demographics-analysis) | Population, income, age, housing, and employment |
-| [`/as:site-history`](./site-history) | Neighborhood context, landmarks, activity, and planned development |
-| [`/as:zoning-analysis-nyc`](./zoning-analysis-nyc) | NYC FAR, height, setback, and use analysis |
-| [`/as:zoning-envelope`](./zoning-envelope) | Self-contained interactive 3D zoning envelope |
+| [`/as:nyc-landmarks`](./nyc-landmarks) | LPC landmark ve tarihî bölge kontrolü |
+| [`/as:nyc-dob-permits`](./nyc-dob-permits) | DOB ruhsat ve başvuru geçmişi |
+| [`/as:nyc-dob-violations`](./nyc-dob-violations) | DOB ve ECB ihlalleri |
+| [`/as:nyc-acris`](./nyc-acris) | ACRIS mülk işlem kayıtları |
+| [`/as:nyc-hpd`](./nyc-hpd) | HPD ihlalleri, şikâyetler ve kayıt |
+| [`/as:nyc-bsa`](./nyc-bsa) | BSA muafiyetleri ve özel izinler |
+| [`/as:nyc-property-report`](./nyc-property-report) | Birleşik NYC mülk raporu |
 
-### Programming and specifications
+### Arsa ve imar
 
-| Skill | Description |
+| Beceri | Açıklama |
 |-------|-------------|
-| [`/as:workplace-programmer`](./workplace-programmer) | Workplace programs from headcount and work style |
-| [`/as:occupancy-calculator`](./occupancy-calculator) | IBC occupancy loads, egress, exits, and plumbing fixtures |
-| [`/as:spec-writer`](./spec-writer) | Project Manual specification sections with review markers |
+| [`/as:environmental-analysis`](./environmental-analysis) | İklim, rüzgâr, güneş, sel, deprem (AFAD) ve zemin araştırması |
+| [`/as:mobility-analysis`](./mobility-analysis) | Toplu taşıma, yürünebilirlik, bisiklet ve yaya altyapısı |
+| [`/as:demographics-analysis`](./demographics-analysis) | Nüfus, gelir, yaş, konut ve istihdam (TÜİK) |
+| [`/as:site-history`](./site-history) | Mahalle bağlamı, tescilli yapılar, hareketlilik ve planlanan gelişmeler |
+| [`/as:zoning-analysis-nyc`](./zoning-analysis-nyc) | NYC FAR, yükseklik, setback ve kullanım analizi (Türkiye için `imar-analizi-tr`) |
+| [`/as:zoning-envelope`](./zoning-envelope) | Bağımsız etkileşimli 3B imar zarfı (Türkiye ve NYC) |
 
-### Sustainability
+### Programlama ve şartnameler
 
-| Skill | Description |
+| Beceri | Açıklama |
 |-------|-------------|
-| [`/as:epd-parser`](./epd-parser) | Extract environmental data from EPD PDFs |
-| [`/as:epd-research`](./epd-research) | Research EPD registries by material or category |
-| [`/as:epd-compare`](./epd-compare) | Compare environmental impacts and LEED eligibility |
-| [`/as:epd-to-spec`](./epd-to-spec) | Project Manual EPD submittal requirements and sourced GWP limits |
+| [`/as:workplace-programmer`](./workplace-programmer) | Personel sayısı ve çalışma biçiminden ofis alan programı |
+| [`/as:occupancy-calculator`](./occupancy-calculator) | Kullanıcı yükü, kaçış ve çıkışlar (Türkiye: Yangın Yönetmeliği; ABD: IBC) |
+| [`/as:spec-writer`](./spec-writer) | Mahal listesi ve teknik şartname bölümleri, inceleme işaretleriyle (TS/TS EN veya CSI) |
 
-### FF&E and materials
+### Sürdürülebilirlik
 
-Explicitly adopted FF&E schedules use immutable item/schedule records; workbooks are pinned views. The optional reusable library remains `product-library.csv`; optional EPD persistence uses `epd-library.csv`. See [record ownership](../studio/ffe/README.md) and [`schema/`](../schema).
-
-| Skill | Description |
+| Beceri | Açıklama |
 |-------|-------------|
-| [`/as:master-schedule`](./master-schedule) | Adopt/revise/reconcile schedules; keep library maintenance with product-library |
-| [`/as:product-library`](./product-library) | Own reusable CSV products with previews, guarded saves and retry recovery |
-| [`/as:product-url-clip`](./product-url-clip) | Retain supplied URL evidence and inspect durable capture history without adopting products |
-| [`/as:product-research`](./product-research) | Find products from a design brief |
-| [`/as:product-spec-bulk-fetch`](./product-spec-bulk-fetch) | Extract specifications from product URLs at scale |
-| [`/as:product-spec-pdf-parser`](./product-spec-pdf-parser) | Extract specifications from catalogs, price books, and sheets |
-| [`/as:drawing-quantity-extract`](./drawing-quantity-extract) | Count drawing instances with position-level evidence and coverage gaps |
-| [`/as:schedule-quantity-reconcile`](./schedule-quantity-reconcile) | Compare sourced quantities within matching scopes without changing records |
-| [`/as:lighting-report-extract`](./lighting-report-extract) | Extract reported lighting results with exact surface and page identities |
-| [`/as:product-data-cleanup`](./product-data-cleanup) | Normalize product categories, dimensions, materials, and language |
-| [`/as:product-data-import`](./product-data-import) | Turn product lists into formatted FF&E schedules |
-| [`/as:product-enrich`](./product-enrich) | Tag products with categories, colors, materials, and styles |
-| [`/as:product-match`](./product-match) | Find similar products from an image, name, or description |
-| [`/as:product-pair`](./product-pair) | Suggest complementary products |
-| [`/as:product-image-processor`](./product-image-processor) | Download, resize, and remove product-image backgrounds |
-| [`/as:product-audit`](./product-audit) | Review fresh or saved product evidence, discrepancies and unknowns |
-| [`/as:product-cut-sheet`](./product-cut-sheet) | Source-faithful single-product PDF/URL cut sheet or FF&E entry |
-| [`/as:ffe-spec-book`](./ffe-spec-book) | Assemble an ordered FF&E specification book with itemized receipts |
-| [`/as:csv-to-sif`](./csv-to-sif) | Convert canonical product CSV to SIF |
-| [`/as:sif-to-csv`](./sif-to-csv) | Convert SIF into the canonical product CSV schema |
+| [`/as:epd-parser`](./epd-parser) | EPD PDF'lerinden çevresel veri çıkarır |
+| [`/as:epd-research`](./epd-research) | Malzeme veya kategoriye göre EPD kayıtlarını araştırır (EPD Türkiye dahil) |
+| [`/as:epd-compare`](./epd-compare) | Çevresel etkileri ve LEED uygunluğunu karşılaştırır |
+| [`/as:epd-to-spec`](./epd-to-spec) | Şartname için EPD teslim gereklilikleri ve kaynaklı GWP sınırları |
 
-### Presentations
+### FF&E ve malzemeler
 
-| Skill | Description |
+Açıkça benimsenen FF&E (mobilya, donatı, ekipman) listeleri değişmez kalem/liste kayıtları kullanır; Excel çalışma kitapları sabitlenmiş görünümlerdir. İsteğe bağlı yeniden kullanılabilir kütüphane `product-library.csv`, isteğe bağlı EPD kaydı `epd-library.csv` dosyasıdır. Bkz. [kayıt sahipliği](../studio/ffe/README.md) ve [`schema/`](../schema).
+
+| Beceri | Açıklama |
 |-------|-------------|
-| [`/as:slide-deck-generator`](./slide-deck-generator) | Create self-contained HTML slide decks |
-| [`/as:color-palette-generator`](./color-palette-generator) | Create palettes with WCAG contrast checks |
-| [`/as:resize-images`](./resize-images) | Resize images for web, social, slides, and print |
+| [`/as:master-schedule`](./master-schedule) | Listeleri benimser/revize eder/uzlaştırır; kütüphane bakımı product-library'de kalır |
+| [`/as:product-library`](./product-library) | Önizleme, korumalı kayıt ve yeniden deneme kurtarmasıyla CSV ürün kütüphanesi |
+| [`/as:product-url-clip`](./product-url-clip) | Verilen URL kanıtını saklar ve kayıt geçmişini inceler; ürün benimsemez |
+| [`/as:product-research`](./product-research) | Tasarım brifinden ürün bulur |
+| [`/as:product-spec-bulk-fetch`](./product-spec-bulk-fetch) | Ürün URL'lerinden toplu teknik özellik çıkarır |
+| [`/as:product-spec-pdf-parser`](./product-spec-pdf-parser) | Katalog, fiyat listesi ve föylerden teknik özellik çıkarır |
+| [`/as:drawing-quantity-extract`](./drawing-quantity-extract) | Çizimlerden konum kanıtlı adet sayımı ve kapsam boşlukları |
+| [`/as:schedule-quantity-reconcile`](./schedule-quantity-reconcile) | Eşleşen kapsamlarda kaynaklı adetleri kayıt değiştirmeden karşılaştırır |
+| [`/as:lighting-report-extract`](./lighting-report-extract) | Aydınlatma raporu sonuçlarını kesin yüzey ve sayfa kimlikleriyle çıkarır |
+| [`/as:product-data-cleanup`](./product-data-cleanup) | Ürün kategorisi, ölçü, malzeme ve dili normalize eder |
+| [`/as:product-data-import`](./product-data-import) | Ürün listelerini biçimli FF&E listelerine dönüştürür |
+| [`/as:product-enrich`](./product-enrich) | Ürünleri kategori, renk, malzeme ve stil ile etiketler |
+| [`/as:product-match`](./product-match) | Görsel, ad veya tanımdan benzer ürün bulur |
+| [`/as:product-pair`](./product-pair) | Tamamlayıcı ürün önerir |
+| [`/as:product-image-processor`](./product-image-processor) | Ürün görsellerini indirir, boyutlandırır ve arka planını kaldırır |
+| [`/as:product-audit`](./product-audit) | Ürün kanıtını, tutarsızlıkları ve bilinmeyenleri denetler |
+| [`/as:product-cut-sheet`](./product-cut-sheet) | Kaynağa sadık tek ürün föyü veya FF&E girdisi |
+| [`/as:ffe-spec-book`](./ffe-spec-book) | Kalem kalem teslim kaydıyla sıralı FF&E şartname kitabı |
+| [`/as:csv-to-sif`](./csv-to-sif) | Kanonik ürün CSV'sini SIF'e dönüştürür |
+| [`/as:sif-to-csv`](./sif-to-csv) | SIF'i kanonik ürün CSV şemasına dönüştürür |
 
-## Individual skill documentation
+### Sunumlar
 
-Each directory contains an authoritative `SKILL.md`, any needed human-facing guide, and its owned procedures, scripts, schemas or templates; external knowledge is routed through the source catalog. Create or update studio or project capabilities with `/as:skill-maker`; to contribute a built-in skill, read [CONTRIBUTING.md](../CONTRIBUTING.md).
+| Beceri | Açıklama |
+|-------|-------------|
+| [`/as:slide-deck-generator`](./slide-deck-generator) | Bağımsız HTML sunumlar |
+| [`/as:color-palette-generator`](./color-palette-generator) | WCAG kontrast kontrollü renk paletleri |
+| [`/as:resize-images`](./resize-images) | Web, sosyal medya, sunum ve baskı için görsel boyutlandırma |
 
-Practice discovery is generated from the [nine maintained cluster manifests](../docs/practice-clusters.md).
-See the [category authoring contract](../docs/category-authoring.md) for shared ownership;
-public skill names and invocation syntax remain unchanged.
+## Tek tek beceri belgeleri
+
+Her klasör yetkili bir `SKILL.md`, gerekirse kullanıcıya yönelik bir rehber ve kendi prosedür, betik, şema veya şablonlarını içerir; dış bilgi kaynak kataloğu üzerinden yönlendirilir. Ofis veya proje becerisi oluşturmak/güncellemek için `/as:skill-maker` kullanın; yerleşik beceriye katkı için [CONTRIBUTING.md](../CONTRIBUTING.md) dosyasını okuyun.
+
+Pratik keşfi, [on bakımlı küme manifestinden](../docs/practice-clusters.md) üretilir.
+Paylaşılan sahiplik için [kategori yazım sözleşmesine](../docs/category-authoring.md) bakın;
+genel beceri adları ve çağırma sözdizimi değişmeden kalır.

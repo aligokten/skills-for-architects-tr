@@ -1,6 +1,6 @@
 ---
 name: receive
-description: "Register received or authored project documents by confirmed coordinates, preserve their filenames and provenance, and find or verify registered documents. Use for filing a supplied file/package or locating documents by kind, date, source or revision."
+description: "Alınan veya üretilen proje belgelerini onaylı koordinatlarla kaydeder, dosya adlarını ve kökenlerini korur; kayıtlı belgeleri türe, tarihe, kaynağa veya revizyona göre bulur ya da doğrular. Gelen dosya/paket arşivleme veya belge bulma için kullan."
 allowed-tools:
   - Read
   - Write
@@ -43,3 +43,7 @@ The affected set for registration is the complete destination file/package plus 
 - Before multi-file publication, preserve the exact prior/prepared set and discoverable pending recovery evidence. `documents.recover` inspects actual state and resumes or restores only with fresh conflict guards; never replay a backup blindly. Cooperating locks do not exclude external editors. Verify actual staged bytes and access metadata before complete-file publication, then reread the entire affected set.
 
 A document spanning phases remains one row at its primary confirmed phase, with other phases in notes, unless the original is physically split. Received evidence does not silently promote project facts, decisions, tasks, time or commercial acceptance.
+
+## Türkiye
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.

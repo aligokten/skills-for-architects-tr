@@ -1,6 +1,6 @@
 {
   "path": "skills/learn/SKILL.md",
-  "responsibility": "Guided, hands-on course teaching architects how to use Codex or Claude Code \u2014 six short modules, each built around an exercise on a bundled sandbox project (a fictional Brooklyn art museum expansion). Resumable across sessions via PROGRESS.md. Use when the user runs $learn or /as:learn, says they're new to AI-assisted project work, or asks how to learn it.",
+  "responsibility": "Mimarlara Codex veya Claude Code kullanımını öğreten, uygulamalı, altı modüllü rehberli kurs (örnek proje: kurgusal bir müze genişletmesi). PROGRESS.md ile oturumlar arasında devam eder. $learn veya /as:learn çalıştırıldığında ya da kullanıcı yapay zekâ destekli proje işine yeni olduğunu söylediğinde kullan.",
   "inputs": "Supplied task and selected source scope; exact destination only for requested persistence or application work. Load project context only when the task needs project records.",
   "owned_records": [
     "practice-folder/PROGRESS.md",

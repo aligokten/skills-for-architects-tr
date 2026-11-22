@@ -1,6 +1,6 @@
 {
   "path": "skills/workplan/SKILL.md",
-  "responsibility": "Prepare a proportionate work plan with outcomes, steps, dependencies and acceptance evidence. Use to plan substantial work or coordinate an approved team; a plan-only request does not authorize implementation.",
+  "responsibility": "Çıktılar, adımlar, bağımlılıklar ve kabul kanıtlarıyla orantılı bir iş planı hazırlar. Kapsamlı işleri planlamak veya onaylı bir ekibi koordine etmek için kullan; yalnızca plan istenmesi uygulama yetkisi vermez.",
   "inputs": "Supplied task and selected source scope; exact destination only for requested persistence or application work. Load project context only when the task needs project records.",
   "owned_records": [
     "DOCUMENTS.csv (kind=plan)"

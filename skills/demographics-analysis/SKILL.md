@@ -1,6 +1,6 @@
 ---
 name: demographics-analysis
-description: "Research population, income, age, housing, and employment around a site. Use for census, demographic, or local-market questions tied to a location."
+description: "Bir arsanın çevresindeki nüfus, gelir, yaş, konut ve istihdamı araştırır (Türkiye'de TÜİK ADNKS ve belediye açık verileri). Konuma bağlı nüfus, demografi veya yerel pazar soruları için kullan."
 allowed-tools:
   - WebSearch
   - WebFetch
@@ -98,6 +98,12 @@ Search for demographic data for the census tract, ZIP code, or municipality:
 - **Housing**: Median home price, rental rates, housing stock character
 - **Employment**: Major employers nearby, unemployment rate, dominant industries
 - **Education**: Attainment levels if available
+
+## Türkiye
+
+Türkiye'de nüfus verisi için **TÜİK Veri Portalı** (`source:tr-tuik-veri-portali`; ADNKS il/ilçe/mahalle nüfusu, yaş, hane) ve belediye açık veri portalları (İstanbul için `source:tr-ibb-acik-veri`) kullan. Mahalle düzeyinde gelir verisi genellikle resmî olarak yayımlanmaz; varsa kaynağını ve yöntemini belirt, yoksa "resmî veri yok" de. ABD Census kavramlarını (tract, block group) Türkiye verisine uygulama.
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.
 
 ## Output Format
 

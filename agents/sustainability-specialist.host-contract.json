@@ -1,6 +1,6 @@
 {
   "path": "agents/sustainability-specialist.md",
-  "responsibility": "Research and compare environmental declarations, embodied-carbon evidence and requested specification or certification requirements.",
+  "responsibility": "Çevresel ürün beyanlarını, gömülü karbon kanıtlarını ve istenen şartname veya sertifika (LEED, BREEAM, YeS-TR) gerekliliklerini araştırır ve karşılaştırır.",
   "inputs": "Original task, selected sources, exact targets, permissions and result evidence; delegates inherit these constraints.",
   "owned_records": [],
   "non_owned_records": [

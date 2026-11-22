@@ -1,6 +1,6 @@
 {
   "path": "skills/product-match/SKILL.md",
-  "responsibility": "Find visually or functionally similar products from an image, name, or description. Use when the user asks to \"find something like this\", match a product from a photo, or source alternates to a given item.",
+  "responsibility": "Bir görsel, ad veya tanımdan görsel ya da işlevsel olarak benzer ürünler bulur (Türk üreticiler dahil). \"Buna benzer bir şey bul\", fotoğraftan ürün eşleştirme veya muadil ürün bulma için kullan.",
   "inputs": "Supplied task and selected source scope; exact destination only for requested persistence or application work. Load project context only when the task needs project records.",
   "owned_records": [],
   "non_owned_records": [

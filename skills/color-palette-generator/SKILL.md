@@ -1,6 +1,6 @@
 ---
 name: color-palette-generator
-description: "Create an HTML color palette from a mood, description, or image, with swatches, color codes, pairings, and contrast checks. Use for color schemes or brand colors."
+description: "Bir ruh hâli, tanım veya görselden renk örnekleri, renk kodları, eşleşmeler ve kontrast kontrolleri içeren HTML renk paleti oluşturur. Renk şeması veya kurumsal renkler için kullan."
 allowed-tools:
   - Read
   - Write
@@ -89,6 +89,10 @@ Follow these principles strictly:
 4. **Proportion**: Not all colors are equal. The palette should have a clear hierarchy — dominant, supporting, and accent. The HTML output should reflect this visually.
 
 5. **Neutrals matter**: Invest in the neutrals. A "white" background should be tinted toward the palette's temperature (warm white, cool white, green-grey, etc.), not pure #FFFFFF.
+
+## Türkiye
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.
 
 ## Output
 

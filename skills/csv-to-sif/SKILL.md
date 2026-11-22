@@ -1,6 +1,6 @@
 ---
 name: csv-to-sif
-description: "Export a project's FF&E product-library CSV as dealer-system SIF. Use to produce a .sif schedule; use sif-to-csv for the reverse direction."
+description: "Projenin FF&E (mobilya, donatı, ekipman) ürün kütüphanesi CSV'sini bayi sistemi SIF formatına aktarır. .sif listesi üretmek için kullan; ters yön için sif-to-csv."
 allowed-tools:
   - Read
   - Write
@@ -28,6 +28,10 @@ Read the selected CSV with proper quoting and the current Arch Studio schema. Ma
 Validate record membership, field mapping, required values and actual encoded output. Reopen it and compare to accepted inputs; test the actual importer only when available and authorized. Unsupported target behavior stays unverified, never an assumed compatibility claim. Return the requested converted file and concise unresolved/loss report.
 
 An export or preview does not adopt a library or schedule. [Product-library](../product-library/SKILL.md) owns requested product-library.csv writes; master-schedule owns adopted selections. Delegate the complete save request under existing authorization; don't independently mutate their records.
+
+## Türkiye
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.
 
 ## Outputs and records
 

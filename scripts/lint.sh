@@ -400,6 +400,11 @@ zoning-envelope
 occupancy-calculator
 epd-to-spec
 site-visit-report
+imar-analizi-tr
+parsel-sorgu-tr
+tescil-kontrol-tr
+yapi-kayit-tr
+mulk-raporu-tr
 "
 MARKER='architecture-studio:requires-disclaimer'
 MARKER_MISSING=0

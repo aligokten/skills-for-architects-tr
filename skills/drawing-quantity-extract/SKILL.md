@@ -1,6 +1,6 @@
 ---
 name: drawing-quantity-extract
-description: "Extract countable FF&E or luminaire instances from supplied drawings with position-level evidence. Use for plan quantities or symbol counts; not area takeoffs, product specs or cross-source reconciliation."
+description: "Verilen çizimlerden sayılabilir FF&E veya armatür adetlerini konum düzeyinde kanıtla çıkarır (metraj). Plan adetleri veya sembol sayımı için kullan; alan metrajı, ürün özellikleri veya kaynaklar arası uzlaştırma için değil."
 allowed-tools:
   - Read
   - Write
@@ -47,3 +47,7 @@ changed. Read owning instructions for project work; one-off files do not require
 ## Current document placement
 
 Save only authorized derived outputs and verify their actual content, source hashes and complete requested scope. Inline answers and one-off files need no project setup or adoption. For a requested registered project report, resolve confirmed coordinates using the receive-owned native `documents.resolve/register` semantics in the [workspace model](../../docs/workspace-model.md), including its complete document/register mutation sequence. Find existing records with `documents.query`; never guess a folder. This conditional handoff does not authorize schedule or library changes.
+
+## Türkiye
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.

@@ -230,6 +230,81 @@
       "id": "authority:w3c",
       "name": "World Wide Web Consortium",
       "jurisdiction": null
+    },
+    {
+      "id": "authority:tr-cbddo-mevzuat",
+      "name": "T.C. Cumhurbaşkanlığı Mevzuat Bilgi Sistemi",
+      "jurisdiction": "jurisdiction:tr"
+    },
+    {
+      "id": "authority:tr-resmi-gazete",
+      "name": "T.C. Resmî Gazete",
+      "jurisdiction": "jurisdiction:tr"
+    },
+    {
+      "id": "authority:tr-csidb",
+      "name": "Çevre, Şehircilik ve İklim Değişikliği Bakanlığı",
+      "jurisdiction": "jurisdiction:tr"
+    },
+    {
+      "id": "authority:tr-tkgm",
+      "name": "Tapu ve Kadastro Genel Müdürlüğü",
+      "jurisdiction": "jurisdiction:tr"
+    },
+    {
+      "id": "authority:tr-afad",
+      "name": "Afet ve Acil Durum Yönetimi Başkanlığı (AFAD)",
+      "jurisdiction": "jurisdiction:tr"
+    },
+    {
+      "id": "authority:tr-mta",
+      "name": "Maden Tetkik ve Arama Genel Müdürlüğü",
+      "jurisdiction": "jurisdiction:tr"
+    },
+    {
+      "id": "authority:tr-ktb",
+      "name": "Kültür ve Turizm Bakanlığı",
+      "jurisdiction": "jurisdiction:tr"
+    },
+    {
+      "id": "authority:tr-tuik",
+      "name": "Türkiye İstatistik Kurumu (TÜİK)",
+      "jurisdiction": "jurisdiction:tr"
+    },
+    {
+      "id": "authority:tr-mgm",
+      "name": "Meteoroloji Genel Müdürlüğü",
+      "jurisdiction": "jurisdiction:tr"
+    },
+    {
+      "id": "authority:tr-tmmob-mo",
+      "name": "TMMOB Mimarlar Odası",
+      "jurisdiction": "jurisdiction:tr"
+    },
+    {
+      "id": "authority:tr-tse",
+      "name": "Türk Standardları Enstitüsü (TSE)",
+      "jurisdiction": "jurisdiction:tr"
+    },
+    {
+      "id": "authority:tr-gib",
+      "name": "Gelir İdaresi Başkanlığı",
+      "jurisdiction": "jurisdiction:tr"
+    },
+    {
+      "id": "authority:tr-edevlet",
+      "name": "e-Devlet Kapısı (Cumhurbaşkanlığı Dijital Dönüşüm Ofisi)",
+      "jurisdiction": "jurisdiction:tr"
+    },
+    {
+      "id": "authority:tr-ibb",
+      "name": "İstanbul Büyükşehir Belediyesi",
+      "jurisdiction": "jurisdiction:tr-34"
+    },
+    {
+      "id": "authority:tr-kik",
+      "name": "Kamu İhale Kurumu",
+      "jurisdiction": "jurisdiction:tr"
     }
   ],
   "sources": [
@@ -2585,6 +2660,693 @@
         "color-contrast"
       ],
       "locators": []
+    },
+    {
+      "id": "source:tr-mevzuat-bilgi-sistemi",
+      "title": "Mevzuat Bilgi Sistemi (konsolide kanun ve yönetmelik metinleri)",
+      "url": "https://www.mevzuat.gov.tr/",
+      "document_kind": "legal-publication",
+      "authority": "authority:tr-cbddo-mevzuat",
+      "jurisdiction": "jurisdiction:tr",
+      "edition": null,
+      "effective_date": null,
+      "checked_at": null,
+      "rights": "verify-reuse-conditions-at-source",
+      "access": "unknown",
+      "adapter": null,
+      "identity": null,
+      "existing_skills": [
+        "imar-analizi-tr",
+        "yapi-kayit-tr",
+        "tescil-kontrol-tr",
+        "mulk-raporu-tr",
+        "occupancy-calculator",
+        "spec-writer",
+        "mimarlik-bilgisi-tr"
+      ],
+      "topics": [
+        "tr",
+        "mevzuat",
+        "code"
+      ],
+      "locators": []
+    },
+    {
+      "id": "source:tr-resmi-gazete",
+      "title": "Resmî Gazete",
+      "url": "https://www.resmigazete.gov.tr/",
+      "document_kind": "legal-publication",
+      "authority": "authority:tr-resmi-gazete",
+      "jurisdiction": "jurisdiction:tr",
+      "edition": null,
+      "effective_date": null,
+      "checked_at": null,
+      "rights": "verify-reuse-conditions-at-source",
+      "access": "unknown",
+      "adapter": null,
+      "identity": null,
+      "existing_skills": [
+        "imar-analizi-tr",
+        "mimarlik-bilgisi-tr",
+        "proposal"
+      ],
+      "topics": [
+        "tr",
+        "mevzuat",
+        "teblig"
+      ],
+      "locators": []
+    },
+    {
+      "id": "source:tr-imar-kanunu-3194",
+      "title": "3194 sayılı İmar Kanunu",
+      "url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=3194&MevzuatTur=1&MevzuatTertip=5",
+      "document_kind": "legal-publication",
+      "authority": "authority:tr-cbddo-mevzuat",
+      "jurisdiction": "jurisdiction:tr",
+      "edition": null,
+      "effective_date": null,
+      "checked_at": null,
+      "rights": "verify-reuse-conditions-at-source",
+      "access": "unknown",
+      "adapter": null,
+      "identity": null,
+      "existing_skills": [
+        "imar-analizi-tr",
+        "yapi-kayit-tr",
+        "mulk-raporu-tr"
+      ],
+      "topics": [
+        "tr",
+        "imar",
+        "ruhsat"
+      ],
+      "locators": []
+    },
+    {
+      "id": "source:tr-planli-alanlar-imar-yonetmeligi",
+      "title": "Planlı Alanlar İmar Yönetmeliği (Mevzuat Bilgi Sistemi'nde adıyla aranır)",
+      "url": "https://www.mevzuat.gov.tr/",
+      "document_kind": "agency-rule",
+      "authority": "authority:tr-csidb",
+      "jurisdiction": "jurisdiction:tr",
+      "edition": null,
+      "effective_date": null,
+      "checked_at": null,
+      "rights": "verify-reuse-conditions-at-source",
+      "access": "unknown",
+      "adapter": null,
+      "identity": null,
+      "existing_skills": [
+        "imar-analizi-tr",
+        "zoning-envelope"
+      ],
+      "topics": [
+        "tr",
+        "imar",
+        "emsal",
+        "taks",
+        "cekme-mesafesi"
+      ],
+      "locators": []
+    },
+    {
+      "id": "source:tr-otopark-yonetmeligi",
+      "title": "Otopark Yönetmeliği (Mevzuat Bilgi Sistemi'nde adıyla aranır)",
+      "url": "https://www.mevzuat.gov.tr/",
+      "document_kind": "agency-rule",
+      "authority": "authority:tr-csidb",
+      "jurisdiction": "jurisdiction:tr",
+      "edition": null,
+      "effective_date": null,
+      "checked_at": null,
+      "rights": "verify-reuse-conditions-at-source",
+      "access": "unknown",
+      "adapter": null,
+      "identity": null,
+      "existing_skills": [
+        "imar-analizi-tr"
+      ],
+      "topics": [
+        "tr",
+        "imar",
+        "otopark"
+      ],
+      "locators": []
+    },
+    {
+      "id": "source:tr-yangin-yonetmeligi",
+      "title": "Binaların Yangından Korunması Hakkında Yönetmelik (Mevzuat Bilgi Sistemi'nde adıyla aranır)",
+      "url": "https://www.mevzuat.gov.tr/",
+      "document_kind": "agency-rule",
+      "authority": "authority:tr-cbddo-mevzuat",
+      "jurisdiction": "jurisdiction:tr",
+      "edition": null,
+      "effective_date": null,
+      "checked_at": null,
+      "rights": "verify-reuse-conditions-at-source",
+      "access": "unknown",
+      "adapter": null,
+      "identity": null,
+      "existing_skills": [
+        "occupancy-calculator",
+        "imar-analizi-tr"
+      ],
+      "topics": [
+        "tr",
+        "yangin",
+        "kullanici-yuku",
+        "kacis"
+      ],
+      "locators": []
+    },
+    {
+      "id": "source:tr-bina-deprem-yonetmeligi",
+      "title": "Türkiye Bina Deprem Yönetmeliği (TBDY 2018)",
+      "url": "https://www.mevzuat.gov.tr/",
+      "document_kind": "agency-rule",
+      "authority": "authority:tr-afad",
+      "jurisdiction": "jurisdiction:tr",
+      "edition": null,
+      "effective_date": null,
+      "checked_at": null,
+      "rights": "verify-reuse-conditions-at-source",
+      "access": "unknown",
+      "adapter": null,
+      "identity": null,
+      "existing_skills": [
+        "environmental-analysis",
+        "mulk-raporu-tr"
+      ],
+      "topics": [
+        "tr",
+        "deprem",
+        "yapi"
+      ],
+      "locators": []
+    },
+    {
+      "id": "source:tr-kultur-tabiat-koruma-kanunu-2863",
+      "title": "2863 sayılı Kültür ve Tabiat Varlıklarını Koruma Kanunu",
+      "url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=2863&MevzuatTur=1&MevzuatTertip=5",
+      "document_kind": "legal-publication",
+      "authority": "authority:tr-cbddo-mevzuat",
+      "jurisdiction": "jurisdiction:tr",
+      "edition": null,
+      "effective_date": null,
+      "checked_at": null,
+      "rights": "verify-reuse-conditions-at-source",
+      "access": "unknown",
+      "adapter": null,
+      "identity": null,
+      "existing_skills": [
+        "tescil-kontrol-tr",
+        "mulk-raporu-tr",
+        "site-history"
+      ],
+      "topics": [
+        "tr",
+        "tescil",
+        "sit-alani"
+      ],
+      "locators": []
+    },
+    {
+      "id": "source:tr-yapi-denetimi-kanunu-4708",
+      "title": "4708 sayılı Yapı Denetimi Hakkında Kanun",
+      "url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=4708&MevzuatTur=1&MevzuatTertip=5",
+      "document_kind": "legal-publication",
+      "authority": "authority:tr-cbddo-mevzuat",
+      "jurisdiction": "jurisdiction:tr",
+      "edition": null,
+      "effective_date": null,
+      "checked_at": null,
+      "rights": "verify-reuse-conditions-at-source",
+      "access": "unknown",
+      "adapter": null,
+      "identity": null,
+      "existing_skills": [
+        "yapi-kayit-tr",
+        "mimarlik-bilgisi-tr"
+      ],
+      "topics": [
+        "tr",
+        "yapi-denetim"
+      ],
+      "locators": []
+    },
+    {
+      "id": "source:tr-afet-riski-kanunu-6306",
+      "title": "6306 sayılı Afet Riski Altındaki Alanların Dönüştürülmesi Hakkında Kanun",
+      "url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6306&MevzuatTur=1&MevzuatTertip=5",
+      "document_kind": "legal-publication",
+      "authority": "authority:tr-cbddo-mevzuat",
+      "jurisdiction": "jurisdiction:tr",
+      "edition": null,
+      "effective_date": null,
+      "checked_at": null,
+      "rights": "verify-reuse-conditions-at-source",
+      "access": "unknown",
+      "adapter": null,
+      "identity": null,
+      "existing_skills": [
+        "yapi-kayit-tr",
+        "imar-analizi-tr",
+        "mulk-raporu-tr"
+      ],
+      "topics": [
+        "tr",
+        "kentsel-donusum",
+        "riskli-yapi"
+      ],
+      "locators": []
+    },
+    {
+      "id": "source:tr-kamu-ihale-kanunu-4734",
+      "title": "4734 sayılı Kamu İhale Kanunu",
+      "url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=4734&MevzuatTur=1&MevzuatTertip=5",
+      "document_kind": "legal-publication",
+      "authority": "authority:tr-cbddo-mevzuat",
+      "jurisdiction": "jurisdiction:tr",
+      "edition": null,
+      "effective_date": null,
+      "checked_at": null,
+      "rights": "verify-reuse-conditions-at-source",
+      "access": "unknown",
+      "adapter": null,
+      "identity": null,
+      "existing_skills": [
+        "mimarlik-bilgisi-tr",
+        "proposal"
+      ],
+      "topics": [
+        "tr",
+        "kamu-ihale"
+      ],
+      "locators": []
+    },
+    {
+      "id": "source:tr-enerji-performansi-yonetmeligi",
+      "title": "Binalarda Enerji Performansı Yönetmeliği (Mevzuat Bilgi Sistemi'nde adıyla aranır)",
+      "url": "https://www.mevzuat.gov.tr/",
+      "document_kind": "agency-rule",
+      "authority": "authority:tr-csidb",
+      "jurisdiction": "jurisdiction:tr",
+      "edition": null,
+      "effective_date": null,
+      "checked_at": null,
+      "rights": "verify-reuse-conditions-at-source",
+      "access": "unknown",
+      "adapter": null,
+      "identity": null,
+      "existing_skills": [
+        "epd-to-spec",
+        "spec-writer"
+      ],
+      "topics": [
+        "tr",
+        "enerji",
+        "surdurulebilirlik"
+      ],
+      "locators": []
+    },
+    {
+      "id": "source:tr-tkgm-parsel-sorgu",
+      "title": "TKGM Parsel Sorgu",
+      "url": "https://parselsorgu.tkgm.gov.tr/",
+      "document_kind": "dataset",
+      "authority": "authority:tr-tkgm",
+      "jurisdiction": "jurisdiction:tr",
+      "edition": null,
+      "effective_date": null,
+      "checked_at": null,
+      "rights": "verify-reuse-conditions-at-source",
+      "access": "unknown",
+      "adapter": null,
+      "identity": null,
+      "existing_skills": [
+        "parsel-sorgu-tr",
+        "imar-analizi-tr",
+        "mulk-raporu-tr",
+        "zoning-envelope"
+      ],
+      "topics": [
+        "tr",
+        "parsel",
+        "kadastro",
+        "geometri"
+      ],
+      "locators": []
+    },
+    {
+      "id": "source:tr-tkgm-web-tapu",
+      "title": "TKGM Web Tapu (kimlik doğrulamalı)",
+      "url": "https://webtapu.tkgm.gov.tr/",
+      "document_kind": "dataset",
+      "authority": "authority:tr-tkgm",
+      "jurisdiction": "jurisdiction:tr",
+      "edition": null,
+      "effective_date": null,
+      "checked_at": null,
+      "rights": "verify-reuse-conditions-at-source",
+      "access": "authenticated",
+      "adapter": null,
+      "identity": null,
+      "existing_skills": [
+        "parsel-sorgu-tr"
+      ],
+      "topics": [
+        "tr",
+        "tapu"
+      ],
+      "locators": []
+    },
+    {
+      "id": "source:tr-e-plan",
+      "title": "e-Plan Mekânsal Planlar ve İmar Durumu Sorgulama",
+      "url": "https://e-plan.gov.tr/",
+      "document_kind": "dataset",
+      "authority": "authority:tr-csidb",
+      "jurisdiction": "jurisdiction:tr",
+      "edition": null,
+      "effective_date": null,
+      "checked_at": null,
+      "rights": "verify-reuse-conditions-at-source",
+      "access": "unknown",
+      "adapter": null,
+      "identity": null,
+      "existing_skills": [
+        "imar-analizi-tr",
+        "mulk-raporu-tr",
+        "site-history"
+      ],
+      "topics": [
+        "tr",
+        "imar-plani",
+        "imar-durumu"
+      ],
+      "locators": []
+    },
+    {
+      "id": "source:tr-e-devlet",
+      "title": "e-Devlet Kapısı (belediye e-İmar, yapı ve tapu hizmetleri)",
+      "url": "https://www.turkiye.gov.tr/",
+      "document_kind": "guidance",
+      "authority": "authority:tr-edevlet",
+      "jurisdiction": "jurisdiction:tr",
+      "edition": null,
+      "effective_date": null,
+      "checked_at": null,
+      "rights": "verify-reuse-conditions-at-source",
+      "access": "unknown",
+      "adapter": null,
+      "identity": null,
+      "existing_skills": [
+        "yapi-kayit-tr",
+        "parsel-sorgu-tr",
+        "imar-analizi-tr"
+      ],
+      "topics": [
+        "tr",
+        "e-devlet",
+        "belediye"
+      ],
+      "locators": []
+    },
+    {
+      "id": "source:tr-afad-deprem-tehlike-haritasi",
+      "title": "AFAD Türkiye Deprem Tehlike Haritaları",
+      "url": "https://tdth.afad.gov.tr/",
+      "document_kind": "dataset",
+      "authority": "authority:tr-afad",
+      "jurisdiction": "jurisdiction:tr",
+      "edition": null,
+      "effective_date": null,
+      "checked_at": null,
+      "rights": "verify-reuse-conditions-at-source",
+      "access": "unknown",
+      "adapter": null,
+      "identity": null,
+      "existing_skills": [
+        "environmental-analysis",
+        "mulk-raporu-tr"
+      ],
+      "topics": [
+        "tr",
+        "deprem",
+        "tehlike"
+      ],
+      "locators": []
+    },
+    {
+      "id": "source:tr-mta-yerbilimleri",
+      "title": "MTA Yerbilimleri Harita Görüntüleyici (diri fay, jeoloji)",
+      "url": "https://yerbilimleri.mta.gov.tr/",
+      "document_kind": "dataset",
+      "authority": "authority:tr-mta",
+      "jurisdiction": "jurisdiction:tr",
+      "edition": null,
+      "effective_date": null,
+      "checked_at": null,
+      "rights": "verify-reuse-conditions-at-source",
+      "access": "unknown",
+      "adapter": null,
+      "identity": null,
+      "existing_skills": [
+        "environmental-analysis"
+      ],
+      "topics": [
+        "tr",
+        "fay",
+        "jeoloji",
+        "zemin"
+      ],
+      "locators": []
+    },
+    {
+      "id": "source:tr-ktb-koruma-kurullari",
+      "title": "Kültür Varlıklarını Koruma Bölge Kurulları",
+      "url": "https://korumakurullari.ktb.gov.tr/",
+      "document_kind": "guidance",
+      "authority": "authority:tr-ktb",
+      "jurisdiction": "jurisdiction:tr",
+      "edition": null,
+      "effective_date": null,
+      "checked_at": null,
+      "rights": "verify-reuse-conditions-at-source",
+      "access": "unknown",
+      "adapter": null,
+      "identity": null,
+      "existing_skills": [
+        "tescil-kontrol-tr",
+        "mulk-raporu-tr",
+        "site-history"
+      ],
+      "topics": [
+        "tr",
+        "tescil",
+        "koruma-kurulu"
+      ],
+      "locators": []
+    },
+    {
+      "id": "source:tr-tuik-veri-portali",
+      "title": "TÜİK Veri Portalı (ADNKS nüfus, konut, işgücü)",
+      "url": "https://data.tuik.gov.tr/",
+      "document_kind": "dataset",
+      "authority": "authority:tr-tuik",
+      "jurisdiction": "jurisdiction:tr",
+      "edition": null,
+      "effective_date": null,
+      "checked_at": null,
+      "rights": "verify-reuse-conditions-at-source",
+      "access": "unknown",
+      "adapter": null,
+      "identity": null,
+      "existing_skills": [
+        "demographics-analysis"
+      ],
+      "topics": [
+        "tr",
+        "nufus",
+        "demografi"
+      ],
+      "locators": []
+    },
+    {
+      "id": "source:tr-mgm-iklim",
+      "title": "Meteoroloji Genel Müdürlüğü iklim ve istasyon verileri",
+      "url": "https://www.mgm.gov.tr/",
+      "document_kind": "dataset",
+      "authority": "authority:tr-mgm",
+      "jurisdiction": "jurisdiction:tr",
+      "edition": null,
+      "effective_date": null,
+      "checked_at": null,
+      "rights": "verify-reuse-conditions-at-source",
+      "access": "unknown",
+      "adapter": null,
+      "identity": null,
+      "existing_skills": [
+        "environmental-analysis"
+      ],
+      "topics": [
+        "tr",
+        "iklim",
+        "ruzgar",
+        "yagis"
+      ],
+      "locators": []
+    },
+    {
+      "id": "source:tr-mimarlar-odasi",
+      "title": "TMMOB Mimarlar Odası (Mimarlık Hizmetleri Şartnamesi, en az bedel esasları)",
+      "url": "https://www.mo.org.tr/",
+      "document_kind": "guidance",
+      "authority": "authority:tr-tmmob-mo",
+      "jurisdiction": "jurisdiction:tr",
+      "edition": null,
+      "effective_date": null,
+      "checked_at": null,
+      "rights": "verify-reuse-conditions-at-source",
+      "access": "unknown",
+      "adapter": null,
+      "identity": null,
+      "existing_skills": [
+        "mimarlik-bilgisi-tr",
+        "proposal",
+        "agreement"
+      ],
+      "topics": [
+        "tr",
+        "meslek",
+        "hizmet-bedeli"
+      ],
+      "locators": []
+    },
+    {
+      "id": "source:tr-yapi-yaklasik-birim-maliyetleri",
+      "title": "Yapı Yaklaşık Birim Maliyetleri Hakkında Tebliğ (yıllık; Resmî Gazete'de yayımlanır)",
+      "url": "https://www.resmigazete.gov.tr/",
+      "document_kind": "guidance",
+      "authority": "authority:tr-csidb",
+      "jurisdiction": "jurisdiction:tr",
+      "edition": null,
+      "effective_date": null,
+      "checked_at": null,
+      "rights": "verify-reuse-conditions-at-source",
+      "access": "unknown",
+      "adapter": null,
+      "identity": null,
+      "existing_skills": [
+        "mimarlik-bilgisi-tr",
+        "proposal"
+      ],
+      "topics": [
+        "tr",
+        "yapi-sinifi",
+        "birim-maliyet"
+      ],
+      "locators": []
+    },
+    {
+      "id": "source:tr-tse",
+      "title": "Türk Standardları Enstitüsü (TS 9111 erişilebilirlik, TS 825 ısı yalıtımı vb.)",
+      "url": "https://www.tse.org.tr/",
+      "document_kind": "standard",
+      "authority": "authority:tr-tse",
+      "jurisdiction": "jurisdiction:tr",
+      "edition": null,
+      "effective_date": null,
+      "checked_at": null,
+      "rights": "verify-reuse-conditions-at-source",
+      "access": "unknown",
+      "adapter": null,
+      "identity": null,
+      "existing_skills": [
+        "spec-writer",
+        "epd-to-spec"
+      ],
+      "topics": [
+        "tr",
+        "standart"
+      ],
+      "locators": []
+    },
+    {
+      "id": "source:tr-gib",
+      "title": "Gelir İdaresi Başkanlığı (KDV, e-Fatura, e-Arşiv, serbest meslek makbuzu)",
+      "url": "https://www.gib.gov.tr/",
+      "document_kind": "guidance",
+      "authority": "authority:tr-gib",
+      "jurisdiction": "jurisdiction:tr",
+      "edition": null,
+      "effective_date": null,
+      "checked_at": null,
+      "rights": "verify-reuse-conditions-at-source",
+      "access": "unknown",
+      "adapter": null,
+      "identity": null,
+      "existing_skills": [
+        "invoice"
+      ],
+      "topics": [
+        "tr",
+        "vergi",
+        "fatura"
+      ],
+      "locators": []
+    },
+    {
+      "id": "source:tr-ekap",
+      "title": "Elektronik Kamu Alımları Platformu (EKAP)",
+      "url": "https://ekap.kik.gov.tr/",
+      "document_kind": "guidance",
+      "authority": "authority:tr-kik",
+      "jurisdiction": "jurisdiction:tr",
+      "edition": null,
+      "effective_date": null,
+      "checked_at": null,
+      "rights": "verify-reuse-conditions-at-source",
+      "access": "unknown",
+      "adapter": null,
+      "identity": null,
+      "existing_skills": [
+        "mimarlik-bilgisi-tr",
+        "proposal"
+      ],
+      "topics": [
+        "tr",
+        "kamu-ihale"
+      ],
+      "locators": []
+    },
+    {
+      "id": "source:tr-ibb-acik-veri",
+      "title": "İBB Açık Veri Portalı (ulaşım, nüfus, mekânsal veri)",
+      "url": "https://data.ibb.gov.tr/",
+      "document_kind": "dataset",
+      "authority": "authority:tr-ibb",
+      "jurisdiction": "jurisdiction:tr-34",
+      "edition": null,
+      "effective_date": null,
+      "checked_at": null,
+      "rights": "verify-reuse-conditions-at-source",
+      "access": "unknown",
+      "adapter": null,
+      "identity": null,
+      "existing_skills": [
+        "mobility-analysis",
+        "demographics-analysis",
+        "site-history"
+      ],
+      "topics": [
+        "tr",
+        "istanbul",
+        "ulasim",
+        "acik-veri"
+      ],
+      "locators": []
     }
   ],
   "relationships": [
@@ -2611,6 +3373,222 @@
       "edition": null,
       "effective_date": null,
       "evidence": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+    },
+    {
+      "from": "source:tr-mevzuat-bilgi-sistemi",
+      "type": "published-by",
+      "to": "authority:tr-cbddo-mevzuat",
+      "edition": null,
+      "effective_date": null,
+      "evidence": "https://www.mevzuat.gov.tr/"
+    },
+    {
+      "from": "source:tr-resmi-gazete",
+      "type": "published-by",
+      "to": "authority:tr-resmi-gazete",
+      "edition": null,
+      "effective_date": null,
+      "evidence": "https://www.resmigazete.gov.tr/"
+    },
+    {
+      "from": "source:tr-imar-kanunu-3194",
+      "type": "published-by",
+      "to": "authority:tr-cbddo-mevzuat",
+      "edition": null,
+      "effective_date": null,
+      "evidence": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=3194&MevzuatTur=1&MevzuatTertip=5"
+    },
+    {
+      "from": "source:tr-planli-alanlar-imar-yonetmeligi",
+      "type": "published-by",
+      "to": "authority:tr-csidb",
+      "edition": null,
+      "effective_date": null,
+      "evidence": "https://www.mevzuat.gov.tr/"
+    },
+    {
+      "from": "source:tr-otopark-yonetmeligi",
+      "type": "published-by",
+      "to": "authority:tr-csidb",
+      "edition": null,
+      "effective_date": null,
+      "evidence": "https://www.mevzuat.gov.tr/"
+    },
+    {
+      "from": "source:tr-yangin-yonetmeligi",
+      "type": "published-by",
+      "to": "authority:tr-cbddo-mevzuat",
+      "edition": null,
+      "effective_date": null,
+      "evidence": "https://www.mevzuat.gov.tr/"
+    },
+    {
+      "from": "source:tr-bina-deprem-yonetmeligi",
+      "type": "published-by",
+      "to": "authority:tr-afad",
+      "edition": null,
+      "effective_date": null,
+      "evidence": "https://www.mevzuat.gov.tr/"
+    },
+    {
+      "from": "source:tr-kultur-tabiat-koruma-kanunu-2863",
+      "type": "published-by",
+      "to": "authority:tr-cbddo-mevzuat",
+      "edition": null,
+      "effective_date": null,
+      "evidence": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=2863&MevzuatTur=1&MevzuatTertip=5"
+    },
+    {
+      "from": "source:tr-yapi-denetimi-kanunu-4708",
+      "type": "published-by",
+      "to": "authority:tr-cbddo-mevzuat",
+      "edition": null,
+      "effective_date": null,
+      "evidence": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=4708&MevzuatTur=1&MevzuatTertip=5"
+    },
+    {
+      "from": "source:tr-afet-riski-kanunu-6306",
+      "type": "published-by",
+      "to": "authority:tr-cbddo-mevzuat",
+      "edition": null,
+      "effective_date": null,
+      "evidence": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6306&MevzuatTur=1&MevzuatTertip=5"
+    },
+    {
+      "from": "source:tr-kamu-ihale-kanunu-4734",
+      "type": "published-by",
+      "to": "authority:tr-cbddo-mevzuat",
+      "edition": null,
+      "effective_date": null,
+      "evidence": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=4734&MevzuatTur=1&MevzuatTertip=5"
+    },
+    {
+      "from": "source:tr-enerji-performansi-yonetmeligi",
+      "type": "published-by",
+      "to": "authority:tr-csidb",
+      "edition": null,
+      "effective_date": null,
+      "evidence": "https://www.mevzuat.gov.tr/"
+    },
+    {
+      "from": "source:tr-tkgm-parsel-sorgu",
+      "type": "published-by",
+      "to": "authority:tr-tkgm",
+      "edition": null,
+      "effective_date": null,
+      "evidence": "https://parselsorgu.tkgm.gov.tr/"
+    },
+    {
+      "from": "source:tr-tkgm-web-tapu",
+      "type": "published-by",
+      "to": "authority:tr-tkgm",
+      "edition": null,
+      "effective_date": null,
+      "evidence": "https://webtapu.tkgm.gov.tr/"
+    },
+    {
+      "from": "source:tr-e-plan",
+      "type": "published-by",
+      "to": "authority:tr-csidb",
+      "edition": null,
+      "effective_date": null,
+      "evidence": "https://e-plan.gov.tr/"
+    },
+    {
+      "from": "source:tr-e-devlet",
+      "type": "published-by",
+      "to": "authority:tr-edevlet",
+      "edition": null,
+      "effective_date": null,
+      "evidence": "https://www.turkiye.gov.tr/"
+    },
+    {
+      "from": "source:tr-afad-deprem-tehlike-haritasi",
+      "type": "published-by",
+      "to": "authority:tr-afad",
+      "edition": null,
+      "effective_date": null,
+      "evidence": "https://tdth.afad.gov.tr/"
+    },
+    {
+      "from": "source:tr-mta-yerbilimleri",
+      "type": "published-by",
+      "to": "authority:tr-mta",
+      "edition": null,
+      "effective_date": null,
+      "evidence": "https://yerbilimleri.mta.gov.tr/"
+    },
+    {
+      "from": "source:tr-ktb-koruma-kurullari",
+      "type": "published-by",
+      "to": "authority:tr-ktb",
+      "edition": null,
+      "effective_date": null,
+      "evidence": "https://korumakurullari.ktb.gov.tr/"
+    },
+    {
+      "from": "source:tr-tuik-veri-portali",
+      "type": "published-by",
+      "to": "authority:tr-tuik",
+      "edition": null,
+      "effective_date": null,
+      "evidence": "https://data.tuik.gov.tr/"
+    },
+    {
+      "from": "source:tr-mgm-iklim",
+      "type": "published-by",
+      "to": "authority:tr-mgm",
+      "edition": null,
+      "effective_date": null,
+      "evidence": "https://www.mgm.gov.tr/"
+    },
+    {
+      "from": "source:tr-mimarlar-odasi",
+      "type": "published-by",
+      "to": "authority:tr-tmmob-mo",
+      "edition": null,
+      "effective_date": null,
+      "evidence": "https://www.mo.org.tr/"
+    },
+    {
+      "from": "source:tr-yapi-yaklasik-birim-maliyetleri",
+      "type": "published-by",
+      "to": "authority:tr-csidb",
+      "edition": null,
+      "effective_date": null,
+      "evidence": "https://www.resmigazete.gov.tr/"
+    },
+    {
+      "from": "source:tr-tse",
+      "type": "published-by",
+      "to": "authority:tr-tse",
+      "edition": null,
+      "effective_date": null,
+      "evidence": "https://www.tse.org.tr/"
+    },
+    {
+      "from": "source:tr-gib",
+      "type": "published-by",
+      "to": "authority:tr-gib",
+      "edition": null,
+      "effective_date": null,
+      "evidence": "https://www.gib.gov.tr/"
+    },
+    {
+      "from": "source:tr-ekap",
+      "type": "published-by",
+      "to": "authority:tr-kik",
+      "edition": null,
+      "effective_date": null,
+      "evidence": "https://ekap.kik.gov.tr/"
+    },
+    {
+      "from": "source:tr-ibb-acik-veri",
+      "type": "published-by",
+      "to": "authority:tr-ibb",
+      "edition": null,
+      "effective_date": null,
+      "evidence": "https://data.ibb.gov.tr/"
     }
   ]
 }

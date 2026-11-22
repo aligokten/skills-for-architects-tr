@@ -1,6 +1,6 @@
 ---
 name: product-data-cleanup
-description: "Clean a local FF&E CSV schedule by normalizing casing, dimensions, units, language, materials, and formatting. Use when asked to clean, fix, or standardize product data."
+description: "Yerel bir FF&E CSV listesini temizler: büyük/küçük harf, ölçüler, birimler, dil, malzeme ve biçim standardizasyonu. Ürün verisini temizleme, düzeltme veya standartlaştırma istekleri için kullan."
 allowed-tools:
   - Read
   - Write
@@ -236,3 +236,7 @@ This read-only comparison does not authorize an edit or replace actual intended-
 backup, feature inspection, recalculation or visual verification required by the task. Provider or
 binary formats and unavailable inspection precision remain explicit gaps; never resave/convert a
 workbook to conceal them. No Arch Studio helper or process runtime is mandatory.
+
+## Türkiye
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.

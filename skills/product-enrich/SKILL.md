@@ -1,6 +1,6 @@
 ---
 name: product-enrich
-description: "Enrich FF&E schedule rows with categories, colors, materials, and style tags. Use to tag, categorize, or fill those missing fields; not to research new products."
+description: "FF&E liste satırlarını kategori, renk, malzeme ve stil etiketleriyle zenginleştirir. Eksik alanları etiketlemek, kategorize etmek veya doldurmak için kullan; yeni ürün araştırmak için değil."
 allowed-tools:
   - Read
   - Write
@@ -160,3 +160,7 @@ This read-only comparison does not authorize an edit or replace actual intended-
 backup, feature inspection, recalculation or visual verification required by the task. Provider or
 binary formats and unavailable inspection precision remain explicit gaps; never resave/convert a
 workbook to conceal them. No Arch Studio helper or process runtime is mandatory.
+
+## Türkiye
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.

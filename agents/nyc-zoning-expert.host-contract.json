@@ -1,6 +1,6 @@
 {
   "path": "agents/nyc-zoning-expert.md",
-  "responsibility": "Coordinate NYC property research, zoning analysis and requested envelope visualization using applicable original agency sources.",
+  "responsibility": "Yalnızca New York: uygulanabilir asıl kurum kaynaklarıyla NYC mülk araştırması, imar analizi ve istenen zarf görselleştirmesini koordine eder. Türkiye için turkiye-imar-uzmani.",
   "inputs": "Original task, selected sources, exact targets, permissions and result evidence; delegates inherit these constraints.",
   "owned_records": [],
   "non_owned_records": [

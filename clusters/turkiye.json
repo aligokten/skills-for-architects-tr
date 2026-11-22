@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "cluster:turkiye",
+  "name": "Türkiye",
+  "maintainer": "Arch Studio maintainers",
+  "scope": "Türkiye'ye özgü taşınmaz, imar, tescil, yapı kayıtları ve meslek pratiği prosedürleri.",
+  "members": [
+    "skill:mulk-raporu-tr",
+    "skill:imar-analizi-tr",
+    "skill:parsel-sorgu-tr",
+    "skill:tescil-kontrol-tr",
+    "skill:yapi-kayit-tr",
+    "skill:mimarlik-bilgisi-tr",
+    "studio:workspace-contract",
+    "knowledge:sources",
+    "knowledge:jurisdictions"
+  ],
+  "dependencies": [],
+  "coverage": {
+    "jurisdictions": [
+      "jurisdiction:tr"
+    ],
+    "limitations": "Türk resmî kaynakları yalnızca gezinme üst verisi olarak dizinlenmiştir. Prosedürler Türkiye genelini hedefler; belediye bazında veri erişimi, güncel mevzuat metni veya doğrulanmış küme iş akışı iddia edilmez.",
+    "sources_indexed": true,
+    "procedures_available": true,
+    "execution_implemented": false,
+    "workflow_validated": false
+  },
+  "host_requirements": [
+    "agent instruction following",
+    "read resources",
+    "skill-specific tools and authorized workspace access when required"
+  ],
+  "evaluations": [
+    {
+      "id": "turkiye-discovery",
+      "kind": "contract",
+      "path": "tests/test-category-contracts.sh",
+      "claim": "Manifest membership and portability only; not workflow acceptance"
+    }
+  ],
+  "reviewed_on": "2026-11-22"
+}

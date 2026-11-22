@@ -1,6 +1,6 @@
 ---
 name: workplace-programmer
-description: "Build office space programs through guided workplace strategy: area splits, room schedules, and planned seat counts. Use to program or size a workplace; not for code occupant-load calculations."
+description: "Rehberli ofis stratejisiyle ofis alan programı oluşturur: alan dağılımı, mahal listesi ve planlanan masa sayısı. Bir ofisi programlamak veya boyutlandırmak için kullan; mevzuata göre kullanıcı yükü hesabı için değil."
 allowed-tools:
   - Read
   - Write
@@ -39,6 +39,12 @@ Present a concise recommendation and alternatives that fit the stated constraint
 ## Refine and deliver
 
 After accepted design changes, recompute affected totals and show changed assumptions. Preserve prior state until its replacement is written successfully. Return area allocations, seats, room quantities, remaining area and unresolved decisions. Write program.json or an export only within the requested destination/scope, marking source evidence separately from design assumptions. Reports can use a user template and units; no mandatory PDF layout or benchmark is prescribed.
+
+## Türkiye
+
+Türkiye'de alan programını m² ve net/brüt ayrımıyla ver. Masa başına alan ve oran varsayımları tasarım kararıdır, mevzuat değildir; mevzuata göre kullanıcı yükü için `/as:occupancy-calculator` (Yangın Yönetmeliği) kullan. İş sağlığı ve güvenliği mevzuatındaki asgari çalışma alanı gibi gereklilikleri yalnızca asıl kaynaktan doğrulayarak belirt.
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.
 
 ## Outputs and records
 

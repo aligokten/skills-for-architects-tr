@@ -1,6 +1,6 @@
 ---
 name: zoning-envelope
-description: "Generate interactive 3D zoning envelope viewers from zoning analysis reports. Use when the user asks to \"visualize the zoning envelope\" or see buildable massing in 3D, typically after /as:zoning-analysis-nyc. Requires a zoning analysis report as input."
+description: "İmar analizi raporlarından etkileşimli 3B yapılaşma zarfı (imar zarfı) görüntüleyicisi üretir; Türkiye'de TAKS, emsal, Hmax ve bahçe mesafeleri, NYC'de setback ve FAR. \"İmar zarfını görselleştir\" veya yapılabilir kütleyi 3B görmek için kullan; genellikle /as:imar-analizi-tr veya /as:zoning-analysis-nyc sonrasında. Girdi olarak imar analizi raporu gerekir."
 allowed-tools:
   - Read
   - Write
@@ -216,6 +216,12 @@ Open the file in the browser after saving.
 - **Units:** NYC reports use feet. The `unit` field in the Envelope Data block determines all labels and scaling.
 - **Camera:** Position proportional to max lot dimension. `PerspectiveCamera(35)` with OrbitControls.
 - **Multi-lot:** When the report includes `scenarios`, generate toggle buttons. Preserve each supplied lot polygon. If a required polygon is missing, retain an explicit unresolved scenario or return to the analysis owner; do not invent simplified rectangles. An expressly requested hypothetical diagram must be labeled separately from regulatory evidence.
+
+## Türkiye
+
+Türkiye girdileri (`/as:imar-analizi-tr` raporu) metre cinsindendir. Türkiye'de zarf; parsel poligonu, ön/yan/arka bahçe mesafeleri (çekme), TAKS'tan gelen azami taban alanı, Hmax veya kat adedi ve emsal (KAKS) toplam alan sınırından oluşur. Emsal sınırını yükseklik zarfından ayrı bir istatistik olarak göster; zarf hacmi emsal hakkı anlamına gelmez. Bitişik/ayrık nizam, çatı ve çıkma kurallarını yalnızca rapordaki doğrulanmış değerlerle çiz.
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.
 
 ## Final Step: Disclaimer + Marker (required)
 

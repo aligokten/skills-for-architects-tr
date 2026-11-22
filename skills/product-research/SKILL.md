@@ -1,6 +1,6 @@
 ---
 name: product-research
-description: "Find and compare current FF&E candidates from a design brief, with sourced purchasing facts and optional CSV-library save. Use to research or source products; not to match from an image or pair coordinating items."
+description: "Bir tasarım brifinden güncel FF&E adaylarını bulur ve karşılaştırır; kaynaklı satın alma bilgileri (TL fiyat, tedarik süresi, Türkiye distribütörü) ve isteğe bağlı CSV kütüphane kaydıyla. Ürün araştırma veya tedarik için kullan."
 allowed-tools:
   - Read
   - Write
@@ -196,3 +196,9 @@ This read-only comparison does not authorize an edit or replace actual intended-
 backup, feature inspection, recalculation or visual verification required by the task. Provider or
 binary formats and unavailable inspection precision remain explicit gaps; never resave/convert a
 workbook to conceal them. No Arch Studio helper or process runtime is mandatory.
+
+## Türkiye
+
+Türkiye'deki projeler için Türkiye distribütörü veya yerli üretici bilgisini, TL fiyat (KDV hariç/dahil ve tarih), tedarik süresi ve stok durumunu kaynaklı olarak ver. Döviz bazlı fiyatlarda para birimini ve tarihi koru; kendin kur çevirisi yapma, kullanıcı isterse kur kaynağını ve tarihini belirt.
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.

@@ -1,0 +1,49 @@
+{
+  "path": "skills/yapi-kayit-tr/SKILL.md",
+  "responsibility": "Türkiye'de bir yapının ruhsat, iskân (yapı kullanma izni), yapı denetim, yapı kayıt belgesi (imar barışı) ve riskli yapı (6306) geçmişini kullanıcının belgeleri ve resmî kaynaklarla araştırır. \"Ruhsatı var mı\", \"iskânı alınmış mı\", \"riskli yapı mı\" için kullan.",
+  "inputs": "Supplied task and selected source scope; exact destination only for requested persistence or application work. Load project context only when the task needs project records.",
+  "owned_records": [],
+  "non_owned_records": [
+    "PROJECT.md",
+    "STUDIO.md",
+    "TASKS.csv",
+    "TIME.csv",
+    "proposals/",
+    "agreement/",
+    "INVOICES.csv",
+    "ffe/items-and-schedules",
+    "product-library.csv",
+    "epd-library.csv",
+    "ffe/jobs/input-manifests"
+  ],
+  "delegation": "inherit-scope-target-permissions-and-evidence",
+  "modes": [
+    {
+      "mode": "research",
+      "when": "Esasa ilişkin bulgular uygulanabilir asıl kaynakları gerektirdiğinde; yalnızca kaynak listesi içerik erişimi gerektirmez ve kullanıcının sağladığı yetkili belgeler kullanılabilir."
+    },
+    {
+      "mode": "file-read"
+    },
+    {
+      "mode": "file-output",
+      "when": "Yalnızca istenen rapor/kanıt dosyaları için, yetkili görev hedefinde; satır içi yanıt dosya yazımı gerektirmez.",
+      "required": [
+        "file.read",
+        "file.write"
+      ],
+      "optional": [
+        "process.run"
+      ]
+    },
+    {
+      "mode": "delegate",
+      "when": "Yalnızca istenen proje olgu/kararları veya kalıcı belge kaydı için; hedef kapsamı, izinleri ve kaynak kanıtını devral."
+    }
+  ],
+  "execution": {
+    "model": "harness-native",
+    "contract": "skills/yapi-kayit-tr/SKILL.md",
+    "operations": []
+  }
+}

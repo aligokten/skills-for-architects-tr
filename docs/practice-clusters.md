@@ -16,6 +16,7 @@ A listed procedure is not proof of executable tooling, legal coverage or a valid
 | [Site & Zoning](../clusters/site-zoning.json) | `zoning-analysis-nyc`, `zoning-envelope`, `environmental-analysis`, `mobility-analysis`, `demographics-analysis`, `site-history` | jurisdiction:us-ny-nyc |
 | [Specifications](../clusters/specifications.json) | `spec-writer`, `epd-to-spec`, `architecture-knowledge` | No cluster-wide coverage; inspect individual skill |
 | [Sustainability](../clusters/sustainability.json) | `epd-research`, `epd-parser`, `epd-compare`, `epd-to-spec`, `environmental-analysis` | No cluster-wide coverage; inspect individual skill |
+| [Türkiye](../clusters/turkiye.json) | `mulk-raporu-tr`, `imar-analizi-tr`, `parsel-sorgu-tr`, `tescil-kontrol-tr`, `yapi-kayit-tr`, `mimarlik-bilgisi-tr` | jurisdiction:tr |
 
 ## Ownership and capability checks
 

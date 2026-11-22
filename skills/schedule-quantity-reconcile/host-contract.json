@@ -1,6 +1,6 @@
 {
   "path": "skills/schedule-quantity-reconcile/SKILL.md",
-  "responsibility": "Compare scoped quantity snapshots without changing records.",
+  "responsibility": "Kapsamlı adet anlık görüntülerini karşılaştırır; eşleşmeleri, eksik satırları ve çelişkileri açıklar. Çizim, rapor veya liste adetlerini uzlaştırmak için kullan; kaynak belge çıkarmak veya benimsenmiş kayıtları güncellemek için değil.",
   "inputs": "Explicit source files/snapshots and scope; project instructions only for project-bound work.",
   "owned_records": [],
   "non_owned_records": [

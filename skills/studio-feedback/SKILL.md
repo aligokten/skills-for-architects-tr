@@ -1,6 +1,6 @@
 ---
 name: studio-feedback
-description: "Prepare a user-reviewed Arch Studio bug report or feature request for GitHub. Use when the user runs /as:studio-feedback, says \"report a bug\", \"this skill broke\", \"send feedback\", or requests a feature. Do not use for Claude Code's native /feedback command."
+description: "Kullanıcının gözden geçirdiği bir Arch Studio hata raporu veya özellik isteğini GitHub için hazırlar. /as:studio-feedback, \"hata bildir\", \"bu beceri bozuldu\", \"geri bildirim gönder\" istekleri için kullan. Claude Code'un kendi /feedback komutu için değil."
 allowed-tools:
   - Read
   - Bash
@@ -84,3 +84,7 @@ Only after observing the browser action, say: "GitHub is open with the displayed
 - Never claim that closing an opened tab means nothing was transmitted.
 - Never treat feedback as telemetry or send it to ALPA infrastructure.
 - Never add project files, conversation transcripts, or attachments automatically.
+
+## Türkiye
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.

@@ -1,6 +1,6 @@
 ---
 name: product-url-clip
-description: "Capture one supplied product URL as auditable, unadopted FF&E evidence and inspect its retained history. Use to clip a page or review prior captures; not to save a library product or adopt a schedule item."
+description: "Verilen tek bir ürün URL'sini denetlenebilir, benimsenmemiş FF&E kanıtı olarak kaydeder ve geçmişini inceler. Sayfa kırpmak veya önceki kayıtları incelemek için kullan; kütüphaneye ürün kaydetmek veya liste kalemi benimsemek için değil."
 allowed-tools:
   - Read
   - Write
@@ -42,3 +42,7 @@ creation and then writing is insufficient, even when final readback succeeds. Pr
 scratch stays separate; follow the owner's output-retry and incomplete-result rules.
 
 Report exact destination, request/capture IDs, extraction outcome, actual host retrieval, custody/readback hashes and pending state separately. History does not establish freshness, selection, library save or schedule adoption. Requested registered reports go through receive's native document owner; one-off reports use only their authorized destination. No Arch Studio runner, executable download or source reconstruction is part of this workflow.
+
+## Türkiye
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.

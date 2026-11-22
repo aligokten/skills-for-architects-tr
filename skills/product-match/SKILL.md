@@ -1,6 +1,6 @@
 ---
 name: product-match
-description: "Find visually or functionally similar products from an image, name, or description. Use when the user asks to \"find something like this\", match a product from a photo, or source alternates to a given item."
+description: "Bir görsel, ad veya tanımdan görsel ya da işlevsel olarak benzer ürünler bulur (Türk üreticiler dahil). \"Buna benzer bir şey bul\", fotoğraftan ürün eşleştirme veya muadil ürün bulma için kullan."
 allowed-tools:
   - Read
   - Write
@@ -188,3 +188,7 @@ Use existing authorization and preserve exact scope in every handoff. Library sa
 product-library, adopted records to master-schedule, accepted input jobs to product-data-import,
 and facts/decisions to project. No Arch Studio runner, source reconstruction or installation is
 required for these native procedures. External sharing and sending require their own authorization.
+
+## Türkiye
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy. Türkiye'de erişilebilir muadilleri (yerli üretici, Türkiye distribütörü) öncelikle listele.

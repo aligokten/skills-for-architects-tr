@@ -1,6 +1,6 @@
 ---
 name: nyc-landmarks
-description: "Check whether a NYC building is landmarked or in a historic district using LPC data. Use when the user asks \"is this building landmarked\", whether a site sits in a historic district, or whether LPC review applies. NYC only."
+description: "Yalnızca New York: LPC verisiyle bir binanın landmark veya tarihî bölgede olup olmadığını kontrol eder. Türkiye'de tescil ve sit alanı için tescil-kontrol-tr kullan."
 allowed-tools:
   - WebFetch
   - Write
@@ -62,6 +62,10 @@ Keep multiple source systems identifiable; deduplicate only on verified identiti
 ## Deliver
 
 Return the property identity, requested scope, sourced results, retrieval date and query/coverage limitations. Summarize counts without hiding omitted rows; mark truncated output. For no matches, say which source/query returned none. For inaccessible datasets, report unavailable, not zero. Link original records/reports and preserve unresolved conclusions.
+
+## Türkiye
+
+Bu beceri yalnızca New York City içindir. Arsa Türkiye'deyse bu prosedürü kullanma ve NYC verilerini Türkiye yerine koyma; `/as:imar-analizi-tr`, `/as:parsel-sorgu-tr`, `/as:tescil-kontrol-tr`, `/as:yapi-kayit-tr` veya `/as:mulk-raporu-tr` becerisine yönlendir. Kullanıcı Türkçe yazıyorsa NYC raporunu Türkçe sun ve Türkçe sorumluluk reddi bloğunu kullan ([Türkiye kuralı](../../rules/turkiye.md)).
 
 ## Outputs and records
 

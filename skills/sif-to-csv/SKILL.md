@@ -1,6 +1,6 @@
 ---
 name: sif-to-csv
-description: "Parse a SIF (Standard Interchange Format) input into a readable preview and optionally append canonical product rows to the project's CSV library. Use when asked to convert or inspect SIF dealer data. For the reverse direction use /as:csv-to-sif."
+description: "SIF (Standard Interchange Format) girdisini okunabilir bir önizlemeye ayrıştırır ve isteğe bağlı olarak projenin CSV kütüphanesine ürün satırları ekler. SIF bayi verisini dönüştürme veya inceleme için kullan; ters yön için /as:csv-to-sif."
 allowed-tools:
   - Read
   - Write
@@ -28,6 +28,10 @@ Parse the complete supplied file using its verified format/version, retaining re
 Validate record membership, field mapping, required values and actual encoded output. Reopen it and compare to accepted inputs; test the actual importer only when available and authorized. Unsupported target behavior stays unverified, never an assumed compatibility claim. Return the requested converted file and concise unresolved/loss report.
 
 An export or preview does not adopt a library or schedule. [Product-library](../product-library/SKILL.md) owns requested product-library.csv writes; master-schedule owns adopted selections. Delegate the complete save request under existing authorization; don't independently mutate their records.
+
+## Türkiye
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.
 
 ## Outputs and records
 

@@ -1,6 +1,6 @@
 ---
 name: product-spec-pdf-parser
-description: "Extract sourced FF&E specifications from supplied product PDFs into reviewable structured data. Use for fact sheets, spec sheets and price books; not web-page capture, EPD extraction or automatic schedule adoption."
+description: "Verilen ürün PDF'lerinden kaynaklı FF&E teknik özelliklerini incelenebilir yapılandırılmış veriye çıkarır. Teknik föy, spesifikasyon sayfası ve fiyat listeleri için kullan; web sayfası, EPD çıkarımı veya otomatik liste benimseme için değil."
 allowed-tools:
   - Read
   - Write
@@ -69,3 +69,7 @@ This read-only comparison does not authorize an edit or replace actual intended-
 backup, feature inspection, recalculation or visual verification required by the task. Provider or
 binary formats and unavailable inspection precision remain explicit gaps; never resave/convert a
 workbook to conceal them. No Arch Studio helper or process runtime is mandatory.
+
+## Türkiye
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.

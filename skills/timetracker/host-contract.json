@@ -1,6 +1,6 @@
 {
   "path": "skills/timetracker/SKILL.md",
-  "responsibility": "Reconstruct evidence-based work descriptions and append user-confirmed durations to TIME.csv. Use for time logging and corrections; never infer hours or billing from activity.",
+  "responsibility": "Kanıta dayalı iş tanımlarını yeniden oluşturur ve kullanıcının onayladığı süreleri TIME.csv'ye ekler. Zaman kaydı ve düzeltmeler için kullan; etkinlikten saat veya fatura çıkarmaz.",
   "inputs": "Supplied task and selected source scope; exact destination only for requested persistence or application work. Load project context only when the task needs project records.",
   "owned_records": [
     "TIME.csv"

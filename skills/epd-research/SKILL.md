@@ -1,6 +1,6 @@
 ---
 name: epd-research
-description: "Search for EPDs by product category, CSI division, or material type — finds EPDs from EC3, program operator registries, and manufacturer sites. Use when the user asks to \"find EPDs for...\", locate declarations for a material, or source low-carbon product documentation."
+description: "Ürün kategorisi, iş kalemi veya malzeme türüne göre EPD arar (EC3, program operatörü kayıtları — EPD Türkiye dahil — ve üretici siteleri). \"... için EPD bul\", düşük karbonlu ürün belgesi bulma istekleri için kullan."
 allowed-tools:
   - Read
   - Write
@@ -59,6 +59,12 @@ Preserve material/product requirements, location, performance, dates and request
 For each candidate retrieve the original declaration and verify exact product/variant, region/plant, unit, registration, operator, issue/expiry and relevant indicators. Use epd-parser when structured extraction is needed. Keep inaccessible declarations and ambiguous variants explicit. Do not treat a search snippet or marketing claim as an EPD.
 
 Return candidates with original links, selection rationale and material gaps. No real-product examples or numeric benchmarks are bundled. An optional library save requires the user's requested persistence and an exact preview under the EPD schema; retrieval alone authorizes no record adoption.
+
+## Türkiye
+
+Türk üreticiler için EPD Türkiye program operatörü kayıtlarını ve üretici sitelerini de ara. EPD'nin geçerlilik tarihini ve üretim tesisinin (ülke/şehir) kapsamda olduğunu kontrol et.
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.
 
 ## Outputs and records
 

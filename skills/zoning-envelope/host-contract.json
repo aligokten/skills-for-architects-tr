@@ -1,6 +1,6 @@
 {
   "path": "skills/zoning-envelope/SKILL.md",
-  "responsibility": "Generate interactive 3D zoning envelope viewers from zoning analysis reports. Use when the user asks to \"visualize the zoning envelope\" or see buildable massing in 3D, typically after /as:zoning-analysis-nyc. Requires a zoning analysis report as input.",
+  "responsibility": "İmar analizi raporlarından etkileşimli 3B yapılaşma zarfı (imar zarfı) görüntüleyicisi üretir; Türkiye'de TAKS, emsal, Hmax ve bahçe mesafeleri, NYC'de setback ve FAR. \"İmar zarfını görselleştir\" veya yapılabilir kütleyi 3B görmek için kullan; genellikle /as:imar-analizi-tr veya /as:zoning-analysis-nyc sonrasında. Girdi olarak imar analizi raporu gerekir.",
   "inputs": "Supplied task and selected source scope; exact destination only for requested persistence or application work. Load project context only when the task needs project records.",
   "owned_records": [],
   "non_owned_records": [

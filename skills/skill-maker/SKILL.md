@@ -1,6 +1,6 @@
 ---
 name: skill-maker
-description: "Create or update an Arch Studio skill for Codex or Claude Code using the host's native skill maker when available, with Arch Studio governance and validation. Use when asked to create, package, adapt or revise a reusable skill."
+description: "Codex veya Claude Code için Arch Studio becerisi oluşturur veya günceller; mümkünse host'un yerel beceri oluşturucusunu, Arch Studio yönetişimi ve doğrulamasıyla kullanır. Yeniden kullanılabilir beceri oluşturma, paketleme veya uyarlama istekleri için kullan."
 allowed-tools:
   - Read
   - Write
@@ -50,3 +50,7 @@ For any files created or changed, follow the [native mutation sequence](../../do
 Run the host maker's checks when available. Independently apply `skill_scaffold.validate` semantics: the directory is kebab-case; readable `README.md` and UTF-8 `SKILL.md` exist; the latter starts with delimited YAML frontmatter whose safely parsed mapping has a matching `name` and nonblank `description`; no `~/` occurs anywhere. A missing YAML parser leaves that check unverified, never passed. Accept exactly `{"directory": "<selected path>"}` with a required string and no extra fields; require regular readable files and a directory matching `[a-z0-9]+(?:-[a-z0-9]+)*`. Frontmatter begins at the first byte with `---` and LF or CRLF, closing on a separate `---` line followed by newline or end of file. On success, report `{"valid": true, "directory": "<actual input path>", "name": "<directory name>"}` only after actual destination readback; on failure identify the failing check, fix only authorized files and rerun the complete check. The validator is read-only. This structural check does not prove discovery, policy access or usefulness. Review the whole bundle for the applicable live-reference step, README dependency, policy privacy and destination/publication constraints.
 
 For a catalog contribution, run [repository lint](../../scripts/lint.sh) in the verified source checkout and relevant focused tests; check catalog membership and host contracts. A private skill need not run catalog lint. If behavior is uncertain, compare representative tasks with and without the skill; report observed value, not an assumed lift. Report the paths, invocation (`$name` on Codex, `/{name}` privately or `/as:{name}` in the Claude catalog), checks and any incomplete verification. Do not commit unless requested.
+
+## Türkiye
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.

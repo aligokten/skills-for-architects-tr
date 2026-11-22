@@ -1,6 +1,6 @@
 {
   "path": "skills/environmental-analysis/SKILL.md",
-  "responsibility": "Research climate, sun, flood, seismic, soil, contamination, and topography for a site. Use for environmental site analysis or hazard questions tied to a location.",
+  "responsibility": "Bir arsa için iklim, güneş, rüzgâr, sel, deprem, zemin, kirlilik ve topoğrafyayı araştırır (Türkiye'de AFAD Deprem Tehlike Haritası, MTA diri fay, MGM iklim verileri). Çevresel arsa analizi veya afet tehlikesi soruları için kullan.",
   "inputs": "Supplied task and selected source scope; exact destination only for requested persistence or application work. Load project context only when the task needs project records.",
   "owned_records": [],
   "non_owned_records": [

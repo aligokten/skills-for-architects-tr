@@ -1,6 +1,6 @@
 ---
 name: product-spec-bulk-fetch
-description: "Extract structured FF&E specs from a list of product URLs into a schedule. Use to pull or bulk-import product-page data; not for PDF catalogs."
+description: "Bir ürün URL listesinden yapılandırılmış FF&E teknik özelliklerini bir listeye çıkarır. Ürün sayfası verisini toplu çekmek için kullan; PDF kataloglar için değil."
 allowed-tools:
   - Read
   - Write
@@ -45,6 +45,10 @@ The user provides product URLs in one of these ways:
 3. **Project library** — URLs from the named `Link` field in `product-library.csv`
 
 If the input format is unclear, ask.
+
+## Türkiye
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.
 
 ## Output Schema
 

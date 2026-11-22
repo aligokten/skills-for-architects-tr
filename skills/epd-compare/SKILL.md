@@ -1,6 +1,6 @@
 ---
 name: epd-compare
-description: "Compare EPD products on normalized GWP and other impacts while checking declared units, system boundaries, and LEED eligibility. Use for side-by-side EPD comparison."
+description: "EPD'li (Çevresel Ürün Beyanı) ürünleri normalize GWP ve diğer etkiler üzerinden karşılaştırır; beyan birimi, sistem sınırları ve LEED/BREEAM uygunluğunu kontrol eder. Yan yana EPD karşılaştırması için kullan."
 allowed-tools:
   - Read
   - Write
@@ -59,6 +59,10 @@ Collect the selected declarations or already source-bound task records. Check pr
 Apply a unit conversion only with explicit sourced conversion factors and justified physical assumptions; retain originals and calculation. Compare aligned values and show any arithmetic denominator. Percentage differences use the named reference `(value-reference)/reference × 100`; a zero/missing reference is undefined, not zero difference. Do not convert rankings into eligibility/compliance. Retrieve the actual applicable program rules if the user requests that separate assessment.
 
 Present compatible comparisons, excluded/uncertain entries and the reasons for any recommendation. User-selected weighting and alternatives are valid when transparent. Save a report only in the requested scope and destination; no fixed deliverables folder or automatic next workflow.
+
+## Türkiye
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.
 
 ## Outputs and records
 

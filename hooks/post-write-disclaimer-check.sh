@@ -55,6 +55,7 @@ fi
 # regulatory output.
 MARKER_RE='^[[:space:]]*<!-- architecture-studio:requires-disclaimer -->[[:space:]]*$'
 DISCLAIMER_PHRASE='AI-generated analysis for preliminary planning purposes'
+DISCLAIMER_PHRASE_TR='ön planlama amacıyla yapay zekâ tarafından üretilmiş'
 
 # If no marker, this isn't a regulatory output; nothing to check.
 if ! grep -qE "$MARKER_RE" "$FILE_PATH"; then
@@ -64,7 +65,7 @@ fi
 PROBLEMS=""
 
 # Marker present → canonical disclaimer text must also be present.
-if ! grep -qF "$DISCLAIMER_PHRASE" "$FILE_PATH"; then
+if ! grep -qF "$DISCLAIMER_PHRASE" "$FILE_PATH" && ! grep -qF "$DISCLAIMER_PHRASE_TR" "$FILE_PATH"; then
   PROBLEMS="$FILE_PATH carries the architecture-studio:requires-disclaimer marker but is missing the canonical disclaimer block. Restore the block from ${CLAUDE_PLUGIN_ROOT:-<plugin-root>}/rules/professional-disclaimer.md."
 fi
 

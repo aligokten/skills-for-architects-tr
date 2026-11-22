@@ -1,6 +1,6 @@
 ---
 name: epd-to-spec
-description: "Draft Project Manual specification requirements for EPD submittals and sourced GWP limits. Use for embodied-carbon requirements in project sections; use the EPD parsing, research or comparison skills for product evidence."
+description: "EPD teslimleri ve kaynaklı GWP sınırları için teknik şartname maddeleri yazar. Proje şartnamesindeki gömülü karbon gereklilikleri için kullan; ürün kanıtı için EPD ayrıştırma, araştırma veya karşılaştırma becerilerini kullan."
 allowed-tools:
   - Read
   - Write
@@ -65,6 +65,12 @@ Use [Arch Studio specification formatting](../../rules/csi-formatting.md) and th
 If requested, interpret the applicable program's current project/version rules using original material, with exact credit/option references. No bundled LEED counts, multipliers, thresholds, declaration eligibility or specification clauses supply that meaning. Never copy protected standard text or imply the draft is independently compliant.
 
 Return every requested section, original evidence locators, unresolved review items and requested saved file links. Follow the professional disclaimer rule for regulatory/life-safety requirements.
+
+## Türkiye
+
+Türkiye projelerinde gerekliliği Türkçe yaz; EPD'lerin EN 15804 uyumunu ve program operatörünü (ör. EPD Türkiye, The International EPD System) belirt. Yeşil bina hedefleri (LEED, BREEAM, ulusal YeS-TR) kullanıcı tarafından belirtilmeli; kriter metnini asıl kaynaktan doğrula.
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.
 
 ## Outputs and records
 

@@ -1,6 +1,6 @@
 ---
 name: epd-parser
-description: "Extract GWP, life-cycle stages, certifications, and impact metrics from an EPD PDF. Use when given a declaration to parse; not to find or compare EPDs."
+description: "Bir EPD PDF'inden GWP, yaşam döngüsü aşamaları, sertifikalar ve etki göstergelerini çıkarır. Ayrıştırılacak beyan verildiğinde kullan; EPD bulmak veya karşılaştırmak için değil."
 allowed-tools:
   - Read
   - Write
@@ -59,6 +59,10 @@ Accept the selected PDF/URL; preserve exact source bytes/identity in authorized 
 Extract identity and reported metadata before numbers. Bind each indicator to its printed unit/stage and source cell; preserve footnotes, inequalities, scientific notation and unavailable markers. Multiple products or variants with distinct results stay separate. Sum cells only when the source explicitly establishes additive, nonoverlapping comparable stages and units; do not infer equivalence between standard versions. Record any derived sum separately from extracted values. Never classify LEED eligibility merely from declaration type or verification text.
 
 Return product rows, source/page locators and parsing gaps, including unmatched or unreadable tables. Parsing does not implicitly save a library. On explicit persistence, preview the exact epd-library.csv changes under the schema and workspace ownership rules, preserve unrelated rows and report actual saved paths.
+
+## Türkiye
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.
 
 ## Outputs and records
 

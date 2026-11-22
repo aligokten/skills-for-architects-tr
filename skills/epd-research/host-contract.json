@@ -1,6 +1,6 @@
 {
   "path": "skills/epd-research/SKILL.md",
-  "responsibility": "Search for EPDs by product category, CSI division, or material type \u2014 finds EPDs from EC3, program operator registries, and manufacturer sites. Use when the user asks to \"find EPDs for...\", locate declarations for a material, or source low-carbon product documentation.",
+  "responsibility": "Ürün kategorisi, iş kalemi veya malzeme türüne göre EPD arar (EC3, program operatörü kayıtları — EPD Türkiye dahil — ve üretici siteleri). \"... için EPD bul\", düşük karbonlu ürün belgesi bulma istekleri için kullan.",
   "inputs": "Supplied task and selected source scope; exact destination only for requested persistence or application work. Load project context only when the task needs project records.",
   "owned_records": [
     "epd-library.csv"

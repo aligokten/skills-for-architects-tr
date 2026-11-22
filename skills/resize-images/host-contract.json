@@ -1,6 +1,6 @@
 {
   "path": "skills/resize-images/SKILL.md",
-  "responsibility": "Batch-resize or convert a folder of images for web, social media, slides, or ARCH-size print output while preserving originals. Use for image resizing, format presets, or photo batches; not for product-image background removal.",
+  "responsibility": "Bir klasördeki görselleri web, sosyal medya, sunum veya A-serisi/ARCH baskı için toplu olarak yeniden boyutlandırır veya dönüştürür; orijinalleri korur. Görsel boyutlandırma veya fotoğraf grupları için kullan; ürün görseli arka plan kaldırma için değil.",
   "inputs": "Supplied task and selected source scope; exact destination only for requested persistence or application work. Load project context only when the task needs project records.",
   "owned_records": [],
   "non_owned_records": [

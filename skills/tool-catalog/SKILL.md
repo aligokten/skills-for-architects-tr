@@ -1,6 +1,6 @@
 ---
 name: tool-catalog
-description: "Show Arch Studio help, available skills, agents and host-specific commands. Use for help, how do I use Arch Studio, what is Norma, or a capability directory."
+description: "Arch Studio yardımını, mevcut becerileri, ajanları ve host'a özgü komutları gösterir. Yardım, \"Arch Studio nasıl kullanılır\", \"Norma nedir\" veya yetenek listesi için kullan."
 allowed-tools:
   - Read
 ---
@@ -23,3 +23,7 @@ Do not invent dispatch operations, run an installer, activate another workflow o
 merely to answer a help question. Report unknown host capabilities as unknown.
 
 For external-source directories use the [source catalog](../../corpus/sources/catalog.json) with geography/topic filtering. Return matching original links, distinguish code sources from related datasets, and state available-manifest coverage. No content retrieval, studio setup or permission is required for listing. Missing LA routes do not substitute NYC. See [moments](../../rules/moments.md) for state facts and the [source contract](../../docs/source-integration-contracts.md) for interpretation boundaries.
+
+## Türkiye
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy. Yardım ve beceri listesini Türkçe sun; Türkiye'ye özel `-tr` becerilerini ayrıca vurgula.

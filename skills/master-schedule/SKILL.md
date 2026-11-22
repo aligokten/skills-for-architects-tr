@@ -1,6 +1,6 @@
 ---
 name: master-schedule
-description: "Adopt, read, reconcile or revise project FF&E item and schedule records with permanent identities and exact revision pins; preserve native workbook views and recover new artifacts."
+description: "Proje FF&E kalem ve liste kayıtlarını kalıcı kimlikler ve kesin revizyon sabitleriyle benimser, okur, uzlaştırır veya revize eder; Excel çalışma kitabı görünümlerini korur ve yeni çıktıları kurtarır."
 allowed-tools:
   - Read
   - Write
@@ -49,3 +49,7 @@ This read-only comparison does not authorize an edit or replace actual intended-
 backup, feature inspection, recalculation or visual verification required by the task. Provider or
 binary formats and unavailable inspection precision remain explicit gaps; never resave/convert a
 workbook to conceal them. No Arch Studio helper or process runtime is mandatory.
+
+## Türkiye
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.

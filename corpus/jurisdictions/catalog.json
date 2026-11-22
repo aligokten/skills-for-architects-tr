@@ -24,6 +24,30 @@
       "name": "New Jersey",
       "parent": "jurisdiction:us",
       "coverage": "routing-only"
+    },
+    {
+      "id": "jurisdiction:tr",
+      "name": "Türkiye",
+      "parent": null,
+      "coverage": "selected-existing-procedures"
+    },
+    {
+      "id": "jurisdiction:tr-34",
+      "name": "İstanbul",
+      "parent": "jurisdiction:tr",
+      "coverage": "routing-only"
+    },
+    {
+      "id": "jurisdiction:tr-06",
+      "name": "Ankara",
+      "parent": "jurisdiction:tr",
+      "coverage": "routing-only"
+    },
+    {
+      "id": "jurisdiction:tr-35",
+      "name": "İzmir",
+      "parent": "jurisdiction:tr",
+      "coverage": "routing-only"
     }
   ]
 }

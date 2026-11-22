@@ -1,6 +1,6 @@
 ---
 name: site-visit-report
-description: "Prepare a sourced site-visit record separating direct observations, participant reports, interpretations, limitations and proposed follow-ups."
+description: "Kaynaklı şantiye/saha ziyaret raporu hazırlar; doğrudan gözlemleri, katılımcı beyanlarını, yorumları, sınırlamaları ve önerilen takip işlerini ayırır."
 allowed-tools:
   - Read
   - Write
@@ -33,3 +33,9 @@ Prepare the report, then resolve confirmed coordinates and register through `doc
 Reopen the actual report and inspect requested presentation. Only after saving, offer selected project-fact/decision/task promotions with exact item IDs. Report approval alone is not promotion approval. Keep observations, reports and interpretations in their original epistemic category. No silent mutation of PROJECT.md, TASKS.csv or decision records.
 
 `site_visit.prepare` means the authored preparation procedure above; it may produce an inline draft without a workspace write. Persistence uses the shared native document contract, restricted here to kind `site-visit` and authorized attachments. A saved record does not authorize its proposed actions or promote facts/decisions automatically.
+
+## Türkiye
+
+Türkiye'de şantiye raporlarında yapı denetim kuruluşu, şantiye şefi ve yüklenici rollerini doğru adlandır; gözlemleri imalat kalemi/poz ve mahal bazında kaydet. Mevzuata aykırılık nitelendirmesi yapma; "incelenmesi önerilir" diliyle takip işi öner.
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.

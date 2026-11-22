@@ -1,6 +1,6 @@
 ---
 name: product-audit
-description: "Audit a product, selection or FF&E schedule against sourced evidence and flag discrepancies, unknowns and stale specifications. Use to check product data; not to repair records, certify compliance or generate cut sheets."
+description: "Bir ürünü, seçimi veya FF&E listesini kaynaklı kanıtlara karşı denetler; tutarsızlıkları, bilinmeyenleri ve eskimiş özellikleri işaretler. Ürün verisini kontrol etmek için kullan; kayıt onarmak, uygunluk onaylamak veya föy üretmek için değil."
 allowed-tools:
   - Read
   - Write
@@ -34,6 +34,10 @@ For adopted schedules, use `/as:master-schedule` to read the pinned item/schedul
 4. Build the complete typed input and apply `ffe_audit.assess` through available native capabilities under its owning semantics. It compares supplied observations only, performs no retrieval and cannot authenticate the host's evidence. Preserve strict number kinds, ASCII-escaped logical input hash, full findings order and exact comparison counts. Missing validation capability is a limitation, not a successful check.
 5. Present discrepancies, missing evidence, stale observations and conflicting sources, tied to immutable item/revision and field. Exact value comparisons do not convert units: resolve dimensional meaning and units before constructing comparable observations. Missing evidence is unknown, not proof that the specification is wrong.
 6. When a durable report is requested/authorized, preview the exact collision-safe target under `ffe/jobs/<job-id>/audits/`, then save the report and source references. Use one confirmation gate only if required and not already authorized. Refuse overwrite; preserve previous reports. Do not persist machine-absolute paths in records. Report the actual file created.
+
+## Türkiye
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.
 
 ## Output and handoff
 

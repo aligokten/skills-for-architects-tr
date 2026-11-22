@@ -1,6 +1,6 @@
 ---
 name: architecture-knowledge
-description: "Explain US architecture professional-practice terms, phases, deliverables, roles, delivery methods, AIA contract families, CSI documentation systems, or NCS at a high level. Use for questions such as “what is a CD set?” or “what does 50% CDs mean?”; do not use for code/jurisdiction, outline-spec, agreement-scope, or work-plan work."
+description: "ABD mimarlık meslek pratiği terimlerini (aşamalar, teslimler, roller, AIA sözleşme aileleri, CSI, NCS) üst düzeyde açıklar; \"CD set nedir?\" gibi sorular için. Türkiye pratiği (avan/uygulama projesi, proje müellifi, yapı denetim, Mimarlar Odası) için mimarlik-bilgisi-tr kullan."
 allowed-tools:
   - Read
   - Grep
@@ -27,3 +27,7 @@ A request only to list sources uses catalog metadata and states that coverage is
 Use `professional-practice` and `architecture-knowledge` topics for AIA, CSI and NCS navigation. Search original publications for the user's term. Interpret ambiguous “CD” from context; ask a short clarification only when the distinction materially changes the answer. Explain the supported meaning concisely with source/version and distinguish project-defined terminology from a publisher's terminology. Do not derive scope, billability, acceptance or phase completion from a generic term.
 
 Do not reproduce protected forms, clauses, tables or reconstructed standards. For contract selection or clause interpretation, give source orientation and identify the need for the governing agreement and qualified review; this skill does not choose a form or provide legal conclusions. Route actual agreement-scope work to agreement, specifications to spec-writer, planning to workplan and geographic code work to its appropriate owner. No project setup or record writes are needed for terminology.
+
+## Türkiye
+
+Bu beceri ABD pratiğini açıklar. Kullanıcı Türkiye pratiğini soruyorsa `/as:mimarlik-bilgisi-tr`'ye yönlendir. Karşılaştırma istenirse ABD terimini Türkiye karşılığıyla eşleştir (ör. Schematic Design ≈ eskiz/ön proje, Design Development ≈ avan proje, Construction Documents ≈ uygulama projesi, Architect of Record ≈ proje müellifi) ve birebir eşdeğer olmadığını belirt.

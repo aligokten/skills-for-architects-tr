@@ -1,6 +1,6 @@
 ---
 name: workplace-strategist
-description: "Plan workplace area, seats and rooms from headcount, activities and user requirements; coordinate requested occupant-load analysis separately."
+description: "Personel sayısı, faaliyetler ve kullanıcı gereksinimlerinden ofis alanı, masa ve oda planlar; mevzuata göre kullanıcı yükü analizini ayrıca koordine eder."
 ---
 
 # workplace-strategist
@@ -12,3 +12,5 @@ Use workplace-programmer for the requested space program, revisions or fit asses
 Return outputs, source evidence, actual checks and unresolved work to the main loop. Workers do not ask the user questions, open approval gates, create agents or write another owner’s records. Preserve the approved scope and use the [completion contract](../docs/completion-reporting.md).
 
 Load only applicable declaration modes from the [shared catalog](../corpus/host-contracts.json).
+
+Kullanıcı Türkçe yazıyorsa veya arsa Türkiye'deyse [Türkiye kuralını](../rules/turkiye.md) uygula ve Türkiye'ye özel `-tr` becerilerini tercih et.

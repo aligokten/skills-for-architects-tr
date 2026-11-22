@@ -1,6 +1,6 @@
 ---
 name: invoice
-description: "Maintain an append-only project INVOICES.csv ledger from explicit billing facts and recorded lifecycle evidence; never infer charges or payment from activity or time logs."
+description: "Açık fatura bilgileri ve kayıtlı yaşam döngüsü kanıtlarından yalnızca eklemeli bir INVOICES.csv defteri tutar (TL, KDV hariç/dahil, e-Fatura/e-Arşiv, serbest meslek makbuzu). Etkinlik veya zaman kayıtlarından ücret ya da ödeme çıkarmaz."
 allowed-tools:
   - Read
   - Write
@@ -54,3 +54,9 @@ retry; do not duplicate an invoice or lifecycle event.
 Re-read the canonical destination and report register path, invoice ID/number, exact amounts and
 currency, explicit status/dates, appended event count and any unmet external action. Recording
 sent or paid evidence does not send a message, invoice the customer or perform bank reconciliation.
+
+## Türkiye
+
+Türkiye'de para birimi `TRY` (TL) olarak kaydedilir. Mevcut INVOICES.csv sütun yapısını değiştirme: KDV'nin `base`/`total` tutarlarına dahil olup olmadığını önizlemede açıkça belirt ve kullanıcının onayladığı yorumu tutarlı kullan; KDV hariç tutar, oran ve KDV dahil toplamı önizlemede ayrı göster. KDV oranını görev tarihinde Gelir İdaresi Başkanlığı kaynağından (`source:tr-gib`) doğrula; bellekten varsayma. Belge türünü kaydet: e-Fatura, e-Arşiv fatura veya serbest meslek makbuzu (stopaj dahil, kullanıcı belirtirse). Fatura numarası ve ETTN kullanıcı tarafından verilir; uydurma. Bu beceri GİB'e fatura düzenlemez veya göndermez.
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.

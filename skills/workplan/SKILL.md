@@ -1,6 +1,6 @@
 ---
 name: workplan
-description: "Prepare a proportionate work plan with outcomes, steps, dependencies and acceptance evidence. Use to plan substantial work or coordinate an approved team; a plan-only request does not authorize implementation."
+description: "Çıktılar, adımlar, bağımlılıklar ve kabul kanıtlarıyla orantılı bir iş planı hazırlar. Kapsamlı işleri planlamak veya onaylı bir ekibi koordine etmek için kullan; yalnızca plan istenmesi uygulama yetkisi vermez."
 allowed-tools:
   - Read
   - Write
@@ -41,3 +41,7 @@ Prepare Markdown; resolve confirmed document coordinates using `documents.resolv
 Task register entries, project facts and durable decisions are separate promotions. Offer only useful selected handoffs; a saved plan does not silently import tasks or execute the work. Inline planning does not imply durable archival of conversation.
 
 `workplan.prepare` means the authored preparation procedure above; it may produce an inline draft without a workspace write. Persistence uses the shared native document contract, restricted here to kind `plan` and authorized attachments. A saved record does not authorize its proposed actions or promote facts/decisions automatically.
+
+## Türkiye
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy.

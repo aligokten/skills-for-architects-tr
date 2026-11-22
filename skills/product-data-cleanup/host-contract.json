@@ -1,6 +1,6 @@
 {
   "path": "skills/product-data-cleanup/SKILL.md",
-  "responsibility": "Clean a local FF&E CSV schedule by normalizing casing, dimensions, units, language, materials, and formatting. Use when asked to clean, fix, or standardize product data.",
+  "responsibility": "Yerel bir FF&E CSV listesini temizler: büyük/küçük harf, ölçüler, birimler, dil, malzeme ve biçim standardizasyonu. Ürün verisini temizleme, düzeltme veya standartlaştırma istekleri için kullan.",
   "inputs": "Supplied task and selected source scope; exact destination only for requested persistence or application work. Load project context only when the task needs project records.",
   "owned_records": [],
   "non_owned_records": [

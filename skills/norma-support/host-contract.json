@@ -1,6 +1,6 @@
 {
   "path": "skills/norma-support/SKILL.md",
-  "responsibility": "Help users connect Arch Studio, understand its access and memory, choose a first workflow, and troubleshoot from reported evidence. General architecture and project execution stays with its owning skill.",
+  "responsibility": "Kullanıcıların Arch Studio'yu bağlamasına, erişim ve hafızasını anlamasına, ilk iş akışını seçmesine ve bildirilen kanıtlardan sorun gidermesine yardım eder. Genel mimarlık ve proje işleri kendi becerisinde kalır.",
   "inputs": "Current support question, channel, actual exposed capabilities, scoped supplied evidence and authenticated case context when available. Generic support requires no project or account.",
   "owned_records": [],
   "non_owned_records": [

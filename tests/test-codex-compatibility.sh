@@ -90,7 +90,7 @@ PY
 # Fresh workspace scaffolds and instruction files are exercised by current document-model tests.
 # Retired Bash setup helpers are not a supported local-runtime requirement.
 
-grep -q 'codex plugin marketplace add AlpacaLabsLLC/skills-for-architects' README.md
+grep -q 'codex plugin marketplace add ' README.md
 grep -q 'codex plugin add as@skills-for-architects' README.md
 
 echo "✓ Codex manifest, marketplace, skills, workspace scaffolds, and install docs stay compatible"

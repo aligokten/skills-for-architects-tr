@@ -1,6 +1,6 @@
 {
   "path": "skills/product-enrich/SKILL.md",
-  "responsibility": "Enrich FF&E schedule rows with categories, colors, materials, and style tags. Use to tag, categorize, or fill those missing fields; not to research new products.",
+  "responsibility": "FF&E liste satırlarını kategori, renk, malzeme ve stil etiketleriyle zenginleştirir. Eksik alanları etiketlemek, kategorize etmek veya doldurmak için kullan; yeni ürün araştırmak için değil.",
   "inputs": "Supplied task and selected source scope; exact destination only for requested persistence or application work. Load project context only when the task needs project records.",
   "owned_records": [],
   "non_owned_records": [

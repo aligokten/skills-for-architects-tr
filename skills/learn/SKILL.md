@@ -1,6 +1,6 @@
 ---
 name: learn
-description: "Guided, hands-on course teaching architects how to use Codex or Claude Code — six short modules, each built around an exercise on a bundled sandbox project (a fictional Brooklyn art museum expansion). Resumable across sessions via PROGRESS.md. Use when the user runs $learn or /as:learn, says they're new to AI-assisted project work, or asks how to learn it."
+description: "Mimarlara Codex veya Claude Code kullanımını öğreten, uygulamalı, altı modüllü rehberli kurs (örnek proje: kurgusal bir müze genişletmesi). PROGRESS.md ile oturumlar arasında devam eder. $learn veya /as:learn çalıştırıldığında ya da kullanıcı yapay zekâ destekli proje işine yeni olduğunu söylediğinde kullan."
 allowed-tools:
   - Read
   - Write
@@ -210,3 +210,7 @@ Mark completed modules `✅`, fill recaps, keep `Next up:` current, and use `Not
 | Learner starts doing real work mid-course | Help them — momentum beats curriculum. Mention the Module 6 checklist once (policy, low-stakes, copy) the way a colleague would, then get on with their work; note in PROGRESS.md where to resume |
 | Learner asks to quit — anytime, even mid-module | Stop immediately, zero persuasion. Update PROGRESS.md to the true state, print the return ritual, one warm goodbye. `$learn` on Codex or `/as:learn` on Claude Code comes back only when they ask |
 | Anxiety about breaking things | Explain the actual permission mechanism and the fictional sandbox; existing authorization may cover a write without a new prompt. Preserve their practice work and never promise that an error cannot change it |
+
+## Türkiye
+
+Kullanıcı Türkçe yazıyorsa veya proje/arsa Türkiye'deyse [Türkiye kuralını](../../rules/turkiye.md) uygula: yanıtlar ve raporlar Türkçe, metrik birimler, Türk sayı biçimi (1.234,56), GG.AA.YYYY tarih biçimi; tutarlar TL ve KDV hariç/dahil belirtilerek. Kişisel verilerde KVKK'ya uy. Kullanıcı Türkçe yazıyorsa dersleri Türkçe anlat; örnek proje kurgusaldır ve ABD'dedir, bunu belirt.

@@ -11,6 +11,7 @@ Rules are cross-cutting conventions that shape every skill output across the who
 | [terminology](./terminology.md) | Style and first-use conventions; original-source retrieval for factual orientation |
 | [output-formatting](./output-formatting.md) | Tables, headings, source attribution, file naming, list structure |
 | [transparency](./transparency.md) | Show your work — link sources, expose inputs, make outputs verifiable |
+| [turkiye](./turkiye.md) | Turkish language, metric/TL/KDV formats, Türkiye regulatory sources and KVKK for sites in Türkiye |
 
 | [moments](./moments.md) | Shared session line and task-proportionate invocation/setup behavior |
 

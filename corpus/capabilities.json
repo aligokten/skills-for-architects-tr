@@ -11,7 +11,7 @@
         "knowledge:sources",
         "knowledge:host-contracts"
       ],
-      "description": "Maintain sourced agreement context and scope in PROJECT.md, cite registered contracts/proposals, and record amendments without imposing a commercial workflow.",
+      "description": "Sözleşme bağlamını ve hizmet kapsamını PROJECT.md içinde kaynaklı olarak tutar, kayıtlı sözleşme/teklifleri referans verir ve ek protokolleri kaydeder; ticari bir iş akışı dayatmaz. Mimarlar Odası hizmet sözleşmesi ve kamu sözleşmeleri dahil.",
       "hostContract": "skills/agreement/host-contract.json",
       "executionOwner": "host",
       "triggers": [
@@ -38,7 +38,9 @@
         "docs/workspace-model.md",
         "skills/project/references/context-resolution.md",
         "docs/completion-reporting.md",
-        "schema/documents.schema.json"
+        "schema/documents.schema.json",
+        "corpus/sources/catalog.json",
+        "rules/turkiye.md"
       ],
       "conditionalReferences": [
         {
@@ -59,7 +61,7 @@
         "knowledge:host-contracts",
         "knowledge:sources"
       ],
-      "description": "Explain US architecture professional-practice terms, phases, deliverables, roles, delivery methods, AIA contract families, CSI documentation systems, or NCS at a high level. Use for questions such as “what is a CD set?” or “what does 50% CDs mean?”; do not use for code/jurisdiction, outline-spec, agreement-scope, or work-plan work.",
+      "description": "ABD mimarlık meslek pratiği terimlerini (aşamalar, teslimler, roller, AIA sözleşme aileleri, CSI, NCS) üst düzeyde açıklar; \"CD set nedir?\" gibi sorular için. Türkiye pratiği (avan/uygulama projesi, proje müellifi, yapı denetim, Mimarlar Odası) için mimarlik-bilgisi-tr kullan.",
       "triggers": [
         "explain this architecture practice term",
         "list original professional practice sources"
@@ -115,7 +117,7 @@
         "knowledge:host-contracts",
         "knowledge:sources"
       ],
-      "description": "Create an HTML color palette from a mood, description, or image, with swatches, color codes, pairings, and contrast checks. Use for color schemes or brand colors.",
+      "description": "Bir ruh hâli, tanım veya görselden renk örnekleri, renk kodları, eşleşmeler ve kontrast kontrolleri içeren HTML renk paleti oluşturur. Renk şeması veya kurumsal renkler için kullan.",
       "hostContract": "skills/color-palette-generator/host-contract.json",
       "executionOwner": "host",
       "triggers": [
@@ -151,7 +153,7 @@
       "dependencies": [
         "knowledge:host-contracts"
       ],
-      "description": "Export a project's FF&E product-library CSV as dealer-system SIF. Use to produce a .sif schedule; use sif-to-csv for the reverse direction.",
+      "description": "Projenin FF&E (mobilya, donatı, ekipman) ürün kütüphanesi CSV'sini bayi sistemi SIF formatına aktarır. .sif listesi üretmek için kullan; ters yön için sif-to-csv.",
       "triggers": [
         "export selected product rows to verified dealer SIF"
       ],
@@ -216,7 +218,7 @@
         "knowledge:host-contracts",
         "knowledge:sources"
       ],
-      "description": "Research population, income, age, housing, and employment around a site. Use for census, demographic, or local-market questions tied to a location.",
+      "description": "Bir arsanın çevresindeki nüfus, gelir, yaş, konut ve istihdamı araştırır (Türkiye'de TÜİK ADNKS ve belediye açık verileri). Konuma bağlı nüfus, demografi veya yerel pazar soruları için kullan.",
       "triggers": [
         "research demographic and market evidence",
         "prepare a sourced demographic and market report"
@@ -242,7 +244,8 @@
         "corpus/geographic-applicability.json",
         "corpus/sources/catalog.json",
         "skills/demographics-analysis/SKILL.md",
-        "skills/demographics-analysis/host-contract.json"
+        "skills/demographics-analysis/host-contract.json",
+        "rules/turkiye.md"
       ],
       "conditionalReferences": [
         {
@@ -274,7 +277,7 @@
       "dependencies": [
         "knowledge:host-contracts"
       ],
-      "description": "Extract countable FF&E or luminaire instances from supplied drawings with position-level evidence. Use for plan quantities or symbol counts; not area takeoffs, product specs or cross-source reconciliation.",
+      "description": "Verilen çizimlerden sayılabilir FF&E veya armatür adetlerini konum düzeyinde kanıtla çıkarır (metraj). Plan adetleri veya sembol sayımı için kullan; alan metrajı, ürün özellikleri veya kaynaklar arası uzlaştırma için değil.",
       "triggers": [
         "count furniture symbols in this drawing",
         "extract scoped drawing quantities"
@@ -332,7 +335,7 @@
         "knowledge:host-contracts",
         "knowledge:sources"
       ],
-      "description": "Research climate, sun, flood, seismic, soil, contamination, and topography for a site. Use for environmental site analysis or hazard questions tied to a location.",
+      "description": "Bir arsa için iklim, güneş, rüzgâr, sel, deprem, zemin, kirlilik ve topoğrafyayı araştırır (Türkiye'de AFAD Deprem Tehlike Haritası, MTA diri fay, MGM iklim verileri). Çevresel arsa analizi veya afet tehlikesi soruları için kullan.",
       "triggers": [
         "research climate and environmental evidence",
         "prepare a sourced climate and environmental report"
@@ -358,7 +361,8 @@
         "corpus/geographic-applicability.json",
         "corpus/sources/catalog.json",
         "skills/environmental-analysis/SKILL.md",
-        "skills/environmental-analysis/host-contract.json"
+        "skills/environmental-analysis/host-contract.json",
+        "rules/turkiye.md"
       ],
       "conditionalReferences": [
         {
@@ -391,7 +395,7 @@
         "knowledge:host-contracts",
         "knowledge:sources"
       ],
-      "description": "Compare EPD products on normalized GWP and other impacts while checking declared units, system boundaries, and LEED eligibility. Use for side-by-side EPD comparison.",
+      "description": "EPD'li (Çevresel Ürün Beyanı) ürünleri normalize GWP ve diğer etkiler üzerinden karşılaştırır; beyan birimi, sistem sınırları ve LEED/BREEAM uygunluğunu kontrol eder. Yan yana EPD karşılaştırması için kullan.",
       "triggers": [
         "compare the selected EPD products"
       ],
@@ -463,7 +467,7 @@
         "knowledge:host-contracts",
         "knowledge:sources"
       ],
-      "description": "Extract GWP, life-cycle stages, certifications, and impact metrics from an EPD PDF. Use when given a declaration to parse; not to find or compare EPDs.",
+      "description": "Bir EPD PDF'inden GWP, yaşam döngüsü aşamaları, sertifikalar ve etki göstergelerini çıkarır. Ayrıştırılacak beyan verildiğinde kullan; EPD bulmak veya karşılaştırmak için değil.",
       "triggers": [
         "extract the supplied EPD declaration"
       ],
@@ -531,7 +535,7 @@
         "knowledge:host-contracts",
         "knowledge:sources"
       ],
-      "description": "Search for EPDs by product category, CSI division, or material type — finds EPDs from EC3, program operator registries, and manufacturer sites. Use when the user asks to \"find EPDs for...\", locate declarations for a material, or source low-carbon product documentation.",
+      "description": "Ürün kategorisi, iş kalemi veya malzeme türüne göre EPD arar (EC3, program operatörü kayıtları — EPD Türkiye dahil — ve üretici siteleri). \"... için EPD bul\", düşük karbonlu ürün belgesi bulma istekleri için kullan.",
       "triggers": [
         "find source-verified EPD declarations"
       ],
@@ -599,7 +603,7 @@
         "knowledge:host-contracts",
         "knowledge:sources"
       ],
-      "description": "Draft Project Manual specification requirements for EPD submittals and sourced GWP limits. Use for embodied-carbon requirements in project sections; use the EPD parsing, research or comparison skills for product evidence.",
+      "description": "EPD teslimleri ve kaynaklı GWP sınırları için teknik şartname maddeleri yazar. Proje şartnamesindeki gömülü karbon gereklilikleri için kullan; ürün kanıtı için EPD ayrıştırma, araştırma veya karşılaştırma becerilerini kullan.",
       "triggers": [
         "draft source-verified EPD specification language"
       ],
@@ -627,7 +631,8 @@
         "skills/epd-to-spec/host-contract.json",
         "schema/epd-schema.md",
         "tools/workspace/epd-library-contract.md",
-        "rules/csi-formatting.md"
+        "rules/csi-formatting.md",
+        "rules/turkiye.md"
       ],
       "conditionalReferences": [
         {
@@ -675,7 +680,7 @@
       "dependencies": [
         "knowledge:host-contracts"
       ],
-      "description": "Assemble an ordered FF&E specification book from selected product cut sheets, with every product accounted for and verified package receipts. Use for grouped sheets or a combined FF&E book; use spec-writer for Project Manual sections.",
+      "description": "Seçili ürün föylerinden sıralı bir FF&E şartname kitabı derler; her ürün hesaba katılır ve paket teslimleri doğrulanır. Gruplanmış föyler veya birleşik FF&E kitabı için kullan; teknik şartname bölümleri için spec-writer.",
       "triggers": [
         "prepare these FF&E product sheets",
         "make a complete FF&E specification book",
@@ -760,13 +765,79 @@
       "hostContract": "skills/ffe-spec-book/host-contract.json"
     },
     {
+      "id": "skill:imar-analizi-tr",
+      "path": "skills/imar-analizi-tr/SKILL.md",
+      "execution": "instructions",
+      "dependencies": [
+        "knowledge:host-contracts",
+        "knowledge:sources",
+        "knowledge:jurisdictions"
+      ],
+      "description": "Türkiye'deki bir parselin imar durumunu analiz eder: plan fonksiyonu, emsal (KAKS), TAKS, yükseklik/kat adedi, çekme mesafeleri, otopark ve plan notları; 3194 sayılı İmar Kanunu, Planlı Alanlar İmar Yönetmeliği ve yerel imar yönetmeliğine göre. \"Bu arsaya ne yapabilirim\", \"imar durumu\", \"emsal hesabı\" için kullan; 3B görselleştirme için zoning-envelope.",
+      "triggers": [
+        "Türkiye'de bir parselin imar durumunu ve yapılaşma koşullarını analiz et",
+        "emsal, TAKS, kat adedi ve çekme mesafelerinden yapılabilir inşaat alanını hesapla"
+      ],
+      "exclusions": [
+        "Türkiye dışındaki hedefler veya NYC/ABD kaynaklarının Türkiye yerine konması",
+        "erişilemeyen veya kesilmiş sonuçları sıfır ya da eksiksiz sayma",
+        "proje olgu/kararlarını sahibinin onayı olmadan benimseme"
+      ],
+      "inputs": [
+        "Açık taşınmaz/konum (il, ilçe, mahalle, ada, parsel) ve seçilen dönem/kapsam; uygulanabilir asıl kaynaklar veya kullanıcının sağladığı yetkili belgeler"
+      ],
+      "outputs": [
+        "Kapsamı, kaynakları, korunmuş bilinmeyenleri, gerçek kontrolleri ve sınırlamaları içeren Türkçe bulgu/rapor"
+      ],
+      "references": [
+        "docs/host-harness-contract.md",
+        "docs/host-adapters.md",
+        "corpus/host-contracts.json",
+        "docs/workspace-model.md",
+        "docs/completion-reporting.md",
+        "docs/geographic-applicability.md",
+        "corpus/geographic-applicability.json",
+        "corpus/sources/catalog.json",
+        "rules/turkiye.md",
+        "skills/imar-analizi-tr/SKILL.md",
+        "skills/imar-analizi-tr/host-contract.json"
+      ],
+      "conditionalReferences": [
+        {
+          "path": "skills/project/references/context-resolution.md",
+          "when": "Only for project-bound work or a requested typed record/document owner handoff; standalone research needs no project."
+        },
+        {
+          "path": "rules/professional-disclaimer.md",
+          "when": "When regulatory/life-safety output requires its exact disclaimer/marker; preserve every owner-required end block."
+        }
+      ],
+      "executionOwner": "host",
+      "handoffs": [
+        {
+          "target": "skill:project",
+          "when": "Only for proposed sourced project facts/decisions; preserve existing authorization and no silent fact adoption."
+        },
+        {
+          "target": "skill:receive",
+          "when": "Only for requested durable document placement or registration with explicit coordinates/kind and actual source evidence."
+        },
+        {
+          "target": "skill:zoning-envelope",
+          "when": "Only when a 3D envelope is requested; pass verified polygon, units, controls and unresolved inputs."
+        }
+      ],
+      "hostContract": "skills/imar-analizi-tr/host-contract.json"
+    },
+    {
       "id": "skill:invoice",
       "path": "skills/invoice/SKILL.md",
       "execution": "instructions",
       "dependencies": [
-        "knowledge:host-contracts"
+        "knowledge:host-contracts",
+        "knowledge:sources"
       ],
-      "description": "Maintain an append-only project INVOICES.csv ledger from explicit billing facts and recorded lifecycle evidence; never infer charges or payment from activity or time logs.",
+      "description": "Açık fatura bilgileri ve kayıtlı yaşam döngüsü kanıtlarından yalnızca eklemeli bir INVOICES.csv defteri tutar (TL, KDV hariç/dahil, e-Fatura/e-Arşiv, serbest meslek makbuzu). Etkinlik veya zaman kayıtlarından ücret ya da ödeme çıkarmaz.",
       "hostContract": "skills/invoice/host-contract.json",
       "executionOwner": "host",
       "triggers": [
@@ -793,7 +864,9 @@
         "docs/workspace-model.md",
         "skills/project/references/context-resolution.md",
         "docs/completion-reporting.md",
-        "schema/documents.schema.json"
+        "schema/documents.schema.json",
+        "corpus/sources/catalog.json",
+        "rules/turkiye.md"
       ],
       "conditionalReferences": [
         {
@@ -809,7 +882,7 @@
       "dependencies": [
         "knowledge:host-contracts"
       ],
-      "description": "Guided, hands-on course teaching architects how to use Codex or Claude Code — six short modules, each built around an exercise on a bundled sandbox project (a fictional Brooklyn art museum expansion). Resumable across sessions via PROGRESS.md. Use when the user runs $learn or /as:learn, says they're new to AI-assisted project work, or asks how to learn it.",
+      "description": "Mimarlara Codex veya Claude Code kullanımını öğreten, uygulamalı, altı modüllü rehberli kurs (örnek proje: kurgusal bir müze genişletmesi). PROGRESS.md ile oturumlar arasında devam eder. $learn veya /as:learn çalıştırıldığında ya da kullanıcı yapay zekâ destekli proje işine yeni olduğunu söylediğinde kullan.",
       "hostContract": "skills/learn/host-contract.json",
       "executionOwner": "host",
       "triggers": [
@@ -850,7 +923,7 @@
       "dependencies": [
         "knowledge:host-contracts"
       ],
-      "description": "Check reported lighting quantities and results in supplied simulation PDFs without adding repeated calculation surfaces. Use for scoped luminaire inventories and illuminance results; not simulation or compliance.",
+      "description": "Verilen aydınlatma simülasyonu PDF'lerindeki armatür adetlerini ve sonuçları tekrar eden hesap yüzeyleri eklemeden kontrol eder. Kapsamlı armatür envanteri ve aydınlık düzeyi sonuçları için kullan; simülasyon veya uygunluk için değil.",
       "triggers": [
         "check these lighting quantities",
         "extract DIALux room results",
@@ -908,7 +981,7 @@
         "studio:workspace-contract",
         "skill:product-library"
       ],
-      "description": "Adopt, read, reconcile or revise project FF&E item and schedule records with permanent identities and exact revision pins; preserve native workbook views and recover new artifacts.",
+      "description": "Proje FF&E kalem ve liste kayıtlarını kalıcı kimlikler ve kesin revizyon sabitleriyle benimser, okur, uzlaştırır veya revize eder; Excel çalışma kitabı görünümlerini korur ve yeni çıktıları kurtarır.",
       "hostContract": "skills/master-schedule/host-contract.json",
       "executionOwner": "host",
       "triggers": [
@@ -967,7 +1040,7 @@
       "dependencies": [
         "knowledge:host-contracts"
       ],
-      "description": "Turn supplied meeting notes or transcripts into sourced minutes, keeping discussion, statements, confirmed/proposed decisions and proposed actions distinct.",
+      "description": "Verilen toplantı notları veya dökümlerinden kaynaklı toplantı tutanağı hazırlar; tartışma, beyanlar, onaylanan/önerilen kararlar ve önerilen aksiyonları ayrı tutar.",
       "hostContract": "skills/meeting-minutes/host-contract.json",
       "executionOwner": "host",
       "triggers": [
@@ -1002,6 +1075,62 @@
       ]
     },
     {
+      "id": "skill:mimarlik-bilgisi-tr",
+      "path": "skills/mimarlik-bilgisi-tr/SKILL.md",
+      "execution": "instructions",
+      "dependencies": [
+        "knowledge:host-contracts",
+        "knowledge:sources"
+      ],
+      "description": "Türkiye'de mimarlık meslek pratiğini kaynaklı olarak açıklar: proje aşamaları (avan, uygulama), proje müellifi, şantiye şefi, yapı denetim, ruhsat/iskân süreci, Mimarlar Odası hizmet şartnamesi ve en az bedel, yapı sınıfları ve Yapı Yaklaşık Birim Maliyetleri. \"Uygulama projesi nedir\", \"hizmet bedeli nasıl hesaplanır\" için kullan.",
+      "triggers": [
+        "Türkiye mimarlık meslek terimlerini ve süreçlerini kaynaklı açıkla",
+        "Mimarlar Odası şartnamesi, yapı sınıfı ve birim maliyet esaslarını açıkla"
+      ],
+      "exclusions": [
+        "Türkiye dışındaki hedefler veya NYC/ABD kaynaklarının Türkiye yerine konması",
+        "erişilemeyen veya kesilmiş sonuçları sıfır ya da eksiksiz sayma",
+        "proje olgu/kararlarını sahibinin onayı olmadan benimseme"
+      ],
+      "inputs": [
+        "Açık taşınmaz/konum (il, ilçe, mahalle, ada, parsel) ve seçilen dönem/kapsam; uygulanabilir asıl kaynaklar veya kullanıcının sağladığı yetkili belgeler"
+      ],
+      "outputs": [
+        "Kapsamı, kaynakları, korunmuş bilinmeyenleri, gerçek kontrolleri ve sınırlamaları içeren Türkçe bulgu/rapor"
+      ],
+      "references": [
+        "docs/host-harness-contract.md",
+        "docs/host-adapters.md",
+        "corpus/host-contracts.json",
+        "docs/workspace-model.md",
+        "docs/completion-reporting.md",
+        "docs/geographic-applicability.md",
+        "corpus/geographic-applicability.json",
+        "corpus/sources/catalog.json",
+        "rules/turkiye.md",
+        "skills/mimarlik-bilgisi-tr/SKILL.md",
+        "skills/mimarlik-bilgisi-tr/host-contract.json"
+      ],
+      "conditionalReferences": [
+        {
+          "path": "skills/project/references/context-resolution.md",
+          "when": "Only for project-bound work or a requested typed record/document owner handoff; standalone research needs no project."
+        }
+      ],
+      "executionOwner": "host",
+      "handoffs": [
+        {
+          "target": "skill:project",
+          "when": "Only for proposed sourced project facts/decisions; preserve existing authorization and no silent fact adoption."
+        },
+        {
+          "target": "skill:receive",
+          "when": "Only for requested durable document placement or registration with explicit coordinates/kind and actual source evidence."
+        }
+      ],
+      "hostContract": "skills/mimarlik-bilgisi-tr/host-contract.json"
+    },
+    {
       "id": "skill:mobility-analysis",
       "path": "skills/mobility-analysis/SKILL.md",
       "execution": "instructions",
@@ -1009,7 +1138,7 @@
         "knowledge:host-contracts",
         "knowledge:sources"
       ],
-      "description": "Research transit, walking, cycling, pedestrian infrastructure, and airport access for a site. Use for mobility, accessibility, or walkability questions tied to a location.",
+      "description": "Bir arsa için toplu taşıma, yürünebilirlik, bisiklet, yaya altyapısı ve havalimanı erişimini araştırır (İstanbul'da İBB Açık Veri, Metro İstanbul vb.). Konuma bağlı ulaşım, erişilebilirlik veya yürünebilirlik soruları için kullan.",
       "triggers": [
         "research mobility and access evidence",
         "prepare a sourced mobility and access report"
@@ -1035,7 +1164,8 @@
         "corpus/geographic-applicability.json",
         "corpus/sources/catalog.json",
         "skills/mobility-analysis/SKILL.md",
-        "skills/mobility-analysis/host-contract.json"
+        "skills/mobility-analysis/host-contract.json",
+        "rules/turkiye.md"
       ],
       "conditionalReferences": [
         {
@@ -1061,13 +1191,97 @@
       "hostContract": "skills/mobility-analysis/host-contract.json"
     },
     {
+      "id": "skill:mulk-raporu-tr",
+      "path": "skills/mulk-raporu-tr/SKILL.md",
+      "execution": "instructions",
+      "dependencies": [
+        "knowledge:host-contracts",
+        "knowledge:sources"
+      ],
+      "description": "Türkiye'deki bir taşınmaz için parsel kimliği, imar durumu, tescil/sit, yapı kayıtları, deprem tehlikesi ve çevre bağlamını tek bir ön inceleme (due diligence) raporunda birleştirir. Tam rapor için kullan; tek konu için ilgili -tr becerisini kullan.",
+      "triggers": [
+        "Türkiye'deki bir taşınmaz için birleşik ön inceleme raporu hazırla",
+        "parsel, imar, tescil, yapı kayıtları ve deprem tehlikesi bulgularını birleştir"
+      ],
+      "exclusions": [
+        "Türkiye dışındaki hedefler veya NYC/ABD kaynaklarının Türkiye yerine konması",
+        "erişilemeyen veya kesilmiş sonuçları sıfır ya da eksiksiz sayma",
+        "proje olgu/kararlarını sahibinin onayı olmadan benimseme"
+      ],
+      "inputs": [
+        "Açık taşınmaz/konum (il, ilçe, mahalle, ada, parsel) ve seçilen dönem/kapsam; uygulanabilir asıl kaynaklar veya kullanıcının sağladığı yetkili belgeler"
+      ],
+      "outputs": [
+        "Kapsamı, kaynakları, korunmuş bilinmeyenleri, gerçek kontrolleri ve sınırlamaları içeren Türkçe bulgu/rapor"
+      ],
+      "references": [
+        "docs/host-harness-contract.md",
+        "docs/host-adapters.md",
+        "corpus/host-contracts.json",
+        "docs/workspace-model.md",
+        "docs/completion-reporting.md",
+        "docs/geographic-applicability.md",
+        "corpus/geographic-applicability.json",
+        "corpus/sources/catalog.json",
+        "rules/turkiye.md",
+        "skills/mulk-raporu-tr/SKILL.md",
+        "skills/mulk-raporu-tr/host-contract.json"
+      ],
+      "conditionalReferences": [
+        {
+          "path": "skills/project/references/context-resolution.md",
+          "when": "Only for project-bound work or a requested typed record/document owner handoff; standalone research needs no project."
+        },
+        {
+          "path": "rules/professional-disclaimer.md",
+          "when": "When regulatory/life-safety output requires its exact disclaimer/marker; preserve every owner-required end block."
+        }
+      ],
+      "executionOwner": "host",
+      "handoffs": [
+        {
+          "target": "skill:project",
+          "when": "Only for proposed sourced project facts/decisions; preserve existing authorization and no silent fact adoption."
+        },
+        {
+          "target": "skill:receive",
+          "when": "Only for requested durable document placement or registration with explicit coordinates/kind and actual source evidence."
+        },
+        {
+          "target": "skill:parsel-sorgu-tr",
+          "when": "Only for the requested domain scope after one verified property identity; preserve identity, period, source evidence and actual per-domain outcome."
+        },
+        {
+          "target": "skill:imar-analizi-tr",
+          "when": "Only for the requested domain scope after one verified property identity; preserve identity, period, source evidence and actual per-domain outcome."
+        },
+        {
+          "target": "skill:tescil-kontrol-tr",
+          "when": "Only for the requested domain scope after one verified property identity; preserve identity, period, source evidence and actual per-domain outcome."
+        },
+        {
+          "target": "skill:yapi-kayit-tr",
+          "when": "Only for the requested domain scope after one verified property identity; preserve identity, period, source evidence and actual per-domain outcome."
+        },
+        {
+          "target": "skill:environmental-analysis",
+          "when": "Only for the requested domain scope after one verified property identity; preserve identity, period, source evidence and actual per-domain outcome."
+        },
+        {
+          "target": "skill:site-history",
+          "when": "Only for the requested domain scope after one verified property identity; preserve identity, period, source evidence and actual per-domain outcome."
+        }
+      ],
+      "hostContract": "skills/mulk-raporu-tr/host-contract.json"
+    },
+    {
       "id": "skill:norma",
       "path": "skills/norma/SKILL.md",
       "execution": "instructions",
       "dependencies": [
         "knowledge:host-contracts"
       ],
-      "description": "Use Norma to coordinate architecture, buildings, projects, clients, proposals, schedules, specifications, sites, zoning, FF&E and firm work through the relevant Arch Studio owners. Direct skill requests stay with their owner.",
+      "description": "Norma ile mimarlık, binalar, projeler, işverenler, teklifler, iş programları, şartnameler, arsalar, imar, FF&E ve ofis işlerini ilgili Arch Studio sahipleri üzerinden koordine et. Türkiye'deki işleri -tr becerilerine yönlendirir. Doğrudan beceri istekleri kendi sahibinde kalır.",
       "triggers": [
         "Architecture or project task without a named skill owner",
         "Coordinate requested outputs across existing skills",
@@ -1349,6 +1563,30 @@
           "when": "Selected from the release inventory for the requested outcome; preserve its ownership and host contract."
         },
         {
+          "target": "skill:imar-analizi-tr",
+          "when": "Selected from the release inventory for the requested outcome; preserve its ownership and host contract."
+        },
+        {
+          "target": "skill:parsel-sorgu-tr",
+          "when": "Selected from the release inventory for the requested outcome; preserve its ownership and host contract."
+        },
+        {
+          "target": "skill:tescil-kontrol-tr",
+          "when": "Selected from the release inventory for the requested outcome; preserve its ownership and host contract."
+        },
+        {
+          "target": "skill:yapi-kayit-tr",
+          "when": "Selected from the release inventory for the requested outcome; preserve its ownership and host contract."
+        },
+        {
+          "target": "skill:mulk-raporu-tr",
+          "when": "Selected from the release inventory for the requested outcome; preserve its ownership and host contract."
+        },
+        {
+          "target": "skill:mimarlik-bilgisi-tr",
+          "when": "Selected from the release inventory for the requested outcome; preserve its ownership and host contract."
+        },
+        {
           "target": "skill:norma-support",
           "when": "Arch Studio onboarding, installation, access, memory or troubleshooting support; general Norma remains the front door."
         }
@@ -1361,7 +1599,7 @@
       "dependencies": [
         "knowledge:host-contracts"
       ],
-      "description": "Help users connect Arch Studio, understand its access and memory, choose a first workflow, and troubleshoot from reported evidence. General architecture and project execution stays with its owning skill.",
+      "description": "Kullanıcıların Arch Studio'yu bağlamasına, erişim ve hafızasını anlamasına, ilk iş akışını seçmesine ve bildirilen kanıtlardan sorun gidermesine yardım eder. Genel mimarlık ve proje işleri kendi becerisinde kalır.",
       "triggers": [
         "Install or authenticate Arch Studio",
         "Understand a reported Arch Studio or connector failure",
@@ -1422,7 +1660,7 @@
         "knowledge:host-contracts",
         "knowledge:sources"
       ],
-      "description": "Look up NYC ACRIS deeds, mortgages, liens, sales, and ownership history. Use for property transactions or recorded ownership; not permits or violations.",
+      "description": "Yalnızca New York: ACRIS tapu, ipotek, haciz, satış ve mülkiyet geçmişi sorgusu. Türkiye'deki taşınmazlar için parsel-sorgu-tr kullan.",
       "triggers": [
         "research NYC recorded-property documents evidence",
         "prepare a sourced NYC recorded-property documents report"
@@ -1483,7 +1721,7 @@
         "knowledge:host-contracts",
         "knowledge:sources"
       ],
-      "description": "Look up NYC BSA variances, special permits, and appeals that modify as-of-right zoning. Use for zoning relief; use zoning-analysis-nyc for base controls.",
+      "description": "Yalnızca New York: BSA imar muafiyetleri, özel izinler ve itirazları. Türkiye için imar-analizi-tr kullan.",
       "triggers": [
         "research NYC BSA decisions evidence",
         "prepare a sourced NYC BSA decisions report"
@@ -1544,7 +1782,7 @@
         "knowledge:host-contracts",
         "knowledge:sources"
       ],
-      "description": "Look up NYC DOB permits and new-building, alteration, or demolition job filings. Use for filed or permitted work and renovation history; use nyc-dob-violations for violations.",
+      "description": "Yalnızca New York: DOB yapı ruhsatları ve yeni bina, tadilat, yıkım başvuruları. Türkiye'deki ruhsat/iskân geçmişi için yapi-kayit-tr kullan.",
       "triggers": [
         "research NYC building permit evidence",
         "prepare a sourced NYC building permit report"
@@ -1605,7 +1843,7 @@
         "knowledge:host-contracts",
         "knowledge:sources"
       ],
-      "description": "Look up open and resolved DOB and ECB violations for any NYC building, with class, status, and penalty detail. Use when the user asks whether a building has violations, stop-work orders, or outstanding ECB penalties. NYC only; for housing-code violations use /as:nyc-hpd.",
+      "description": "Yalnızca New York: DOB ve ECB ihlalleri (sınıf, durum, ceza). Türkiye'deki yapı kayıtları için yapi-kayit-tr kullan.",
       "triggers": [
         "research NYC DOB violations evidence",
         "prepare a sourced NYC DOB violations report"
@@ -1666,7 +1904,7 @@
         "knowledge:host-contracts",
         "knowledge:sources"
       ],
-      "description": "Look up HPD violations, complaints, and building registration for NYC residential buildings. Use when the user asks about housing-code violations, tenant complaints, or HPD registration at an address. NYC only; for DOB and ECB violations use /as:nyc-dob-violations.",
+      "description": "Yalnızca New York: konut binaları için HPD ihlalleri, şikâyetler ve kayıt. Türkiye için yapi-kayit-tr kullan.",
       "triggers": [
         "research NYC HPD housing evidence",
         "prepare a sourced NYC HPD housing report"
@@ -1727,7 +1965,7 @@
         "knowledge:host-contracts",
         "knowledge:sources"
       ],
-      "description": "Check whether a NYC building is landmarked or in a historic district using LPC data. Use when the user asks \"is this building landmarked\", whether a site sits in a historic district, or whether LPC review applies. NYC only.",
+      "description": "Yalnızca New York: LPC verisiyle bir binanın landmark veya tarihî bölgede olup olmadığını kontrol eder. Türkiye'de tescil ve sit alanı için tescil-kontrol-tr kullan.",
       "triggers": [
         "research NYC landmark evidence",
         "prepare a sourced NYC landmark report"
@@ -1788,7 +2026,7 @@
         "knowledge:host-contracts",
         "knowledge:sources"
       ],
-      "description": "Compile NYC landmarks, DOB, ACRIS, HPD, and BSA findings into one property due-diligence report. Use for a full report; use individual NYC skills for one dataset.",
+      "description": "Yalnızca New York: landmark, DOB, ACRIS, HPD ve BSA bulgularını tek bir mülk ön inceleme raporunda birleştirir. Türkiye'deki taşınmazlar için mulk-raporu-tr kullan.",
       "triggers": [
         "research combined NYC property evidence",
         "prepare a sourced combined NYC property report"
@@ -1874,7 +2112,7 @@
         "knowledge:jurisdictions",
         "knowledge:host-contracts"
       ],
-      "description": "Calculate code occupant loads by area with gross/net factors and jurisdiction checks. Use for \"how many people can this space hold,\" IBC Table 1004.5, egress inputs, or occupancy-load reports; not for workplace headcount planning.",
+      "description": "Alan bazında kullanıcı yükü (doluluk) hesaplar; brüt/net katsayıları ve yargı bölgesi kontrolleriyle. Türkiye'de Binaların Yangından Korunması Hakkında Yönetmelik, ABD'de IBC 1004.5. \"Bu mekân kaç kişi alır\", kaçış hesabı girdileri veya kullanıcı yükü raporları için kullan; ofis personel planlaması için değil.",
       "hostContract": "skills/occupancy-calculator/host-contract.json",
       "executionOwner": "host",
       "triggers": [
@@ -1897,7 +2135,8 @@
         "docs/completion-reporting.md",
         "corpus/host-contracts.json",
         "docs/workspace-model.md",
-        "corpus/sources/catalog.json"
+        "corpus/sources/catalog.json",
+        "rules/turkiye.md"
       ],
       "conditionalReferences": [
         {
@@ -1912,13 +2151,73 @@
       "handoffs": []
     },
     {
+      "id": "skill:parsel-sorgu-tr",
+      "path": "skills/parsel-sorgu-tr/SKILL.md",
+      "execution": "instructions",
+      "dependencies": [
+        "knowledge:host-contracts",
+        "knowledge:sources"
+      ],
+      "description": "Türkiye'de ada/parsel, adres veya koordinattan taşınmaz kimliğini TKGM Parsel Sorgu ile çözer: il/ilçe/mahalle, ada, parsel, yüzölçümü, nitelik, pafta ve geometri. Tapu kaydı ve takyidat yalnızca kullanıcının sağladığı belgelerden. \"Ada parsel sorgula\", \"bu parselin alanı ne\" için kullan.",
+      "triggers": [
+        "Türkiye'de ada/parsel veya adresten taşınmaz kimliğini doğrula",
+        "parselin yüzölçümü, niteliği ve geometrisini kaynaklı olarak raporla"
+      ],
+      "exclusions": [
+        "Türkiye dışındaki hedefler veya NYC/ABD kaynaklarının Türkiye yerine konması",
+        "erişilemeyen veya kesilmiş sonuçları sıfır ya da eksiksiz sayma",
+        "proje olgu/kararlarını sahibinin onayı olmadan benimseme"
+      ],
+      "inputs": [
+        "Açık taşınmaz/konum (il, ilçe, mahalle, ada, parsel) ve seçilen dönem/kapsam; uygulanabilir asıl kaynaklar veya kullanıcının sağladığı yetkili belgeler"
+      ],
+      "outputs": [
+        "Kapsamı, kaynakları, korunmuş bilinmeyenleri, gerçek kontrolleri ve sınırlamaları içeren Türkçe bulgu/rapor"
+      ],
+      "references": [
+        "docs/host-harness-contract.md",
+        "docs/host-adapters.md",
+        "corpus/host-contracts.json",
+        "docs/workspace-model.md",
+        "docs/completion-reporting.md",
+        "docs/geographic-applicability.md",
+        "corpus/geographic-applicability.json",
+        "corpus/sources/catalog.json",
+        "rules/turkiye.md",
+        "skills/parsel-sorgu-tr/SKILL.md",
+        "skills/parsel-sorgu-tr/host-contract.json"
+      ],
+      "conditionalReferences": [
+        {
+          "path": "skills/project/references/context-resolution.md",
+          "when": "Only for project-bound work or a requested typed record/document owner handoff; standalone research needs no project."
+        },
+        {
+          "path": "rules/professional-disclaimer.md",
+          "when": "When regulatory/life-safety output requires its exact disclaimer/marker; preserve every owner-required end block."
+        }
+      ],
+      "executionOwner": "host",
+      "handoffs": [
+        {
+          "target": "skill:project",
+          "when": "Only for proposed sourced project facts/decisions; preserve existing authorization and no silent fact adoption."
+        },
+        {
+          "target": "skill:receive",
+          "when": "Only for requested durable document placement or registration with explicit coordinates/kind and actual source evidence."
+        }
+      ],
+      "hostContract": "skills/parsel-sorgu-tr/host-contract.json"
+    },
+    {
       "id": "skill:product-audit",
       "path": "skills/product-audit/SKILL.md",
       "execution": "instructions",
       "dependencies": [
         "knowledge:host-contracts"
       ],
-      "description": "Audit a product, selection or FF&E schedule against sourced evidence and flag discrepancies, unknowns and stale specifications. Use to check product data; not to repair records, certify compliance or generate cut sheets.",
+      "description": "Bir ürünü, seçimi veya FF&E listesini kaynaklı kanıtlara karşı denetler; tutarsızlıkları, bilinmeyenleri ve eskimiş özellikleri işaretler. Ürün verisini kontrol etmek için kullan; kayıt onarmak, uygunluk onaylamak veya föy üretmek için değil.",
       "triggers": [
         "audit these product specifications",
         "compare this selected schedule with source observations"
@@ -2016,7 +2315,7 @@
       "dependencies": [
         "knowledge:host-contracts"
       ],
-      "description": "Create a source-faithful single-product FF&E cut sheet or spec book entry from a supplied PDF or product URL. Preserve selected identity and source limits; use ffe-spec-book for a complete FF&E book and spec-writer for Project Manual requirements.",
+      "description": "Verilen bir PDF veya ürün URL'sinden kaynağa sadık tek ürünlük FF&E föyü veya şartname kitabı girdisi oluşturur. Seçilen kimliği ve kaynak sınırlarını korur; tam FF&E kitabı için ffe-spec-book, teknik şartname için spec-writer kullan.",
       "triggers": [
         "make a product cut sheet from this PDF",
         "create a source-faithful FF&E spec book entry from this product URL",
@@ -2103,7 +2402,7 @@
       "dependencies": [
         "knowledge:host-contracts"
       ],
-      "description": "Clean a local FF&E CSV schedule by normalizing casing, dimensions, units, language, materials, and formatting. Use when asked to clean, fix, or standardize product data.",
+      "description": "Yerel bir FF&E CSV listesini temizler: büyük/küçük harf, ölçüler, birimler, dil, malzeme ve biçim standardizasyonu. Ürün verisini temizleme, düzeltme veya standartlaştırma istekleri için kullan.",
       "triggers": [
         "clean this FF&E CSV",
         "normalize these dimensions and units"
@@ -2170,7 +2469,7 @@
       "dependencies": [
         "knowledge:host-contracts"
       ],
-      "description": "Normalize supplied FF&E information and record accepted document-job inputs with exact product tags and source hashes. Use for intake or corrections; reusable library saves and schedule adoption go to their record owners.",
+      "description": "Verilen FF&E bilgilerini normalize eder ve kabul edilen belge işi girdilerini kesin ürün etiketleri ve kaynak hash'leriyle kaydeder. Veri alımı veya düzeltmeler için kullan; kütüphane kaydı ve liste benimseme kendi kayıt sahiplerine gider.",
       "triggers": [
         "import these product sources",
         "prepare accepted inputs for specification sheets",
@@ -2257,7 +2556,7 @@
       "dependencies": [
         "knowledge:host-contracts"
       ],
-      "description": "Enrich FF&E schedule rows with categories, colors, materials, and style tags. Use to tag, categorize, or fill those missing fields; not to research new products.",
+      "description": "FF&E liste satırlarını kategori, renk, malzeme ve stil etiketleriyle zenginleştirir. Eksik alanları etiketlemek, kategorize etmek veya doldurmak için kullan; yeni ürün araştırmak için değil.",
       "triggers": [
         "tag these product rows",
         "fill missing categories, colors and materials"
@@ -2324,7 +2623,7 @@
         "knowledge:host-contracts",
         "skill:product-library"
       ],
-      "description": "Download, resize, and remove backgrounds from product images at scale. Use when the user asks to \"process product images\", batch-download images from the schedule, strip backgrounds, or standardize product photos.",
+      "description": "Ürün görsellerini toplu olarak indirir, yeniden boyutlandırır ve arka planlarını kaldırır. \"Ürün görsellerini işle\", listeden toplu görsel indirme, arka plan temizleme veya ürün fotoğraflarını standartlaştırma için kullan.",
       "hostContract": "skills/product-image-processor/host-contract.json",
       "executionOwner": "host",
       "triggers": [
@@ -2384,7 +2683,7 @@
         "knowledge:host-contracts",
         "studio:workspace-contract"
       ],
-      "description": "Inspect or save reusable FF&E library products through reviewed, guarded transactions. Use for explicit library imports, corrections or recovery; adopted selections and workbook reconciliation belong to master-schedule.",
+      "description": "Yeniden kullanılabilir FF&E kütüphane ürünlerini gözden geçirilmiş, korumalı işlemlerle inceler veya kaydeder. Açık kütüphane aktarımları, düzeltmeler veya kurtarma için kullan; benimsenen seçimler ve çalışma kitabı uzlaştırma master-schedule'a aittir.",
       "triggers": [
         "save these products to the library",
         "correct the reusable product library",
@@ -2439,7 +2738,7 @@
       "dependencies": [
         "knowledge:host-contracts"
       ],
-      "description": "Find visually or functionally similar products from an image, name, or description. Use when the user asks to \"find something like this\", match a product from a photo, or source alternates to a given item.",
+      "description": "Bir görsel, ad veya tanımdan görsel ya da işlevsel olarak benzer ürünler bulur (Türk üreticiler dahil). \"Buna benzer bir şey bul\", fotoğraftan ürün eşleştirme veya muadil ürün bulma için kullan.",
       "triggers": [
         "find similar alternatives to this product",
         "compare product matches"
@@ -2509,7 +2808,7 @@
       "dependencies": [
         "knowledge:host-contracts"
       ],
-      "description": "Suggest complementary products that pair well with a given item — side tables for sofas, task lights for desks, etc. Use when the user asks \"what goes with\" a product, wants coordinating pieces, or asks to complete a furniture grouping.",
+      "description": "Verilen bir ürünle uyumlu tamamlayıcı ürünler önerir — kanepeye sehpa, masaya çalışma lambası vb. \"Bununla ne gider\", koordineli parçalar veya mobilya grubunu tamamlama için kullan.",
       "triggers": [
         "find complementary products for this anchor",
         "pair coordinating items"
@@ -2579,7 +2878,7 @@
       "dependencies": [
         "knowledge:host-contracts"
       ],
-      "description": "Find and compare current FF&E candidates from a design brief, with sourced purchasing facts and optional CSV-library save. Use to research or source products; not to match from an image or pair coordinating items.",
+      "description": "Bir tasarım brifinden güncel FF&E adaylarını bulur ve karşılaştırır; kaynaklı satın alma bilgileri (TL fiyat, tedarik süresi, Türkiye distribütörü) ve isteğe bağlı CSV kütüphane kaydıyla. Ürün araştırma veya tedarik için kullan.",
       "triggers": [
         "find products for this brief",
         "compare sourced furniture candidates"
@@ -2645,7 +2944,7 @@
       "dependencies": [
         "knowledge:host-contracts"
       ],
-      "description": "Extract structured FF&E specs from a list of product URLs into a schedule. Use to pull or bulk-import product-page data; not for PDF catalogs.",
+      "description": "Bir ürün URL listesinden yapılandırılmış FF&E teknik özelliklerini bir listeye çıkarır. Ürün sayfası verisini toplu çekmek için kullan; PDF kataloglar için değil.",
       "triggers": [
         "extract specs from these product URLs",
         "bulk import these product pages"
@@ -2711,7 +3010,7 @@
       "dependencies": [
         "knowledge:host-contracts"
       ],
-      "description": "Extract sourced FF&E specifications from supplied product PDFs into reviewable structured data. Use for fact sheets, spec sheets and price books; not web-page capture, EPD extraction or automatic schedule adoption.",
+      "description": "Verilen ürün PDF'lerinden kaynaklı FF&E teknik özelliklerini incelenebilir yapılandırılmış veriye çıkarır. Teknik föy, spesifikasyon sayfası ve fiyat listeleri için kullan; web sayfası, EPD çıkarımı veya otomatik liste benimseme için değil.",
       "triggers": [
         "extract product specifications from these PDFs",
         "read this product fact sheet",
@@ -2784,7 +3083,7 @@
       "dependencies": [
         "knowledge:host-contracts"
       ],
-      "description": "Capture one supplied product URL as auditable, unadopted FF&E evidence and inspect its retained history. Use to clip a page or review prior captures; not to save a library product or adopt a schedule item.",
+      "description": "Verilen tek bir ürün URL'sini denetlenebilir, benimsenmemiş FF&E kanıtı olarak kaydeder ve geçmişini inceler. Sayfa kırpmak veya önceki kayıtları incelemek için kullan; kütüphaneye ürün kaydetmek veya liste kalemi benimsemek için değil.",
       "triggers": [
         "clip this product URL",
         "retain this product page evidence",
@@ -2840,7 +3139,7 @@
       "dependencies": [
         "knowledge:host-contracts"
       ],
-      "description": "Initialize or inspect a project, maintain sourced current facts and record durable decisions. Use for project context or remember-this requests; other record types retain their owners.",
+      "description": "Bir projeyi başlatır veya inceler, kaynaklı güncel olguları (ada/parsel, işveren, yapı sınıfı vb.) tutar ve kalıcı kararları kaydeder. Proje bağlamı veya \"bunu hatırla\" istekleri için kullan; diğer kayıt türleri kendi sahiplerinde kalır.",
       "triggers": [
         "open this project context",
         "remember this project fact",
@@ -2924,9 +3223,10 @@
       "path": "skills/proposal/SKILL.md",
       "execution": "instructions",
       "dependencies": [
-        "knowledge:host-contracts"
+        "knowledge:host-contracts",
+        "knowledge:sources"
       ],
-      "description": "Draft and register project proposals, protect issued terms, and record explicitly evidenced commercial lifecycle changes. Sending messages is separate authorization.",
+      "description": "Proje tekliflerini hazırlar ve kaydeder (Mimarlar Odası en az bedel esasları, yapı sınıfı ve Yapı Yaklaşık Birim Maliyetleri dikkate alınarak), verilmiş koşulları korur ve açıkça belgelenen ticari değişiklikleri kaydeder. Mesaj göndermek ayrı yetki gerektirir.",
       "hostContract": "skills/proposal/host-contract.json",
       "executionOwner": "host",
       "triggers": [
@@ -2953,7 +3253,9 @@
         "docs/workspace-model.md",
         "skills/project/references/context-resolution.md",
         "docs/completion-reporting.md",
-        "schema/documents.schema.json"
+        "schema/documents.schema.json",
+        "corpus/sources/catalog.json",
+        "rules/turkiye.md"
       ],
       "conditionalReferences": [
         {
@@ -2973,7 +3275,7 @@
       "dependencies": [
         "knowledge:host-contracts"
       ],
-      "description": "Register received or authored project documents by confirmed coordinates, preserve their filenames and provenance, and find or verify registered documents. Use for filing a supplied file/package or locating documents by kind, date, source or revision.",
+      "description": "Alınan veya üretilen proje belgelerini onaylı koordinatlarla kaydeder, dosya adlarını ve kökenlerini korur; kayıtlı belgeleri türe, tarihe, kaynağa veya revizyona göre bulur ya da doğrular. Gelen dosya/paket arşivleme veya belge bulma için kullan.",
       "triggers": [
         "file a received document",
         "find registered documents"
@@ -3009,7 +3311,7 @@
       "dependencies": [
         "knowledge:host-contracts"
       ],
-      "description": "Batch-resize or convert a folder of images for web, social media, slides, or ARCH-size print output while preserving originals. Use for image resizing, format presets, or photo batches; not for product-image background removal.",
+      "description": "Bir klasördeki görselleri web, sosyal medya, sunum veya A-serisi/ARCH baskı için toplu olarak yeniden boyutlandırır veya dönüştürür; orijinalleri korur. Görsel boyutlandırma veya fotoğraf grupları için kullan; ürün görseli arka plan kaldırma için değil.",
       "hostContract": "skills/resize-images/host-contract.json",
       "executionOwner": "host",
       "triggers": [
@@ -3044,7 +3346,7 @@
       "dependencies": [
         "knowledge:host-contracts"
       ],
-      "description": "Compare scoped quantity snapshots and explain matches, missing rows and conflicts. Use to reconcile drawing, report or schedule counts; not to extract source documents or update adopted records.",
+      "description": "Kapsamlı adet anlık görüntülerini karşılaştırır; eşleşmeleri, eksik satırları ve çelişkileri açıklar. Çizim, rapor veya liste adetlerini uzlaştırmak için kullan; kaynak belge çıkarmak veya benimsenmiş kayıtları güncellemek için değil.",
       "triggers": [
         "reconcile these counts",
         "compare drawing and schedule quantities",
@@ -3103,7 +3405,7 @@
       "dependencies": [
         "knowledge:host-contracts"
       ],
-      "description": "Parse a SIF (Standard Interchange Format) input into a readable preview and optionally append canonical product rows to the project's CSV library. Use when asked to convert or inspect SIF dealer data. For the reverse direction use /as:csv-to-sif.",
+      "description": "SIF (Standard Interchange Format) girdisini okunabilir bir önizlemeye ayrıştırır ve isteğe bağlı olarak projenin CSV kütüphanesine ürün satırları ekler. SIF bayi verisini dönüştürme veya inceleme için kullan; ters yön için /as:csv-to-sif.",
       "triggers": [
         "inspect or convert supplied SIF dealer data"
       ],
@@ -3168,7 +3470,7 @@
         "knowledge:host-contracts",
         "knowledge:sources"
       ],
-      "description": "Neighborhood context and history — adjacent uses, architectural character, landmarks, commercial activity, and planned development from an address. Use when the user asks about a site's history or surroundings, \"what's around this site\", neighborhood character, or nearby planned development.",
+      "description": "Bir adresten mahalle bağlamı ve tarihçesi — komşu kullanımlar, mimari karakter, tescilli yapılar, ticari hareketlilik ve planlanan gelişmeler. Arsanın tarihçesi, çevresi, \"bu arsanın etrafında ne var\" veya yakındaki projeler için kullan.",
       "triggers": [
         "research neighborhood history and context evidence",
         "prepare a sourced neighborhood history and context report"
@@ -3194,7 +3496,8 @@
         "corpus/geographic-applicability.json",
         "corpus/sources/catalog.json",
         "skills/site-history/SKILL.md",
-        "skills/site-history/host-contract.json"
+        "skills/site-history/host-contract.json",
+        "rules/turkiye.md"
       ],
       "conditionalReferences": [
         {
@@ -3226,7 +3529,7 @@
       "dependencies": [
         "knowledge:host-contracts"
       ],
-      "description": "Prepare a sourced site-visit record separating direct observations, participant reports, interpretations, limitations and proposed follow-ups.",
+      "description": "Kaynaklı şantiye/saha ziyaret raporu hazırlar; doğrudan gözlemleri, katılımcı beyanlarını, yorumları, sınırlamaları ve önerilen takip işlerini ayırır.",
       "hostContract": "skills/site-visit-report/host-contract.json",
       "executionOwner": "host",
       "triggers": [
@@ -3271,7 +3574,7 @@
       "dependencies": [
         "knowledge:host-contracts"
       ],
-      "description": "Create or update an Arch Studio skill for Codex or Claude Code using the host's native skill maker when available, with Arch Studio governance and validation. Use when asked to create, package, adapt or revise a reusable skill.",
+      "description": "Codex veya Claude Code için Arch Studio becerisi oluşturur veya günceller; mümkünse host'un yerel beceri oluşturucusunu, Arch Studio yönetişimi ve doğrulamasıyla kullanır. Yeniden kullanılabilir beceri oluşturma, paketleme veya uyarlama istekleri için kullan.",
       "hostContract": "skills/skill-maker/host-contract.json",
       "executionOwner": "host",
       "triggers": [
@@ -3319,7 +3622,7 @@
       "dependencies": [
         "knowledge:host-contracts"
       ],
-      "description": "Generate a self-contained HTML slide deck from a topic, outline, report, or data. Use for presentations and slide decks; not for editing PowerPoint files.",
+      "description": "Bir konu, taslak, rapor veya veriden bağımsız çalışan HTML sunum hazırlar (Türkçe içerik destekli). Sunum ve slayt için kullan; PowerPoint dosyası düzenlemek için değil.",
       "hostContract": "skills/slide-deck-generator/host-contract.json",
       "executionOwner": "host",
       "triggers": [
@@ -3361,7 +3664,7 @@
         "knowledge:host-contracts",
         "knowledge:sources"
       ],
-      "description": "Draft Project Manual specification sections from accepted project requirements using CSI MasterFormat identities, three-part sections and review flags. Use for design requirements; use product-cut-sheet for source-faithful product entries and epd-to-spec for EPD requirements.",
+      "description": "Kabul edilmiş proje gerekliliklerinden teknik şartname bölümleri yazar: Türkiye'de mahal listesi ve teknik şartname düzeni (TS/TS EN standart atıflarıyla), isteğe bağlı olarak CSI MasterFormat üç bölümlü yapı ve inceleme işaretleri. Ürün föyleri için product-cut-sheet, EPD gereklilikleri için epd-to-spec kullan.",
       "triggers": [
         "draft the requested material specifications",
         "write sourced outline specifications"
@@ -3388,7 +3691,8 @@
         "corpus/geographic-applicability.json",
         "rules/csi-formatting.md",
         "skills/spec-writer/SKILL.md",
-        "skills/spec-writer/host-contract.json"
+        "skills/spec-writer/host-contract.json",
+        "rules/turkiye.md"
       ],
       "conditionalReferences": [
         {
@@ -3424,7 +3728,7 @@
       "dependencies": [
         "knowledge:host-contracts"
       ],
-      "description": "Open, inspect or configure an Arch Studio workspace and register projects. Use for studio administration; direct domain skills and tools-only use remain available.",
+      "description": "Bir Arch Studio çalışma alanını açar, inceler veya yapılandırır ve projeleri kaydeder (birimler, yargı bölgesi, proje aşamaları). Ofis yönetimi için kullan; doğrudan alan becerileri de kullanılabilir.",
       "triggers": [
         "open my studio",
         "set up Arch Studio",
@@ -3530,7 +3834,7 @@
       "dependencies": [
         "knowledge:host-contracts"
       ],
-      "description": "Prepare a user-reviewed Arch Studio bug report or feature request for GitHub. Use when the user runs /as:studio-feedback, says \"report a bug\", \"this skill broke\", \"send feedback\", or requests a feature. Do not use for Claude Code's native /feedback command.",
+      "description": "Kullanıcının gözden geçirdiği bir Arch Studio hata raporu veya özellik isteğini GitHub için hazırlar. /as:studio-feedback, \"hata bildir\", \"bu beceri bozuldu\", \"geri bildirim gönder\" istekleri için kullan. Claude Code'un kendi /feedback komutu için değil.",
       "triggers": [
         "prepare an Arch Studio bug report",
         "draft a feature request"
@@ -3566,7 +3870,7 @@
       "dependencies": [
         "knowledge:host-contracts"
       ],
-      "description": "Maintain the canonical TASKS.csv with permanent IDs, provenance and lifecycle history; list, add, update, complete, cancel or import selected actions.",
+      "description": "Kalıcı kimlikler, köken ve yaşam döngüsü geçmişiyle kanonik TASKS.csv'yi tutar; seçili aksiyonları listeler, ekler, günceller, tamamlar, iptal eder veya içe aktarır.",
       "triggers": [
         "list project tasks",
         "add or update a task",
@@ -3608,13 +3912,73 @@
       "handoffs": []
     },
     {
+      "id": "skill:tescil-kontrol-tr",
+      "path": "skills/tescil-kontrol-tr/SKILL.md",
+      "execution": "instructions",
+      "dependencies": [
+        "knowledge:host-contracts",
+        "knowledge:sources"
+      ],
+      "description": "Türkiye'de bir taşınmazın tescilli kültür varlığı olup olmadığını, sit alanı veya koruma alanında kalıp kalmadığını 2863 sayılı Kanun ve Koruma Bölge Kurulu kararları üzerinden kontrol eder. \"Bu bina tescilli mi\", \"sit alanında mı\", \"kurul izni gerekir mi\" için kullan.",
+      "triggers": [
+        "Türkiye'de taşınmazın tescil ve sit alanı durumunu araştır",
+        "Koruma Bölge Kurulu kararları ve tapu beyanlarına dayalı kaynaklı rapor hazırla"
+      ],
+      "exclusions": [
+        "Türkiye dışındaki hedefler veya NYC/ABD kaynaklarının Türkiye yerine konması",
+        "erişilemeyen veya kesilmiş sonuçları sıfır ya da eksiksiz sayma",
+        "proje olgu/kararlarını sahibinin onayı olmadan benimseme"
+      ],
+      "inputs": [
+        "Açık taşınmaz/konum (il, ilçe, mahalle, ada, parsel) ve seçilen dönem/kapsam; uygulanabilir asıl kaynaklar veya kullanıcının sağladığı yetkili belgeler"
+      ],
+      "outputs": [
+        "Kapsamı, kaynakları, korunmuş bilinmeyenleri, gerçek kontrolleri ve sınırlamaları içeren Türkçe bulgu/rapor"
+      ],
+      "references": [
+        "docs/host-harness-contract.md",
+        "docs/host-adapters.md",
+        "corpus/host-contracts.json",
+        "docs/workspace-model.md",
+        "docs/completion-reporting.md",
+        "docs/geographic-applicability.md",
+        "corpus/geographic-applicability.json",
+        "corpus/sources/catalog.json",
+        "rules/turkiye.md",
+        "skills/tescil-kontrol-tr/SKILL.md",
+        "skills/tescil-kontrol-tr/host-contract.json"
+      ],
+      "conditionalReferences": [
+        {
+          "path": "skills/project/references/context-resolution.md",
+          "when": "Only for project-bound work or a requested typed record/document owner handoff; standalone research needs no project."
+        },
+        {
+          "path": "rules/professional-disclaimer.md",
+          "when": "When regulatory/life-safety output requires its exact disclaimer/marker; preserve every owner-required end block."
+        }
+      ],
+      "executionOwner": "host",
+      "handoffs": [
+        {
+          "target": "skill:project",
+          "when": "Only for proposed sourced project facts/decisions; preserve existing authorization and no silent fact adoption."
+        },
+        {
+          "target": "skill:receive",
+          "when": "Only for requested durable document placement or registration with explicit coordinates/kind and actual source evidence."
+        }
+      ],
+      "hostContract": "skills/tescil-kontrol-tr/host-contract.json"
+    },
+    {
       "id": "skill:timetracker",
       "path": "skills/timetracker/SKILL.md",
       "execution": "instructions",
       "dependencies": [
         "knowledge:host-contracts"
       ],
-      "description": "Reconstruct evidence-based work descriptions and append user-confirmed durations to TIME.csv. Use for time logging and corrections; never infer hours or billing from activity.",
+      "description": "Kanıta dayalı iş tanımlarını yeniden oluşturur ve kullanıcının onayladığı süreleri TIME.csv'ye ekler. Zaman kaydı ve düzeltmeler için kullan; etkinlikten saat veya fatura çıkarmaz.",
       "hostContract": "skills/timetracker/host-contract.json",
       "executionOwner": "host",
       "triggers": [
@@ -3655,7 +4019,7 @@
       "dependencies": [
         "knowledge:host-contracts"
       ],
-      "description": "Show Arch Studio help, available skills, agents and host-specific commands. Use for help, how do I use Arch Studio, what is Norma, or a capability directory.",
+      "description": "Arch Studio yardımını, mevcut becerileri, ajanları ve host'a özgü komutları gösterir. Yardım, \"Arch Studio nasıl kullanılır\", \"Norma nedir\" veya yetenek listesi için kullan.",
       "triggers": [
         "show Arch Studio help",
         "what skills and agents are available"
@@ -3705,7 +4069,7 @@
       "dependencies": [
         "knowledge:host-contracts"
       ],
-      "description": "Build office space programs through guided workplace strategy: area splits, room schedules, and planned seat counts. Use to program or size a workplace; not for code occupant-load calculations.",
+      "description": "Rehberli ofis stratejisiyle ofis alan programı oluşturur: alan dağılımı, mahal listesi ve planlanan masa sayısı. Bir ofisi programlamak veya boyutlandırmak için kullan; mevzuata göre kullanıcı yükü hesabı için değil.",
       "hostContract": "skills/workplace-programmer/host-contract.json",
       "executionOwner": "host",
       "triggers": [
@@ -3750,7 +4114,7 @@
         "knowledge:sources",
         "knowledge:host-contracts"
       ],
-      "description": "Prepare a proportionate work plan with outcomes, steps, dependencies and acceptance evidence. Use to plan substantial work or coordinate an approved team; a plan-only request does not authorize implementation.",
+      "description": "Çıktılar, adımlar, bağımlılıklar ve kabul kanıtlarıyla orantılı bir iş planı hazırlar. Kapsamlı işleri planlamak veya onaylı bir ekibi koordine etmek için kullan; yalnızca plan istenmesi uygulama yetkisi vermez.",
       "triggers": [
         "plan this implementation",
         "scope and sequence this work",
@@ -3801,6 +4165,66 @@
       "hostContract": "skills/workplan/host-contract.json"
     },
     {
+      "id": "skill:yapi-kayit-tr",
+      "path": "skills/yapi-kayit-tr/SKILL.md",
+      "execution": "instructions",
+      "dependencies": [
+        "knowledge:host-contracts",
+        "knowledge:sources"
+      ],
+      "description": "Türkiye'de bir yapının ruhsat, iskân (yapı kullanma izni), yapı denetim, yapı kayıt belgesi (imar barışı) ve riskli yapı (6306) geçmişini kullanıcının belgeleri ve resmî kaynaklarla araştırır. \"Ruhsatı var mı\", \"iskânı alınmış mı\", \"riskli yapı mı\" için kullan.",
+      "triggers": [
+        "Türkiye'de bir yapının ruhsat, iskân ve yapı denetim geçmişini araştır",
+        "yapı kayıt belgesi ve riskli yapı durumunu kaynaklı olarak raporla"
+      ],
+      "exclusions": [
+        "Türkiye dışındaki hedefler veya NYC/ABD kaynaklarının Türkiye yerine konması",
+        "erişilemeyen veya kesilmiş sonuçları sıfır ya da eksiksiz sayma",
+        "proje olgu/kararlarını sahibinin onayı olmadan benimseme"
+      ],
+      "inputs": [
+        "Açık taşınmaz/konum (il, ilçe, mahalle, ada, parsel) ve seçilen dönem/kapsam; uygulanabilir asıl kaynaklar veya kullanıcının sağladığı yetkili belgeler"
+      ],
+      "outputs": [
+        "Kapsamı, kaynakları, korunmuş bilinmeyenleri, gerçek kontrolleri ve sınırlamaları içeren Türkçe bulgu/rapor"
+      ],
+      "references": [
+        "docs/host-harness-contract.md",
+        "docs/host-adapters.md",
+        "corpus/host-contracts.json",
+        "docs/workspace-model.md",
+        "docs/completion-reporting.md",
+        "docs/geographic-applicability.md",
+        "corpus/geographic-applicability.json",
+        "corpus/sources/catalog.json",
+        "rules/turkiye.md",
+        "skills/yapi-kayit-tr/SKILL.md",
+        "skills/yapi-kayit-tr/host-contract.json"
+      ],
+      "conditionalReferences": [
+        {
+          "path": "skills/project/references/context-resolution.md",
+          "when": "Only for project-bound work or a requested typed record/document owner handoff; standalone research needs no project."
+        },
+        {
+          "path": "rules/professional-disclaimer.md",
+          "when": "When regulatory/life-safety output requires its exact disclaimer/marker; preserve every owner-required end block."
+        }
+      ],
+      "executionOwner": "host",
+      "handoffs": [
+        {
+          "target": "skill:project",
+          "when": "Only for proposed sourced project facts/decisions; preserve existing authorization and no silent fact adoption."
+        },
+        {
+          "target": "skill:receive",
+          "when": "Only for requested durable document placement or registration with explicit coordinates/kind and actual source evidence."
+        }
+      ],
+      "hostContract": "skills/yapi-kayit-tr/host-contract.json"
+    },
+    {
       "id": "skill:zoning-analysis-nyc",
       "path": "skills/zoning-analysis-nyc/SKILL.md",
       "execution": "instructions",
@@ -3809,7 +4233,7 @@
         "knowledge:jurisdictions",
         "knowledge:host-contracts"
       ],
-      "description": "Analyze NYC lot zoning, FAR, height, setbacks, uses, and buildable envelope from PLUTO and the Zoning Resolution. Use for \"what can I build\"; use nyc-bsa for relief and zoning-envelope for 3D visualization.",
+      "description": "Yalnızca New York: PLUTO ve Zoning Resolution'dan parsel imarı, FAR, yükseklik, çekme ve kullanımları analiz eder. Türkiye'deki parseller için imar-analizi-tr kullan.",
       "hostContract": "skills/zoning-analysis-nyc/host-contract.json",
       "executionOwner": "host",
       "triggers": [
@@ -3852,9 +4276,10 @@
       "execution": "instructions",
       "dependencies": [
         "skill:zoning-analysis-nyc",
-        "knowledge:host-contracts"
+        "knowledge:host-contracts",
+        "knowledge:sources"
       ],
-      "description": "Generate interactive 3D zoning envelope viewers from zoning analysis reports. Use when the user asks to \"visualize the zoning envelope\" or see buildable massing in 3D, typically after /as:zoning-analysis-nyc. Requires a zoning analysis report as input.",
+      "description": "İmar analizi raporlarından etkileşimli 3B yapılaşma zarfı (imar zarfı) görüntüleyicisi üretir; Türkiye'de TAKS, emsal, Hmax ve bahçe mesafeleri, NYC'de setback ve FAR. \"İmar zarfını görselleştir\" veya yapılabilir kütleyi 3B görmek için kullan; genellikle /as:imar-analizi-tr veya /as:zoning-analysis-nyc sonrasında. Girdi olarak imar analizi raporu gerekir.",
       "hostContract": "skills/zoning-envelope/host-contract.json",
       "executionOwner": "host",
       "triggers": [
@@ -3879,7 +4304,9 @@
         "skills/zoning-envelope/host-contract.json",
         "docs/host-harness-contract.md",
         "docs/host-adapters.md",
-        "corpus/host-contracts.json"
+        "corpus/host-contracts.json",
+        "corpus/sources/catalog.json",
+        "rules/turkiye.md"
       ],
       "conditionalReferences": [],
       "handoffs": []

@@ -1,6 +1,6 @@
 {
   "path": "agents/site-planner.md",
-  "responsibility": "Research site context, environmental conditions, mobility, demographics and neighborhood history for a site brief or comparison.",
+  "responsibility": "Bir arsa brifi veya karşılaştırma için arsa bağlamı, çevresel koşullar (AFAD deprem tehlikesi dahil), ulaşım, demografi ve mahalle tarihçesini araştırır.",
   "inputs": "Original task, selected sources, exact targets, permissions and result evidence; delegates inherit these constraints.",
   "owned_records": [],
   "non_owned_records": [

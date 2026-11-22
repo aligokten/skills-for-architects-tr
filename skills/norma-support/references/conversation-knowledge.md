@@ -22,64 +22,70 @@ For questions asking what Arch Studio offers, use this catalog to name skills an
 
 | Skill | Purpose |
 |---|---|
-| norma | Coordinate architectural intent, scope and handoffs through available skills |
-| norma-support | Arch Studio onboarding, access and memory guidance, and evidence-bound troubleshooting |
-| studio | Set up and inspect the studio, register projects, and forward general requests to Norma |
-| tool-catalog | Show the available skills and agents |
-| learn | Guided, resumable introduction to Codex and Claude Code for architects (use `$learn` on Codex) |
-| skill-maker | Create or update governed studio, project or catalog skills using native host authoring |
-| studio-feedback | Prepare a reviewed bug report or feature request without automatic submission |
-| project | Initialize a project, maintain sourced facts, and manage durable decisions |
-| receive | Register supplied and authored documents in DOCUMENTS.csv with verified identity, coordinates and history |
-| workplan | Plan repository, operational, or AEC delivery work before acting |
-| meeting-minutes | Create source-linked meeting records with explicit promotion handoffs |
-| site-visit-report | Record field observations, reported information, limitations, and follow-up candidates |
-| tasklist | Maintain project tasks or an opted-in studio portfolio register |
-| timetracker | Reconstruct activity and append only user-confirmed time |
-| proposal | Maintain project-local proposals with protected issued terms and flexible lifecycle records |
-| agreement | Maintain sourced agreement context and check work against its scope |
-| invoice | Record user-directed invoices with cap warnings and gap detection |
-| architecture-knowledge | Source-backed US practice terminology: “What is a CD set?”, AIA relationships, and CSI/NCS context |
-| nyc-landmarks | LPC landmark and historic district check |
-| nyc-dob-permits | DOB permit and filing history |
-| nyc-dob-violations | DOB and ECB violations |
-| nyc-acris | ACRIS property transaction records |
-| nyc-hpd | HPD violations, complaints, and registration |
-| nyc-bsa | BSA variances and special permits |
-| nyc-property-report | Combined NYC property report |
-| environmental-analysis | Climate, wind, sun, flood, seismic, and soil research |
-| mobility-analysis | Transit, walkability, cycling, and pedestrian infrastructure |
-| demographics-analysis | Population, income, age, housing, and employment |
-| site-history | Neighborhood context, landmarks, activity, and planned development |
-| zoning-analysis-nyc | NYC FAR, height, setback, and use analysis |
-| zoning-envelope | Self-contained interactive 3D zoning envelope |
-| workplace-programmer | Workplace programs from headcount and work style |
-| occupancy-calculator | IBC occupancy loads, egress, exits, and plumbing fixtures |
-| spec-writer | Project Manual specification sections with review markers |
-| epd-parser | Extract environmental data from EPD PDFs |
-| epd-research | Research EPD registries by material or category |
-| epd-compare | Compare environmental impacts and LEED eligibility |
-| epd-to-spec | Project Manual EPD submittal requirements and sourced GWP limits |
-| master-schedule | Adopt/revise/reconcile schedules; keep library maintenance with product-library |
-| product-library | Own reusable CSV products with previews, guarded saves and retry recovery |
-| product-url-clip | Retain supplied URL evidence and inspect durable capture history without adopting products |
-| product-research | Find products from a design brief |
-| product-spec-bulk-fetch | Extract specifications from product URLs at scale |
-| product-spec-pdf-parser | Extract specifications from catalogs, price books, and sheets |
-| drawing-quantity-extract | Count drawing instances with position-level evidence and coverage gaps |
-| schedule-quantity-reconcile | Compare sourced quantities within matching scopes without changing records |
-| lighting-report-extract | Extract reported lighting results with exact surface and page identities |
-| product-data-cleanup | Normalize product categories, dimensions, materials, and language |
-| product-data-import | Turn product lists into formatted FF&E schedules |
-| product-enrich | Tag products with categories, colors, materials, and styles |
-| product-match | Find similar products from an image, name, or description |
-| product-pair | Suggest complementary products |
-| product-image-processor | Download, resize, and remove product-image backgrounds |
-| product-audit | Review fresh or saved product evidence, discrepancies and unknowns |
-| product-cut-sheet | Source-faithful single-product PDF/URL cut sheet or FF&E entry |
-| ffe-spec-book | Assemble an ordered FF&E specification book with itemized receipts |
-| csv-to-sif | Convert canonical product CSV to SIF |
-| sif-to-csv | Convert SIF into the canonical product CSV schema |
-| slide-deck-generator | Create self-contained HTML slide decks |
-| color-palette-generator | Create palettes with WCAG contrast checks |
-| resize-images | Resize images for web, social, slides, and print |
+| mulk-raporu-tr | Parsel, imar, tescil, yapı kayıtları ve deprem tehlikesini birleştiren ön inceleme raporu |
+| imar-analizi-tr | İmar durumu, emsal/KAKS, TAKS, Hmax, çekme mesafeleri, otopark ve plan notları |
+| parsel-sorgu-tr | TKGM Parsel Sorgu ile ada/parsel kimliği, yüzölçümü, nitelik ve geometri |
+| tescil-kontrol-tr | Tescilli kültür varlığı ve sit alanı kontrolü (2863, Koruma Bölge Kurulları) |
+| yapi-kayit-tr | Ruhsat, iskân, yapı denetim, yapı kayıt belgesi ve riskli yapı geçmişi |
+| mimarlik-bilgisi-tr | Türkiye mimarlık meslek pratiği: proje aşamaları, roller, Mimarlar Odası, yapı sınıfları |
+| norma | Mimari niyeti, kapsamı ve devirleri mevcut beceriler üzerinden koordine eder |
+| norma-support | Arch Studio başlangıç, erişim, hafıza ve kanıta dayalı sorun giderme |
+| studio | Ofisi kurar ve inceler, projeleri kaydeder, genel istekleri Norma'ya iletir |
+| tool-catalog | Mevcut becerileri ve ajanları gösterir |
+| learn | Mimarlar için Codex ve Claude Code'a rehberli, devam ettirilebilir giriş (Codex'te `$learn`) |
+| skill-maker | Yönetişimli ofis, proje veya katalog becerileri oluşturur ya da günceller |
+| studio-feedback | Otomatik gönderim olmadan gözden geçirilmiş hata raporu veya özellik isteği hazırlar |
+| project | Proje başlatır, kaynaklı olguları tutar ve kalıcı kararları yönetir |
+| receive | Gelen ve üretilen belgeleri doğrulanmış kimlik ve geçmişle DOCUMENTS.csv'ye kaydeder |
+| workplan | İşe başlamadan önce depo, operasyon veya yapı işlerini planlar |
+| meeting-minutes | Kaynak bağlantılı toplantı tutanakları |
+| site-visit-report | Saha gözlemleri, beyanlar, sınırlamalar ve takip adayları |
+| tasklist | Proje görevleri veya ofis portföy kaydı |
+| timetracker | Etkinliği yeniden oluşturur ve yalnızca onaylanan süreyi ekler |
+| proposal | Korumalı verilmiş koşullarla proje teklifleri (Mimarlar Odası en az bedel, TL/KDV) |
+| agreement | Kaynaklı sözleşme bağlamı ve işin kapsamla karşılaştırılması |
+| invoice | Kullanıcı talimatıyla fatura kaydı, tavan uyarıları ve boşluk tespiti (TL, e-Fatura) |
+| architecture-knowledge | ABD pratiği terimleri (CD set, AIA, CSI); Türkiye için `mimarlik-bilgisi-tr` |
+| nyc-landmarks | LPC landmark ve tarihî bölge kontrolü |
+| nyc-dob-permits | DOB ruhsat ve başvuru geçmişi |
+| nyc-dob-violations | DOB ve ECB ihlalleri |
+| nyc-acris | ACRIS mülk işlem kayıtları |
+| nyc-hpd | HPD ihlalleri, şikâyetler ve kayıt |
+| nyc-bsa | BSA muafiyetleri ve özel izinler |
+| nyc-property-report | Birleşik NYC mülk raporu |
+| environmental-analysis | İklim, rüzgâr, güneş, sel, deprem (AFAD) ve zemin araştırması |
+| mobility-analysis | Toplu taşıma, yürünebilirlik, bisiklet ve yaya altyapısı |
+| demographics-analysis | Nüfus, gelir, yaş, konut ve istihdam (TÜİK) |
+| site-history | Mahalle bağlamı, tescilli yapılar, hareketlilik ve planlanan gelişmeler |
+| zoning-analysis-nyc | NYC FAR, yükseklik, setback ve kullanım analizi (Türkiye için `imar-analizi-tr`) |
+| zoning-envelope | Bağımsız etkileşimli 3B imar zarfı (Türkiye ve NYC) |
+| workplace-programmer | Personel sayısı ve çalışma biçiminden ofis alan programı |
+| occupancy-calculator | Kullanıcı yükü, kaçış ve çıkışlar (Türkiye: Yangın Yönetmeliği; ABD: IBC) |
+| spec-writer | Mahal listesi ve teknik şartname bölümleri, inceleme işaretleriyle (TS/TS EN veya CSI) |
+| epd-parser | EPD PDF'lerinden çevresel veri çıkarır |
+| epd-research | Malzeme veya kategoriye göre EPD kayıtlarını araştırır (EPD Türkiye dahil) |
+| epd-compare | Çevresel etkileri ve LEED uygunluğunu karşılaştırır |
+| epd-to-spec | Şartname için EPD teslim gereklilikleri ve kaynaklı GWP sınırları |
+| master-schedule | Listeleri benimser/revize eder/uzlaştırır; kütüphane bakımı product-library'de kalır |
+| product-library | Önizleme, korumalı kayıt ve yeniden deneme kurtarmasıyla CSV ürün kütüphanesi |
+| product-url-clip | Verilen URL kanıtını saklar ve kayıt geçmişini inceler; ürün benimsemez |
+| product-research | Tasarım brifinden ürün bulur |
+| product-spec-bulk-fetch | Ürün URL'lerinden toplu teknik özellik çıkarır |
+| product-spec-pdf-parser | Katalog, fiyat listesi ve föylerden teknik özellik çıkarır |
+| drawing-quantity-extract | Çizimlerden konum kanıtlı adet sayımı ve kapsam boşlukları |
+| schedule-quantity-reconcile | Eşleşen kapsamlarda kaynaklı adetleri kayıt değiştirmeden karşılaştırır |
+| lighting-report-extract | Aydınlatma raporu sonuçlarını kesin yüzey ve sayfa kimlikleriyle çıkarır |
+| product-data-cleanup | Ürün kategorisi, ölçü, malzeme ve dili normalize eder |
+| product-data-import | Ürün listelerini biçimli FF&E listelerine dönüştürür |
+| product-enrich | Ürünleri kategori, renk, malzeme ve stil ile etiketler |
+| product-match | Görsel, ad veya tanımdan benzer ürün bulur |
+| product-pair | Tamamlayıcı ürün önerir |
+| product-image-processor | Ürün görsellerini indirir, boyutlandırır ve arka planını kaldırır |
+| product-audit | Ürün kanıtını, tutarsızlıkları ve bilinmeyenleri denetler |
+| product-cut-sheet | Kaynağa sadık tek ürün föyü veya FF&E girdisi |
+| ffe-spec-book | Kalem kalem teslim kaydıyla sıralı FF&E şartname kitabı |
+| csv-to-sif | Kanonik ürün CSV'sini SIF'e dönüştürür |
+| sif-to-csv | SIF'i kanonik ürün CSV şemasına dönüştürür |
+| slide-deck-generator | Bağımsız HTML sunumlar |
+| color-palette-generator | WCAG kontrast kontrollü renk paletleri |
+| resize-images | Web, sosyal medya, sunum ve baskı için görsel boyutlandırma |

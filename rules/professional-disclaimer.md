@@ -12,6 +12,16 @@ Every skill output that includes code analysis, structural assumptions, zoning i
 <!-- architecture-studio:requires-disclaimer -->
 ```
 
+For Turkish-language outputs (see [Türkiye](turkiye.md)) use the Turkish canonical block instead; the hook accepts either:
+
+```markdown
+> **Sorumluluk Reddi:** Bu, ön planlama amacıyla yapay zekâ tarafından üretilmiş bir analizdir. Tüm bulgular; tasarım, ruhsat veya resmî başvurularda kullanılmadan önce yetkili bir mimar veya mühendis tarafından doğrulanmalıdır.
+
+<!-- architecture-studio:requires-disclaimer -->
+```
+
+Turkish language rules mirror the English ones below: say "… ile uyumlu görünmektedir", never "… mevzuata uygundur"; say "incelenen verilerde ihlal tespit edilmedi", never "ihlal yok".
+
 The HTML-comment marker is invisible in rendered Markdown but is parsed by the `post-write-disclaimer-check` hook to verify the canonical block is present. Do not place the marker anywhere else in the document — it is a single end-of-file sentinel.
 
 ## Language Rules
